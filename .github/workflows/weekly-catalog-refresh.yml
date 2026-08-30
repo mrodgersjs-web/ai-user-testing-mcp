@@ -1,0 +1,50 @@
+name: weekly-catalog-refresh
+
+on:
+  schedule:
+    - cron: "17 6 * * 1" # Mondays 06:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+# This workflow NEVER merges. It refreshes upstream commits/metadata, runs the
+# full catalog audit, and opens (or updates) exactly one reviewed PR.
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build
+      - name: Refresh upstream metadata + audit
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          pnpm --filter @rig-testlab/cli exec node dist/main.js catalog sync --refresh
+          pnpm --filter @rig-testlab/cli exec node dist/main.js catalog verify
+      - name: Open reviewed PR (never merge)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          BRANCH="bot/catalog-refresh-$(date +%Y-%m-%d)"
+          if git diff --quiet -- catalog.lock.json; then
+            echo "no catalog delta"; exit 0
+          fi
+          git checkout -b "$BRANCH"
+          git add catalog.lock.json
+          git commit -m "bot: weekly catalog refresh $(date -u +%F)"
+          git push origin "$BRANCH"
+          gh pr create -B main -H "$BRANCH" \
+            --title "catalog: weekly refresh $(date -u +%F)" \
+            --body "Added/removed/changed-license/redirected/quarantined sources are in the diff of catalog.lock.json. Human review required; merge is manual."

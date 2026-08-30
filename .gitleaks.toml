@@ -1,0 +1,16 @@
+title = "rig-testlab gitleaks config"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "commit shas and fixture placeholders are not secrets"
+regexes = [
+  '''[0-9a-f]{40}''',
+  '''REDACTED:[a-z_]+''',
+  '''fixture-token-never-real-[0-9a-f]{8}'''
+]
+paths = [
+  '''packages/catalog/testdata/''',
+  '''adapters/.*/fixtures/'''
+]

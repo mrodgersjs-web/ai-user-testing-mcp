@@ -1,0 +1,46 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build
+      - run: pnpm test
+      - run: pnpm --filter @rig-testlab/cli exec node dist/main.js catalog verify
+
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Secret scan
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITLEAKS_CONFIG: .gitleaks.toml
+      - name: Large-file audit
+        run: |
+          set -euo pipefail
+          BIG=$(git ls-tree -r -l HEAD | awk '$4 > 5242880 {print $4" "$5}' || true)
+          if [ -n "$BIG" ]; then echo "files over 5MiB:"; echo "$BIG"; exit 1; fi
+      - name: No vendored sources in superproject
+        run: |
+          set -euo pipefail
+          # every sources/** entry must be a gitlink (mode 160000) or absent
+          BAD=$(git ls-tree -r HEAD sources/ | awk '$2 != "commit" {print $4}' || true)
+          if [ -n "$BAD" ]; then echo "non-gitlink content under sources/:"; echo "$BAD"; exit 1; fi
