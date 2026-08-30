@@ -75,7 +75,7 @@ const ROUTES: Record<string, Route> = {
   "suite run": {
     handler: suiteRun,
     help: SUITE_HELP,
-    flags: { project: s, scenarios: s, estimates: s, "adapters-dir": s, lock: s, store: s, "budget-credits": s, "budget-scenarios": s, all: b },
+    flags: { project: s, scenarios: s, estimates: s, "adapters-dir": s, lock: s, store: s, "budget-credits": s, "budget-scenarios": s, all: b, run: { type: "string", multiple: true } },
   },
   "run wait": { handler: runWait, help: RUN_HELP, flags: { all: b, "interval-ms": s, "timeout-s": s, store: s } },
   "evidence verify": { handler: evidenceVerify, help: EVIDENCE_HELP, flags: { store: s, all: b } },

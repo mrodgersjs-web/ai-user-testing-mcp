@@ -185,7 +185,13 @@ function compileForCli(ctx: Ctx, inputs: SuiteInputs): CompileSuiteResult {
 
 function reportCompile(ctx: Ctx, compiled: CompileSuiteResult, storeRoot: string): void {
   for (const m of compiled.manifests) {
-    saveManifest(storeRoot, m);
+    // A recompile must not silently resurrect terminal evidence: a stored
+    // terminal manifest for the same runId survives a queued re-save. An
+    // explicit `suite run --run <id>` still overwrites with its new terminal.
+    const existing = readManifest(storeRoot, m.runId);
+    const resurrecting =
+      m.state === "queued" && existing.ok && (TERMINAL_STATES as readonly string[]).includes(existing.manifest.state);
+    if (!resurrecting) saveManifest(storeRoot, m);
     ctx.rep.line(`${m.state.padEnd(13)} ${m.runId}  ${m.scenarioId} -> ${m.adapterId} est=${String(m.credits.estimated)}cr`);
   }
   for (const r of compiled.refusals) ctx.rep.line(`REFUSED     ${r.scenarioId}: ${r.reason}`);

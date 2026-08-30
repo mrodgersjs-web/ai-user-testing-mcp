@@ -1,162 +1,355 @@
-{
-  "scenarios": [
-    {
-      "id": "tf-web-onboarding",
-      "project": "transformfit",
-      "platforms": ["web"],
-      "title": "New user completes onboarding and reaches the initial daily plan",
-      "persona": "first-day lifter",
-      "steps": [
-        { "action": "open", "target": "/onboarding", "expected": "onboarding step 1 renders" },
-        { "action": "fill-and-advance", "target": "all onboarding steps", "expected": "initial daily plan is shown" },
-        { "action": "persist-check", "target": "reload", "expected": "plan survives reload" }
-      ],
-      "requiredAdapters": ["cypress"],
-      "requiredEvidence": ["screenshot", "log", "json_report"]
-    },
-    {
-      "id": "tf-web-workout-day",
-      "project": "transformfit",
-      "platforms": ["web"],
-      "title": "Start a workout from preview and finish with a receipt",
-      "persona": "weekday trainer",
-      "steps": [
-        { "action": "start", "target": "preview workout", "expected": "active session with logger" },
-        { "action": "log-sets", "target": "primary logger", "expected": "sets saved" },
-        { "action": "finish", "expected": "session receipt with debrief entry point" }
-      ],
-      "requiredAdapters": ["cypress"],
-      "requiredEvidence": ["rrweb", "screenshot", "json_report"]
-    },
-    {
-      "id": "tf-web-today-a11y",
-      "project": "transformfit",
-      "platforms": ["accessibility", "web"],
-      "title": "Today screen passes automated accessibility rules",
-      "steps": [
-        { "action": "open", "target": "/today", "expected": "Today renders" },
-        { "action": "axe-scan", "expected": "zero critical violations" }
-      ],
-      "requiredAdapters": ["cypress-axe"],
-      "requiredEvidence": ["accessibility_tree", "json_report"]
-    },
-    {
-      "id": "tf-web-today-vision",
-      "project": "transformfit",
-      "platforms": ["vision", "web"],
-      "title": "Today screen visual baseline at 390x844",
-      "steps": [
-        { "action": "open", "target": "/today", "expected": "deterministic fixture state" },
-        { "action": "capture", "expected": "screenshot matches approved baseline" }
-      ],
-      "requiredAdapters": ["cypress"],
-      "requiredEvidence": ["screenshot"]
-    },
-    {
-      "id": "tf-tc001-workout-receipt",
-      "project": "transformfit",
-      "platforms": ["web"],
-      "title": "TestSprite TC001: preview workout to receipt",
-      "steps": [
-        { "action": "testsprite-run", "target": "TC001_Start_a_workout_from_the_preview_and_finish_with_a_receipt.py", "expected": "provider plan passes all steps" }
-      ],
-      "requiredAdapters": ["testsprite"],
-      "requiredEvidence": ["video", "console_network_trace", "json_report"],
-      "budget": { "maxScenarios": 3, "maxEstimatedCredits": 4 }
-    },
-    {
-      "id": "tf-tc004-wellness-checkin",
-      "project": "transformfit",
-      "platforms": ["web"],
-      "title": "TestSprite TC004: wellness check-in updates Today",
-      "steps": [
-        { "action": "testsprite-run", "target": "TC004_Complete_the_wellness_check_in_and_update_Today.py", "expected": "check-in persists and Today reflects it" }
-      ],
-      "requiredAdapters": ["testsprite"],
-      "requiredEvidence": ["video", "json_report"],
-      "budget": { "maxScenarios": 3, "maxEstimatedCredits": 4 }
-    },
-    {
-      "id": "tf-tc007-pain-safety",
-      "project": "transformfit",
-      "platforms": ["web"],
-      "title": "TestSprite TC007: pain handling during active day",
-      "steps": [
-        { "action": "testsprite-run", "target": "TC007_Handle_pain_safely_during_an_active_day.py", "expected": "safety flow offered and workout adjusted" }
-      ],
-      "requiredAdapters": ["testsprite"],
-      "requiredEvidence": ["video", "json_report"],
-      "budget": { "maxScenarios": 3, "maxEstimatedCredits": 4 }
-    },
-    {
-      "id": "tf-ios-sim-smoke",
-      "project": "transformfit",
-      "platforms": ["ios"],
-      "title": "iOS simulator: launch, onboard, start workout (native gestures)",
-      "steps": [
-        { "action": "install-launch", "target": "TransformFit.app on iPhone simulator", "expected": "app reaches Today" },
-        { "action": "native-tap", "target": "start workout", "expected": "session begins" }
-      ],
-      "requiredAdapters": ["appium-xcuitest"],
-      "requiredEvidence": ["video", "screenshot", "log"]
-    },
-    {
-      "id": "tf-api-coach-contract",
-      "project": "transformfit",
-      "platforms": ["api"],
-      "title": "Coach recommendation endpoint contract against OpenAPI spec",
-      "steps": [
-        { "action": "mock-up", "target": "mockserver fixtures", "expected": "deterministic backend" },
-        { "action": "bruno-run", "target": "coach collection", "expected": "responses validate against OpenAPI schema" }
-      ],
-      "requiredAdapters": ["bruno-openapi", "mockserver"],
-      "requiredEvidence": ["json_report", "log"]
-    },
-    {
-      "id": "tf-data-boundary-inputs",
-      "project": "transformfit",
-      "platforms": ["data"],
-      "title": "Wellness inputs survive boundary and adversarial string data",
-      "steps": [
-        { "action": "generate", "target": "DATAMIMIC profile for wellness inputs", "expected": "typed dataset" },
-        { "action": "inject-malformed", "target": "malformed JSON fixtures", "expected": "parser rejects with structured error, no crash" }
-      ],
-      "requiredAdapters": ["datamimic", "malformed-fixtures"],
-      "requiredEvidence": ["json_report", "log"]
-    },
-    {
-      "id": "tf-ai-persona-evals",
-      "project": "transformfit",
-      "platforms": ["ai"],
-      "title": "Coach prompt contract: safety + non-diagnosis assertions per persona",
-      "steps": [
-        { "action": "promptfoo-run", "target": "coach prompts x personas x adversarial inputs", "expected": "no diagnosis claims; safety refusals fire; format assertions pass" }
-      ],
-      "requiredAdapters": ["promptfoo"],
-      "requiredEvidence": ["model_transcript", "json_report"]
-    },
-    {
-      "id": "tf-sec-baseline-scan",
-      "project": "transformfit",
-      "platforms": ["security"],
-      "title": "OWASP ZAP baseline scan of the web build on localhost only",
-      "steps": [
-        { "action": "serve", "target": "local web build", "expected": "localhost-only exposure" },
-        { "action": "zap-baseline", "expected": "no medium+ alerts; findings recorded" }
-      ],
-      "requiredAdapters": ["owasp-zap"],
-      "requiredEvidence": ["json_report", "log"]
-    },
-    {
-      "id": "tf-long-week-sim",
-      "project": "transformfit",
-      "platforms": ["longitudinal"],
-      "title": "Seven simulated days of check-ins keep recommendations coherent",
-      "steps": [
-        { "action": "replay", "target": "7-day fixture sequence", "expected": "readiness/recommendation state transitions monotonic; no data loss on reload" }
-      ],
-      "requiredAdapters": ["cypress"],
-      "requiredEvidence": ["json_report", "screenshot"]
+[
+  {
+    "id": "tf-web-onboarding",
+    "project": "transformfit",
+    "platforms": [
+      "web"
+    ],
+    "title": "New user completes onboarding and reaches the initial daily plan",
+    "persona": "first-day lifter",
+    "steps": [
+      {
+        "action": "open",
+        "target": "/onboarding",
+        "expected": "onboarding step 1 renders"
+      },
+      {
+        "action": "fill-and-advance",
+        "target": "all onboarding steps",
+        "expected": "initial daily plan is shown"
+      },
+      {
+        "action": "persist-check",
+        "target": "reload",
+        "expected": "plan survives reload"
+      }
+    ],
+    "requiredAdapters": [
+      "cypress"
+    ],
+    "requiredEvidence": [
+      "screenshot",
+      "log",
+      "json_report"
+    ]
+  },
+  {
+    "id": "tf-web-workout-day",
+    "project": "transformfit",
+    "platforms": [
+      "web"
+    ],
+    "title": "Start a workout from preview and finish with a receipt",
+    "persona": "weekday trainer",
+    "steps": [
+      {
+        "action": "start",
+        "target": "preview workout",
+        "expected": "active session with logger"
+      },
+      {
+        "action": "log-sets",
+        "target": "primary logger",
+        "expected": "sets saved"
+      },
+      {
+        "action": "finish",
+        "expected": "session receipt with debrief entry point"
+      }
+    ],
+    "requiredAdapters": [
+      "cypress"
+    ],
+    "requiredEvidence": [
+      "rrweb",
+      "screenshot",
+      "json_report"
+    ]
+  },
+  {
+    "id": "tf-web-today-a11y",
+    "project": "transformfit",
+    "platforms": [
+      "accessibility",
+      "web"
+    ],
+    "title": "Today screen passes automated accessibility rules",
+    "steps": [
+      {
+        "action": "open",
+        "target": "/today",
+        "expected": "Today renders"
+      },
+      {
+        "action": "axe-scan",
+        "expected": "zero critical violations"
+      }
+    ],
+    "requiredAdapters": [
+      "cypress-axe"
+    ],
+    "requiredEvidence": [
+      "accessibility_tree",
+      "json_report"
+    ]
+  },
+  {
+    "id": "tf-web-today-vision",
+    "project": "transformfit",
+    "platforms": [
+      "vision",
+      "web"
+    ],
+    "title": "Today screen visual baseline at 390x844",
+    "steps": [
+      {
+        "action": "open",
+        "target": "/today",
+        "expected": "deterministic fixture state"
+      },
+      {
+        "action": "capture",
+        "expected": "screenshot matches approved baseline"
+      }
+    ],
+    "requiredAdapters": [
+      "cypress"
+    ],
+    "requiredEvidence": [
+      "screenshot"
+    ]
+  },
+  {
+    "id": "tf-tc001-workout-receipt",
+    "project": "transformfit",
+    "platforms": [
+      "web"
+    ],
+    "title": "TestSprite TC001: preview workout to receipt",
+    "steps": [
+      {
+        "action": "testsprite-run",
+        "target": "TC001_Start_a_workout_from_the_preview_and_finish_with_a_receipt.py",
+        "expected": "provider plan passes all steps"
+      }
+    ],
+    "requiredAdapters": [
+      "testsprite"
+    ],
+    "requiredEvidence": [
+      "video",
+      "console_network_trace",
+      "json_report"
+    ],
+    "budget": {
+      "maxScenarios": 13,
+      "maxEstimatedCredits": 4
     }
-  ]
-}
+  },
+  {
+    "id": "tf-tc004-wellness-checkin",
+    "project": "transformfit",
+    "platforms": [
+      "web"
+    ],
+    "title": "TestSprite TC004: wellness check-in updates Today",
+    "steps": [
+      {
+        "action": "testsprite-run",
+        "target": "TC004_Complete_the_wellness_check_in_and_update_Today.py",
+        "expected": "check-in persists and Today reflects it"
+      }
+    ],
+    "requiredAdapters": [
+      "testsprite"
+    ],
+    "requiredEvidence": [
+      "video",
+      "json_report"
+    ],
+    "budget": {
+      "maxScenarios": 13,
+      "maxEstimatedCredits": 4
+    }
+  },
+  {
+    "id": "tf-tc007-pain-safety",
+    "project": "transformfit",
+    "platforms": [
+      "web"
+    ],
+    "title": "TestSprite TC007: pain handling during active day",
+    "steps": [
+      {
+        "action": "testsprite-run",
+        "target": "TC007_Handle_pain_safely_during_an_active_day.py",
+        "expected": "safety flow offered and workout adjusted"
+      }
+    ],
+    "requiredAdapters": [
+      "testsprite"
+    ],
+    "requiredEvidence": [
+      "video",
+      "json_report"
+    ],
+    "budget": {
+      "maxScenarios": 13,
+      "maxEstimatedCredits": 4
+    }
+  },
+  {
+    "id": "tf-ios-sim-smoke",
+    "project": "transformfit",
+    "platforms": [
+      "ios"
+    ],
+    "title": "iOS simulator: launch, onboard, start workout (native gestures)",
+    "steps": [
+      {
+        "action": "install-launch",
+        "target": "TransformFit.app on iPhone simulator",
+        "expected": "app reaches Today"
+      },
+      {
+        "action": "native-tap",
+        "target": "start workout",
+        "expected": "session begins"
+      }
+    ],
+    "requiredAdapters": [
+      "appium-xcuitest"
+    ],
+    "requiredEvidence": [
+      "video",
+      "screenshot",
+      "log"
+    ]
+  },
+  {
+    "id": "tf-api-coach-contract",
+    "project": "transformfit",
+    "platforms": [
+      "api"
+    ],
+    "title": "Coach recommendation endpoint contract against OpenAPI spec",
+    "steps": [
+      {
+        "action": "mock-up",
+        "target": "mockserver fixtures",
+        "expected": "deterministic backend"
+      },
+      {
+        "action": "bruno-run",
+        "target": "coach collection",
+        "expected": "responses validate against OpenAPI schema"
+      }
+    ],
+    "requiredAdapters": [
+      "bruno-openapi",
+      "mockserver"
+    ],
+    "requiredEvidence": [
+      "json_report",
+      "log"
+    ]
+  },
+  {
+    "id": "tf-data-boundary-inputs",
+    "project": "transformfit",
+    "platforms": [
+      "data"
+    ],
+    "title": "Wellness inputs survive boundary and adversarial string data",
+    "steps": [
+      {
+        "action": "generate",
+        "target": "DATAMIMIC profile for wellness inputs",
+        "expected": "typed dataset"
+      },
+      {
+        "action": "inject-malformed",
+        "target": "malformed JSON fixtures",
+        "expected": "parser rejects with structured error, no crash"
+      }
+    ],
+    "requiredAdapters": [
+      "datamimic",
+      "malformed-fixtures"
+    ],
+    "requiredEvidence": [
+      "json_report",
+      "log"
+    ]
+  },
+  {
+    "id": "tf-ai-persona-evals",
+    "project": "transformfit",
+    "platforms": [
+      "ai"
+    ],
+    "title": "Coach prompt contract: safety + non-diagnosis assertions per persona",
+    "steps": [
+      {
+        "action": "promptfoo-run",
+        "target": "coach prompts x personas x adversarial inputs",
+        "expected": "no diagnosis claims; safety refusals fire; format assertions pass"
+      }
+    ],
+    "requiredAdapters": [
+      "promptfoo"
+    ],
+    "requiredEvidence": [
+      "model_transcript",
+      "json_report"
+    ]
+  },
+  {
+    "id": "tf-sec-baseline-scan",
+    "project": "transformfit",
+    "platforms": [
+      "security"
+    ],
+    "title": "OWASP ZAP baseline scan of the web build on localhost only",
+    "steps": [
+      {
+        "action": "serve",
+        "target": "local web build",
+        "expected": "localhost-only exposure"
+      },
+      {
+        "action": "zap-baseline",
+        "expected": "no medium+ alerts; findings recorded"
+      }
+    ],
+    "requiredAdapters": [
+      "owasp-zap"
+    ],
+    "requiredEvidence": [
+      "json_report",
+      "log"
+    ]
+  },
+  {
+    "id": "tf-long-week-sim",
+    "project": "transformfit",
+    "platforms": [
+      "longitudinal"
+    ],
+    "title": "Seven simulated days of check-ins keep recommendations coherent",
+    "steps": [
+      {
+        "action": "replay",
+        "target": "7-day fixture sequence",
+        "expected": "readiness/recommendation state transitions monotonic; no data loss on reload"
+      }
+    ],
+    "requiredAdapters": [
+      "cypress"
+    ],
+    "requiredEvidence": [
+      "json_report",
+      "screenshot"
+    ]
+  }
+]
