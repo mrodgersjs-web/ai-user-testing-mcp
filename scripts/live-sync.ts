@@ -36,6 +36,11 @@ const lock = await resolveEntries(parsed, { client, readmeMarkdown: readme });
 const check = validateLock(lock);
 if (!check.ok) {
   console.error("lock validation FAILED:", check.errors.slice(0, 20));
+  // Debug dump: offending entries so failures are diagnosable without a blind rerun.
+  const { writeFileSync } = await import("node:fs");
+  const bad = [...new Set(check.errors.map((e) => Number(/^\/entries\/(\d+)/.exec(e)?.[1] ?? -1)))].filter((n) => n >= 0);
+  writeFileSync("/tmp/lock-debug.json", JSON.stringify(bad.map((n) => lock.entries[n]), null, 2));
+  console.error(`wrote /tmp/lock-debug.json (${bad.length} offending entries)`);
   process.exit(2);
 }
 const path = writeLock(lock, resolve(root, "catalog.lock.json"));

@@ -55,6 +55,26 @@ function headingTitle(raw: string): string {
   return raw.replace(/\s*\([^)]*\)\s*$/, "").trim();
 }
 
+/**
+ * URLs in the wild are not always RFC 3986 URIs (unicode paths, `{}` template
+ * placeholders, stray spaces). The lock schema requires `format: uri`, so every
+ * extracted link is normalized: WHATWG URL first (punycode host, percent
+ * encoding), encodeURI fallback, then a final pass for ASCII characters that
+ * are legal in HTML links but illegal in URIs.
+ */
+const URI_ILLEGAL_ASCII = /[ "<>\\^`{|}]/g;
+export function sanitizeLinkUrl(url: string): string {
+  let out = url;
+  if (/[^\x21-\x7e]/.test(out)) {
+    try {
+      out = new URL(out).href;
+    } catch {
+      out = encodeURI(out);
+    }
+  }
+  return out.replace(URI_ILLEGAL_ASCII, (c) => encodeURIComponent(c));
+}
+
 /** Extract every resource bullet outside skipped sections. */
 export function extractResourceLinks(readmeMarkdown: string): ParsedLink[] {
   const out: ParsedLink[] = [];
@@ -79,7 +99,7 @@ export function extractResourceLinks(readmeMarkdown: string): ParsedLink[] {
     if (url.startsWith("#") || url.startsWith("mailto:")) continue; // anchor-only
     out.push({
       name: m[1]!.trim(),
-      url,
+      url: sanitizeLinkUrl(url),
       description: (m[3] ?? "").trim(),
       section,
       subsection,
