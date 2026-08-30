@@ -5,12 +5,24 @@ export interface ProjectRepoPin {
   url: string;
   /** Exact commit SHA (lowercase hex, 7–64 chars). */
   revision: string;
+  /** Optional absolute local clone used as the worktree materialization source. */
+  localPath?: string;
 }
 
 export interface ProjectSuite {
   /** Path (within the project repo) to the scenario file set. */
   path: string;
   scenarioIds: string[];
+}
+
+/** One deterministic CLI-side materialization step at the worktree root. */
+export interface ProvisionStep {
+  argv: string[];
+  env?: Record<string, string>;
+}
+
+export interface ProjectProvision {
+  postCheckout?: ProvisionStep[];
 }
 
 /**
@@ -23,4 +35,5 @@ export interface ProjectManifest {
   platforms: Platform[];
   suites: ProjectSuite[];
   requiredAdapters: string[];
+  provision?: ProjectProvision;
 }

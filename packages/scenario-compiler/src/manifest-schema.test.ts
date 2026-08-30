@@ -65,3 +65,62 @@ describe("manifest-schema loading", () => {
     expect(firstViolationPointer(null)).toBe("#");
   });
 });
+
+describe("execution + provision extensions (v1 optional additions)", () => {
+  it("ScenarioSpec accepts a materialized execution plan and rejects malformed ones", () => {
+    const validate = getValidator("ScenarioSpec.v1.schema.json");
+    const base = {
+      id: "s-exec",
+      project: "transformfit",
+      platforms: ["web"],
+      title: "execution probe",
+      steps: [{ action: "run", expected: "done" }],
+      requiredAdapters: ["cypress"],
+      requiredEvidence: ["log"],
+    } as ScenarioSpec;
+    expect(
+      validate({
+        ...base,
+        execution: { argv: [["npx", "cypress", "run"]], env: { CYPRESS_BASE_URL: "http://127.0.0.1:7358" } },
+      }),
+      JSON.stringify(validate.errors),
+    ).toBe(true);
+    // secret-style / lowercase env names are rejected
+    expect(validate({ ...base, execution: { env: { api_token: "x" } } })).toBe(false);
+    // sequential commands are not (yet) a thing: maxItems 1
+    expect(validate({ ...base, execution: { argv: [["a"], ["b"]] } })).toBe(false);
+    // empty execution object is pointless and rejected
+    expect(validate({ ...base, execution: {} })).toBe(false);
+  });
+
+  it("ProjectManifest accepts localPath and provision steps, rejecting malformed argv", () => {
+    const validate = getValidator("ProjectManifest.v1.schema.json");
+    const manifest = JSON.parse(
+      readFileSync(new URL("../testdata/project.json", import.meta.url), "utf8")
+    ) as ProjectManifest;
+    const extended = {
+      ...manifest,
+      repo: { ...manifest.repo, localPath: "/repo/local" },
+      provision: { postCheckout: [{ argv: ["npm", "ci"], env: { CI: "1" } }] },
+    };
+    expect(validate(extended), JSON.stringify(validate.errors)).toBe(true);
+    expect(validate({ ...extended, provision: { postCheckout: [{ argv: [] }] } })).toBe(false);
+    expect(validate({ ...extended, provision: { postCheckout: [{ cmd: "npm ci" }] } })).toBe(false);
+  });
+
+  it("the shipped transformfit manifest validates against the extended schema", () => {
+    const validate = getValidator("ProjectManifest.v1.schema.json");
+    const root = findRepoRoot(import.meta.dirname);
+    const manifest = JSON.parse(
+      readFileSync(join(root, "projects/transformfit/manifest.json"), "utf8")
+    );
+    expect(validate(manifest), JSON.stringify(validate.errors)).toBe(true);
+    const scenarios = JSON.parse(
+      readFileSync(join(root, "projects/transformfit/scenarios.json"), "utf8")
+    ) as ScenarioSpec[];
+    const vScenario = getValidator("ScenarioSpec.v1.schema.json");
+    for (const s of scenarios) {
+      expect(vScenario(s), `${s.id}: ${JSON.stringify(vScenario.errors)}`).toBe(true);
+    }
+  });
+});

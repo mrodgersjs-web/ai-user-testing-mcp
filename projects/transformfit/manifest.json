@@ -2,7 +2,8 @@
   "id": "transformfit",
   "repo": {
     "url": "git@github.com:Rodgers-Intelligence-Group/transformfit-flutter.git",
-    "revision": "f412c01a7431b813acb39d90cfc04f10c99fb64f"
+    "revision": "f412c01a7431b813acb39d90cfc04f10c99fb64f",
+    "localPath": "/Users/rig128gb/Developer/transformfit-flutter"
   },
   "platforms": ["web", "ios", "api", "data", "ai", "vision", "accessibility", "security", "longitudinal"],
   "suites": [
@@ -21,5 +22,18 @@
     "datamimic",
     "malformed-fixtures",
     "mockserver"
-  ]
+  ],
+  "provision": {
+    "postCheckout": [
+      { "argv": ["npm", "ci", "--prefix", "e2e"] },
+      { "argv": ["python3", "scripts/certification/ai_usability_harness.py", "cypress-catalog", "--output", "e2e/cypress/fixtures/transformfit-screen-catalog.json"] },
+      { "argv": ["mkdir", "-p", "build"] },
+      { "argv": ["cp", "-R", "/Users/rig128gb/Developer/transformfit-flutter/build/web", "build/web"] },
+      { "argv": ["ln", "-sfn", "e2e/node_modules", "node_modules"] },
+      { "argv": ["cp", "/Users/rig128gb/Developer/ai-user-testing-mcp/projects/transformfit/cypress.suite.config.mjs", "cypress.config.mjs"] },
+      { "argv": ["ln", "-sfn", "../artifacts", "e2e/artifacts"] },
+      { "argv": ["mkdir", "-p", "artifacts/cypress/demo"] },
+      { "argv": ["python3", "scripts/certification/ai_usability_harness.py", "cypress-bind", "--lane", "demo", "--run-id", "suite-demo", "--build-dir", "build/web", "--output", "artifacts/cypress/demo/source-binding.json"] }
+    ]
+  }
 }

@@ -14,6 +14,7 @@
  *           not_evaluated / cancelled render with their failureDetail and keep
  *           the exit code nonzero.
  */
+import { execFileSync } from "node:child_process";
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import {
@@ -225,6 +226,32 @@ export async function suiteRun(ctx: Ctx): Promise<number> {
   const onlyIds = strs(ctx.values, "run");
   const budgetCredits = intOpt(ctx.values, "budget-credits", -1, 0, 1_000_000, ctx.command, ctx.help);
   const executed: RunManifest[] = [];
+  const scenarioById = new Map(inputs.scenarios.map((s) => [s.id, s]));
+  // Materialize the pinned source + deterministic deps OUTSIDE the sandbox
+  // (CLI trust), so the sandboxed adapter command stays allowlist-gated and
+  // never spawns against an empty worktree. Absent localPath/provision the
+  // historical empty-worktree behavior is preserved untouched.
+  const provisioner: ((worktree: string) => Promise<void>) | undefined =
+    inputs.project.repo.localPath === undefined && inputs.project.provision === undefined
+      ? undefined
+      : async (worktree) => {
+          const gitEnv = { ...process.env, GIT_TERMINAL_PROMPT: "0", GIT_SSH_COMMAND: "ssh -oBatchMode=yes" };
+          const src = inputs.project.repo.localPath ?? inputs.project.repo.url;
+          execFileSync("git", ["clone", "--quiet", "--no-hardlinks", src, worktree], { stdio: "pipe", timeout: 300_000, maxBuffer: 33_554_432, env: gitEnv });
+          execFileSync("git", ["-C", worktree, "checkout", "--quiet", "--detach", inputs.project.repo.revision], { stdio: "pipe", timeout: 120_000, maxBuffer: 33_554_432, env: gitEnv });
+          for (const step of inputs.project.provision?.postCheckout ?? []) {
+            const [bin, ...rest] = step.argv;
+            if (bin === undefined) continue;
+            const stepEnv: NodeJS.ProcessEnv = { ...process.env, ...(step.env ?? {}) };
+            execFileSync(bin, rest, {
+              cwd: worktree,
+              stdio: "pipe",
+              timeout: 900_000,
+              maxBuffer: 67_108_864,
+              env: stepEnv,
+            });
+          }
+        };
   for (const manifest of compiled.manifests) {
     if (manifest.state !== "queued" || (onlyIds.length > 0 && !onlyIds.includes(manifest.runId))) {
       executed.push(manifest);
@@ -237,7 +264,8 @@ export async function suiteRun(ctx: Ctx): Promise<number> {
         `suite run: compiled manifest ${manifest.runId} references unknown adapter ${manifest.adapterId}`,
       );
     }
-    const argv = descriptor.commandAllowlist[0];
+    const scenario = scenarioById.get(manifest.scenarioId);
+    const argv = scenario?.execution?.argv?.[0] ?? descriptor.commandAllowlist[0];
     if (argv === undefined || argv.length === 0) {
       manifest.state = "blocked";
       manifest.failureDetail = "empty_command_allowlist";
@@ -250,7 +278,10 @@ export async function suiteRun(ctx: Ctx): Promise<number> {
       argv,
       baseDir: sandboxBase,
       storeRoot,
-      requiredEvidence: [],
+      requiredEvidence: scenario?.requiredEvidence ?? [],
+      ...(provisioner === undefined ? {} : { provisionWorktree: provisioner }),
+      ...(scenario?.execution?.env === undefined ? {} : { envPassthrough: scenario.execution.env }),
+      ...(scenario?.execution?.server === undefined ? {} : { startCommand: scenario.execution.server }),
       ...(budgetCredits === -1 ? {} : { scenarioMaxCredits: budgetCredits }),
       spawner: ctx.deps.spawner ?? childProcessSpawner(),
       ...(ctx.deps.toolChecker === undefined ? {} : { toolChecker: ctx.deps.toolChecker }),

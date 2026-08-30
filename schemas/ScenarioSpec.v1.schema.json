@@ -43,6 +43,42 @@
         "maxEstimatedCredits": { "type": "number", "minimum": 0 }
       },
       "description": "Required whenever a required adapter is a paid provider; enforced by the compiler."
+    },
+    "execution": {
+      "type": "object",
+      "additionalProperties": false,
+      "minProperties": 1,
+      "properties": {
+        "argv": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 1,
+          "items": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "type": "string", "minLength": 1 }
+          },
+          "description": "Materialized command line for this run. Each argv must still prefix-match one of the selected adapter's commandAllowlist entries at preflight; no shell, no absolute-path arguments outside the sandbox."
+        },
+        "env": {
+          "type": "object",
+          "propertyNames": { "pattern": "^[A-Z][A-Z0-9_]*$" },
+          "additionalProperties": { "type": "string" },
+          "description": "Non-secret env names passed into the execution child (adapter-passthrough channel). Credentials never travel here; preflight's credential gate still applies."
+        },
+        "server": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["argv", "readyUrl"],
+          "properties": {
+            "argv": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+            "readyUrl": { "type": "string", "pattern": "^https?://" },
+            "timeoutMs": { "type": "integer", "minimum": 100 }
+          },
+          "description": "App-under-test server: spawned in the worktree after provision, awaited on readyUrl, killed with its process group at run end. Readiness failure blocks the run (app_server_unavailable)."
+        }
+      },
+      "description": "Optional materialized execution plan. Without it the runner falls back to the adapter's allowlist head, exactly as before."
     }
   }
 }

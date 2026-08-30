@@ -481,3 +481,101 @@ describe("executeRun sandbox hygiene", () => {
     expect(run.credits).toEqual({ estimated: 0, consumed: 0 });
   });
 });
+
+describe("executeRun provisionWorktree hook", () => {
+  it("materializes the worktree before spawn; files reach the child cwd", async () => {
+    let seenAtSpawn = "";
+    const spawner = fakeSpawner({
+      stdout: ["ok\n"],
+      onSpawn: (spec) => {
+        seenAtSpawn = readFileSync(join(spec.cwd, "PROVISIONED"), "utf8");
+      },
+    });
+    const run = await executeRun(queuedManifest("run.provision-ok"), makeAdapter(), {
+      argv: ["/bin/echo", "ok"],
+      baseDir: freshDir("base"),
+      storeRoot: freshDir("store"),
+      spawner,
+      sealer: fakeReceiptSealer(),
+      redactor: noRedact,
+      provisionWorktree: (worktree) => {
+        expect(statSync(worktree).isDirectory()).toBe(true);
+        writeFileSync(join(worktree, "PROVISIONED"), "x");
+      },
+    });
+    expect(run.state).toBe("passed");
+    expect(spawner.calls).toHaveLength(1);
+    // The child itself saw the provisioned file in its cwd (sandbox is
+    // removed on cleanup, so the read is captured inside spawn).
+    expect(seenAtSpawn).toBe("x");
+  });
+
+  it("blocks honestly and never spawns when provisioning throws", async () => {
+    const spawner = fakeSpawner();
+    const run = await executeRun(queuedManifest("run.provision-fail"), makeAdapter(), {
+      argv: ["/bin/echo", "ok"],
+      baseDir: freshDir("base"),
+      storeRoot: freshDir("store"),
+      spawner,
+      sealer: fakeReceiptSealer(),
+      redactor: noRedact,
+      provisionWorktree: () => {
+        throw new Error("clone exploded");
+      },
+    });
+    expect(run.state).toBe("blocked");
+    expect(run.failureDetail).toBe("source_provision_failed:clone exploded");
+    expect(spawner.calls).toHaveLength(0);
+    expect(typeof run.finishedAt).toBe("string");
+  });
+});
+
+describe("executeRun startCommand (app server lifecycle)", () => {
+  const writeServer = (dir: string, port: number): string => {
+    const script = join(dir, "server.mjs");
+    writeFileSync(
+      script,
+      `import { createServer } from "node:http";\ncreateServer((_, res) => { res.writeHead(200); res.end("ok"); }).listen(${port}, "127.0.0.1");\n`,
+    );
+    return script;
+  };
+
+  it("server is ready before spawn, killed at run end (port closes)", async () => {
+    const port = 41731;
+    const base = freshDir("base");
+    const serverScript = writeServer(base, port);
+    const run = await executeRun(queuedManifest("run.appserver-ok"), makeAdapter(), {
+      argv: ["/bin/echo", "ok"],
+      baseDir: base,
+      storeRoot: freshDir("store"),
+      spawner: fakeSpawner({ stdout: ["ok\n"] }),
+      sealer: fakeReceiptSealer(),
+      redactor: noRedact,
+      startCommand: { argv: ["node", serverScript], readyUrl: `http://127.0.0.1:${port}/`, timeoutMs: 10_000 },
+    });
+    expect(run.state).toBe("passed");
+    // passed implies the server answered readiness before the child spawned.
+    let reachable = true;
+    try {
+      await fetch(`http://127.0.0.1:${port}/`, { signal: AbortSignal.timeout(1_000) });
+    } catch {
+      reachable = false;
+    }
+    expect(reachable).toBe(false); // process-group teardown after the run
+  });
+
+  it("never-ready server blocks the run with ZERO spawns", async () => {
+    const spawner = fakeSpawner({});
+    const run = await executeRun(queuedManifest("run.appserver-dead"), makeAdapter(), {
+      argv: ["/bin/echo"],
+      baseDir: freshDir("base"),
+      storeRoot: freshDir("store"),
+      spawner,
+      sealer: fakeReceiptSealer(),
+      startCommand: { argv: ["node", "-e", "setTimeout(()=>{},60000)"], readyUrl: "http://127.0.0.1:1/", timeoutMs: 400 },
+    });
+    expect(run.state).toBe("blocked");
+    expect(run.failureDetail).toContain("app_server_unavailable");
+    expect(spawner.calls).toHaveLength(0);
+  });
+});

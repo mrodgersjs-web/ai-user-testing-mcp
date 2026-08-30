@@ -14,7 +14,8 @@
       "required": ["url", "revision"],
       "properties": {
         "url": { "type": "string", "minLength": 1 },
-        "revision": { "type": "string", "pattern": "^[a-f0-9]{7,64}$", "description": "Exact commit SHA the project is compiled against." }
+        "revision": { "type": "string", "pattern": "^[a-f0-9]{7,64}$", "description": "Exact commit SHA the project is compiled against." },
+        "localPath": { "type": "string", "minLength": 1, "description": "Optional absolute path of a local clone used as the materialization source for sandbox worktrees (falls back to url when absent)." }
       }
     },
     "platforms": {
@@ -37,6 +38,25 @@
     "requiredAdapters": {
       "type": "array",
       "items": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]*$" }
+    },
+    "provision": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "postCheckout": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["argv"],
+            "properties": {
+              "argv": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+              "env": { "type": "object", "propertyNames": { "pattern": "^[A-Z][A-Z0-9_]*$" }, "additionalProperties": { "type": "string" } }
+            }
+          },
+          "description": "Deterministic materialization steps run by the CLI at the worktree root after clone+checkout (deps install, fixture generation). Runs OUTSIDE the sandbox with operator trust; the sandboxed adapter command itself remains allowlist-gated."
+        }
+      }
     }
   }
 }

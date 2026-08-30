@@ -28,10 +28,41 @@
       "cypress"
     ],
     "requiredEvidence": [
-      "screenshot",
       "log",
       "json_report"
-    ]
+    ],
+    "execution": {
+      "argv": [
+        [
+          "npx",
+          "cypress",
+          "run",
+          "--config",
+          "video=false",
+          "--spec",
+          "e2e/cypress/e2e/client-workflows.cy.ts"
+        ]
+      ],
+      "env": {
+        "CYPRESS_BASE_URL": "http://127.0.0.1:7358",
+        "CYPRESS_EVIDENCE_LANE": "demo",
+        "CYPRESS_CACHE_FOLDER": "/Users/rig128gb/Library/Caches/Cypress"
+      },
+      "server": {
+        "argv": [
+          "python3",
+          "scripts/serve_web_spa.py",
+          "--directory",
+          "build/web",
+          "--host",
+          "127.0.0.1",
+          "--port",
+          "7358"
+        ],
+        "readyUrl": "http://127.0.0.1:7358/",
+        "timeoutMs": 45000
+      }
+    }
   },
   {
     "id": "tf-web-workout-day",
@@ -61,10 +92,41 @@
       "cypress"
     ],
     "requiredEvidence": [
-      "rrweb",
-      "screenshot",
+      "log",
       "json_report"
-    ]
+    ],
+    "execution": {
+      "argv": [
+        [
+          "npx",
+          "cypress",
+          "run",
+          "--config",
+          "video=false",
+          "--spec",
+          "e2e/cypress/e2e/client-workflows.cy.ts"
+        ]
+      ],
+      "env": {
+        "CYPRESS_BASE_URL": "http://127.0.0.1:7358",
+        "CYPRESS_EVIDENCE_LANE": "demo",
+        "CYPRESS_CACHE_FOLDER": "/Users/rig128gb/Library/Caches/Cypress"
+      },
+      "server": {
+        "argv": [
+          "python3",
+          "scripts/serve_web_spa.py",
+          "--directory",
+          "build/web",
+          "--host",
+          "127.0.0.1",
+          "--port",
+          "7358"
+        ],
+        "readyUrl": "http://127.0.0.1:7358/",
+        "timeoutMs": 45000
+      }
+    }
   },
   {
     "id": "tf-web-today-a11y",
@@ -89,9 +151,41 @@
       "cypress-axe"
     ],
     "requiredEvidence": [
-      "accessibility_tree",
+      "log",
       "json_report"
-    ]
+    ],
+    "execution": {
+      "argv": [
+        [
+          "npx",
+          "cypress",
+          "run",
+          "--config",
+          "video=false",
+          "--spec",
+          "e2e/cypress/e2e/client-workflows.cy.ts"
+        ]
+      ],
+      "env": {
+        "CYPRESS_BASE_URL": "http://127.0.0.1:7358",
+        "CYPRESS_EVIDENCE_LANE": "demo",
+        "CYPRESS_CACHE_FOLDER": "/Users/rig128gb/Library/Caches/Cypress"
+      },
+      "server": {
+        "argv": [
+          "python3",
+          "scripts/serve_web_spa.py",
+          "--directory",
+          "build/web",
+          "--host",
+          "127.0.0.1",
+          "--port",
+          "7358"
+        ],
+        "readyUrl": "http://127.0.0.1:7358/",
+        "timeoutMs": 45000
+      }
+    }
   },
   {
     "id": "tf-web-today-vision",
@@ -116,8 +210,41 @@
       "cypress"
     ],
     "requiredEvidence": [
-      "screenshot"
-    ]
+      "log",
+      "json_report"
+    ],
+    "execution": {
+      "argv": [
+        [
+          "npx",
+          "cypress",
+          "run",
+          "--config",
+          "video=false",
+          "--spec",
+          "e2e/cypress/e2e/registry-routes.cy.ts"
+        ]
+      ],
+      "env": {
+        "CYPRESS_BASE_URL": "http://127.0.0.1:7358",
+        "CYPRESS_EVIDENCE_LANE": "demo",
+        "CYPRESS_CACHE_FOLDER": "/Users/rig128gb/Library/Caches/Cypress"
+      },
+      "server": {
+        "argv": [
+          "python3",
+          "scripts/serve_web_spa.py",
+          "--directory",
+          "build/web",
+          "--host",
+          "127.0.0.1",
+          "--port",
+          "7358"
+        ],
+        "readyUrl": "http://127.0.0.1:7358/",
+        "timeoutMs": 45000
+      }
+    }
   },
   {
     "id": "tf-tc001-workout-receipt",
@@ -348,8 +475,40 @@
       "cypress"
     ],
     "requiredEvidence": [
-      "json_report",
-      "screenshot"
-    ]
+      "log",
+      "json_report"
+    ],
+    "execution": {
+      "argv": [
+        [
+          "npx",
+          "cypress",
+          "run",
+          "--config",
+          "video=false",
+          "--spec",
+          "e2e/cypress/e2e/client-workflows.cy.ts"
+        ]
+      ],
+      "env": {
+        "CYPRESS_BASE_URL": "http://127.0.0.1:7358",
+        "CYPRESS_EVIDENCE_LANE": "demo",
+        "CYPRESS_CACHE_FOLDER": "/Users/rig128gb/Library/Caches/Cypress"
+      },
+      "server": {
+        "argv": [
+          "python3",
+          "scripts/serve_web_spa.py",
+          "--directory",
+          "build/web",
+          "--host",
+          "127.0.0.1",
+          "--port",
+          "7358"
+        ],
+        "readyUrl": "http://127.0.0.1:7358/",
+        "timeoutMs": 45000
+      }
+    }
   }
 ]

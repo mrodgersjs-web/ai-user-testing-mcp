@@ -182,6 +182,17 @@ export interface ScenarioSpec {
   requiredAdapters: string[];
   requiredEvidence: ArtifactKind[];
   budget?: { maxScenarios?: number; maxEstimatedCredits?: number };
+  /**
+   * Optional materialized execution plan (max 1 command today). The argv must
+   * still prefix-match the selected adapter's commandAllowlist at preflight;
+   * env is non-secret passthrough only. Absent ⇒ adapter allowlist head.
+   */
+  execution?: {
+    argv?: string[][];
+    env?: Record<string, string>;
+    /** App-under-test server lifecycle for this run (runner-owned). */
+    server?: { argv: string[]; readyUrl: string; timeoutMs?: number };
+  };
 }
 
 export type RunState =
