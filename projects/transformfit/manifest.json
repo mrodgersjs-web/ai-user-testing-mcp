@@ -2,7 +2,7 @@
   "id": "transformfit",
   "repo": {
     "url": "git@github.com:Rodgers-Intelligence-Group/transformfit-flutter.git",
-    "revision": "a941606097d533ffaac8ea5440c8f7d684e32257"
+    "revision": "f412c01a7431b813acb39d90cfc04f10c99fb64f"
   },
   "platforms": ["web", "ios", "api", "data", "ai", "vision", "accessibility", "security", "longitudinal"],
   "suites": [
