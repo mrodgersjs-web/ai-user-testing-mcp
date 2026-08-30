@@ -102,6 +102,18 @@ function engine(): { ajv: Ajv2020; lockValidator: ValidateFunction } {
   return cachedAjv;
 }
 
+/** Validate any value against any registered schema by its $id. */
+export function validateAgainstSchema(schemaId: string, value: unknown): ValidationResult {
+  const { ajv } = engine();
+  const validate = ajv.getSchema(schemaId);
+  if (!validate) throw new Error(`schema not registered: ${schemaId}`);
+  const ok = validate(value) as boolean;
+  const errors = (validate.errors ?? []).map(
+    (e) => `${e.instancePath || "/"}: ${e.message}${e.params?.allowedValues ? ` (allowed: ${(e.params.allowedValues as unknown[]).join("|")})` : ""}`,
+  );
+  return { ok, errors };
+}
+
 /** Schema validation (draft 2020-12, all schemas registered, formats enforced). */
 export function validateLock(lock: unknown): ValidationResult {
   const { lockValidator } = engine();

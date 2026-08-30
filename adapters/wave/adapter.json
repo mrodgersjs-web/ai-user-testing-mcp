@@ -1,0 +1,36 @@
+{
+  "id": "wave",
+  "name": "WAVE accessibility API",
+  "adapterVersion": "1.0.0",
+  "sourceEntryId": "wave-wave-webaim-org",
+  "status": "reviewed",
+  "commandAllowlist": [
+    [
+      "npx",
+      "wave-cli"
+    ],
+    [
+      "node"
+    ]
+  ],
+  "networkAllowlist": [
+    "wave.webaim.org"
+  ],
+  "limits": {
+    "maxCpuMs": 300000,
+    "maxMemoryMb": 2048,
+    "maxWallClockS": 600,
+    "maxOutputBytes": 10485760
+  },
+  "credentialMode": "env_store",
+  "paidProvider": false,
+  "fixtures": {
+    "passing": "fixtures/passing.mjs",
+    "plantedFailing": "fixtures/planted-failing.mjs",
+    "unavailableDependency": "fixtures/unavailable.mjs"
+  },
+  "evidenceKinds": [
+    "accessibility_tree",
+    "json_report"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "id": "testsprite",
+  "name": "TestSprite (paid web/API verifier)",
+  "adapterVersion": "1.0.0",
+  "sourceEntryId": "mission.core.testsprite",
+  "status": "reviewed",
+  "commandAllowlist": [
+    [
+      "npx",
+      "@testsprite/testsprite-cli"
+    ],
+    [
+      "testsprite-cli"
+    ],
+    [
+      "node"
+    ]
+  ],
+  "networkAllowlist": [
+    "api.testsprite.com"
+  ],
+  "limits": {
+    "maxCpuMs": 300000,
+    "maxMemoryMb": 2048,
+    "maxWallClockS": 900,
+    "maxOutputBytes": 10485760
+  },
+  "credentialMode": "keychain",
+  "paidProvider": true,
+  "paidGuards": {
+    "maxScenarios": 5,
+    "maxEstimatedCredits": 10
+  },
+  "fixtures": {
+    "passing": "fixtures/passing.mjs",
+    "plantedFailing": "fixtures/planted-failing.mjs",
+    "unavailableDependency": "fixtures/unavailable.mjs"
+  },
+  "evidenceKinds": [
+    "video",
+    "console_network_trace",
+    "json_report"
+  ]
+}

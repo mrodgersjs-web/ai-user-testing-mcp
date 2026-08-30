@@ -29,6 +29,9 @@ importers:
       '@rig-testlab/evidence':
         specifier: workspace:*
         version: link:../../packages/evidence
+      '@rig-testlab/runner':
+        specifier: workspace:*
+        version: link:../../packages/runner
       '@rig-testlab/scenario-compiler':
         specifier: workspace:*
         version: link:../../packages/scenario-compiler
@@ -79,12 +82,18 @@ importers:
 
   packages/cli:
     dependencies:
+      '@rig-testlab/agent-installer':
+        specifier: workspace:*
+        version: link:../agent-installer
       '@rig-testlab/catalog':
         specifier: workspace:*
         version: link:../catalog
       '@rig-testlab/evidence':
         specifier: workspace:*
         version: link:../evidence
+      '@rig-testlab/runner':
+        specifier: workspace:*
+        version: link:../runner
       '@rig-testlab/scenario-compiler':
         specifier: workspace:*
         version: link:../scenario-compiler

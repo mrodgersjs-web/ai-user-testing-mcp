@@ -1,0 +1,42 @@
+{
+  "id": "robot-framework",
+  "name": "Robot Framework suites",
+  "adapterVersion": "1.0.0",
+  "sourceEntryId": "robot-framework-robotframework-org",
+  "status": "reviewed",
+  "commandAllowlist": [
+    [
+      "python",
+      "-m",
+      "robot"
+    ],
+    [
+      "robot",
+      "--outputdir"
+    ],
+    [
+      "node"
+    ]
+  ],
+  "networkAllowlist": [
+    "127.0.0.1"
+  ],
+  "limits": {
+    "maxCpuMs": 300000,
+    "maxMemoryMb": 2048,
+    "maxWallClockS": 900,
+    "maxOutputBytes": 10485760
+  },
+  "credentialMode": "none",
+  "paidProvider": false,
+  "fixtures": {
+    "passing": "fixtures/passing.mjs",
+    "plantedFailing": "fixtures/planted-failing.mjs",
+    "unavailableDependency": "fixtures/unavailable.mjs"
+  },
+  "evidenceKinds": [
+    "log",
+    "json_report",
+    "screenshot"
+  ]
+}

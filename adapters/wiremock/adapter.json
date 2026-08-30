@@ -1,0 +1,42 @@
+{
+  "id": "wiremock",
+  "name": "WireMock HTTP mocks",
+  "adapterVersion": "1.0.0",
+  "sourceEntryId": "wiremock--wiremock",
+  "status": "reviewed",
+  "commandAllowlist": [
+    [
+      "java",
+      "-jar",
+      "wiremock"
+    ],
+    [
+      "docker",
+      "run",
+      "wiremock/wiremock"
+    ],
+    [
+      "node"
+    ]
+  ],
+  "networkAllowlist": [
+    "127.0.0.1"
+  ],
+  "limits": {
+    "maxCpuMs": 300000,
+    "maxMemoryMb": 2048,
+    "maxWallClockS": 600,
+    "maxOutputBytes": 10485760
+  },
+  "credentialMode": "none",
+  "paidProvider": false,
+  "fixtures": {
+    "passing": "fixtures/passing.mjs",
+    "plantedFailing": "fixtures/planted-failing.mjs",
+    "unavailableDependency": "fixtures/unavailable.mjs"
+  },
+  "evidenceKinds": [
+    "log",
+    "json_report"
+  ]
+}
