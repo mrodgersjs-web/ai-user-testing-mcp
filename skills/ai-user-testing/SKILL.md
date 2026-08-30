@@ -41,6 +41,17 @@ rig-testlab suite compile projects/transformfit/project.yaml --out out/suite.jso
 Compile refusals are informative: `unknown_adapter`, `adapter_not_reviewed`, `budget_required`, scenario-cap `not_evaluated`.
 
 ### 3. Run with evidence
+
+**Project execution lane (v2):** scenarios can carry an `execution` block — a
+materialized `argv` (must still prefix-match the adapter allowlist), non-secret
+`env` passthrough (e.g. `CYPRESS_BASE_URL`), and an app-under-test `server`
+(`argv` + `readyUrl`). The project manifest's `repo.localPath` + `provision.postCheckout`
+drive worktree materialization: clone at the pinned revision → deterministic
+deps steps → runner boots the server (readiness-gated, process-group teardown)
+→ adapter command runs against real source. Evidence sealing is baseline-scoped:
+only files the run itself creates or modifies become receipts (a cloned repo's
+committed `artifacts/` history is never sealed). Blocked lanes stay honest:
+`no_spec_mapping`, `source_provision_failed`, `app_server_unavailable`.
 ```
 rig-testlab suite run out/suite.json --scenario <id> --budget-scenarios 3 --budget-credits 5
 rig-testlab run wait <runId>
