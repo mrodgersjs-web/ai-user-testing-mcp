@@ -43,8 +43,9 @@ if (!check.ok) {
   console.error(`wrote /tmp/lock-debug.json (${bad.length} offending entries)`);
   process.exit(2);
 }
-const path = writeLock(lock, resolve(root, "catalog.lock.json"));
-console.log(`wrote ${path}`);
+const lockPath = resolve(root, "catalog.lock.json");
+writeLock(lock, lockPath);
+console.log(`wrote ${lockPath}`);
 console.log(
   `entries=${lock.entries.length} pins=${lock.pins.length} nested=${lock.nestedCatalogs.length}`,
 );
