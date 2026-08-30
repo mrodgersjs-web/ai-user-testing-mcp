@@ -80,7 +80,7 @@ const remoteUrl = git(["remote", "get-url", "origin"]);
 
 const input = {
   schemaVersion: 1 as const,
-  claim: "ai-user-testing-mcp release: governed catalog (1,849 entries, 580 exact-SHA gitlinks), sandboxed runner, 24 reviewed adapters, CLI + MCP, six-harness install receipts, TransformFit smoke compiled and executed to honest terminal states (7 failed, 4 blocked, 2 queued — toolchain/provider deliberately absent, zero credential spend; no success asserted for any run); private remote equals local HEAD",
+  claim: "ai-user-testing-mcp v2: governed catalog (1,849 entries, 580 exact-SHA gitlinks), sandboxed runner with provision + runner-owned app-server lifecycle + baseline-scoped evidence harvest, 24 reviewed adapters, CLI + MCP, six-harness install receipts; TransformFit web lane executed end-to-end — 5/5 scenarios reached terminal success states with genuine cypress evidence (73/73 registry screens rendered), remaining lanes stay in honest blocked/queued/failed states (credential/toolchain/device gates); private remote equals local HEAD",
   repoCommit,
   catalogHash,
   sourcePinHash,
