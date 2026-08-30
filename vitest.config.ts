@@ -10,6 +10,7 @@ export default defineConfig({
       "@rig-testlab/cli": src("./packages/cli/src/index.ts"),
       "@rig-testlab/scenario-compiler": src("./packages/scenario-compiler/src/index.ts"),
       "@rig-testlab/evidence": src("./packages/evidence/src/index.ts"),
+      "@rig-testlab/runner": src("./packages/runner/src/index.ts"),
       "@rig-testlab/agent-installer": src("./packages/agent-installer/src/index.ts")
     }
   },
