@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rig-testlab.dev/schemas/ProofPacket/v1",
+  "title": "ProofPacket v1",
+  "description": "Signed completion evidence binding repository commit, catalog hash, source-pin hash, test results, agent installation receipts, TransformFit smoke evidence, and private-remote verification. An honest SKIP/UNAVAILABLE is never a PASS.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "claim", "repoCommit", "catalogHash", "sourcePinHash", "tests", "agentInstallReceipts", "transformfitSmoke", "remoteVerification", "sealedAt", "sealedBy", "proofHash"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "claim": { "type": "string", "minLength": 1 },
+    "repoCommit": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
+    "catalogHash": { "type": "string", "pattern": "^[0-9a-f]{64}$", "description": "sha256 of catalog.lock.json." },
+    "sourcePinHash": { "type": "string", "pattern": "^[0-9a-f]{64}$", "description": "sha256 over the canonical ordering of all SourcePin commitShas + submodulePaths." },
+    "tests": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "command", "exitCode", "summary"],
+        "properties": {
+          "name": { "type": "string" },
+          "command": { "type": "string" },
+          "exitCode": { "type": "integer" },
+          "summary": { "type": "string" }
+        }
+      }
+    },
+    "agentInstallReceipts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["harness", "receiptPath", "sha256"],
+        "properties": {
+          "harness": { "enum": ["codex", "claude", "hermes", "omp", "orca", "prime"] },
+          "receiptPath": { "type": "string" },
+          "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+        }
+      }
+    },
+    "transformfitSmoke": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["compiled", "representativeRuns"],
+      "properties": {
+        "compiled": { "type": "boolean" },
+        "representativeRuns": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["platform", "runId", "state"],
+            "properties": {
+              "platform": { "type": "string" },
+              "runId": { "type": "string" },
+              "state": { "$ref": "./RunManifest.v1.schema.json#/properties/state" }
+            }
+          }
+        }
+      }
+    },
+    "remoteVerification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["remoteUrl", "remoteMain", "localHead", "equal", "privateVerified"],
+      "properties": {
+        "remoteUrl": { "type": "string", "pattern": "^https://github\\.com/mrodgersjs-web/ai-user-testing-mcp(\\.git)?$" },
+        "remoteMain": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
+        "localHead": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
+        "equal": { "const": true },
+        "privateVerified": { "const": true }
+      }
+    },
+    "sealedAt": { "type": "string", "format": "date-time" },
+    "sealedBy": { "type": "string", "minLength": 1, "description": "Independent verifier identity — never the builder." },
+    "proofHash": { "type": "string", "pattern": "^[0-9a-f]{64}$", "description": "sha256 over the canonical serialization of this object minus proofHash." }
+  }
+}

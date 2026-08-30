@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rig-testlab.dev/schemas/CatalogEntry/v1",
+  "title": "CatalogEntry v1",
+  "description": "One cataloged resource. EVERY discovered resource gets an entry — including dead, blocked, redirected, rate-limited, unresolved and quarantined ones. Blocked resources are preserved, never dropped.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id", "name", "categories", "capabilities", "canonicalUrl", "targetKind",
+    "description", "provenance", "license", "credentialRequirement",
+    "lastValidation", "redirectHistory", "adoptionTier", "executionPolicy", "resolutionStatus"
+  ],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]*$", "description": "Stable across regenerations; derived from canonical identity, never from link position." },
+    "name": { "type": "string", "minLength": 1 },
+    "categories": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "capabilities": { "type": "array", "items": { "type": "string" }, "description": "Free-form capability tags used by capability search and runner selection." },
+    "canonicalUrl": { "type": "string", "format": "uri" },
+    "targetKind": {
+      "enum": ["git_repo", "github_org", "github_user", "website", "saas", "book", "training", "blog", "newsletter", "awesome_list", "other"]
+    },
+    "description": { "type": "string" },
+    "provenance": { "type": "array", "items": { "$ref": "./ProvenanceEdge.v1.schema.json" }, "minItems": 1 },
+    "repository": {
+      "description": "Present iff the entry resolved to a clonable repository. Organization/user/issue/file/discussion URLs are metadata only and MUST NOT produce this block.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["owner", "name", "defaultBranch", "commitSha", "submodulePath", "reportedSizeKb"],
+      "properties": {
+        "owner": { "type": "string", "minLength": 1 },
+        "name": { "type": "string", "minLength": 1 },
+        "defaultBranch": { "type": "string", "minLength": 1 },
+        "commitSha": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
+        "submodulePath": { "type": "string", "pattern": "^sources/(direct|nested)/[a-z0-9._-]+/[a-z0-9._-]+--[a-z0-9._-]+$" },
+        "reportedSizeKb": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "license": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["spdx", "kind"],
+      "properties": {
+        "spdx": { "type": ["string", "null"], "description": "SPDX identifier or null when undetermined." },
+        "kind": { "enum": ["permissive", "weak_permissive", "copyleft", "restrictive", "missing", "unknown"] },
+        "notice": { "type": "string", "description": "License text location within the pinned tree, when present." }
+      }
+    },
+    "credentialRequirement": { "enum": ["none", "free_account", "paid", "commercial_license"] },
+    "lastValidation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["at", "method"],
+      "properties": {
+        "at": { "type": "string", "format": "date-time" },
+        "method": { "enum": ["github_api", "http_get", "http_head_confirmed", "manual"] },
+        "httpStatus": { "type": "integer" },
+        "notes": { "type": "string" }
+      }
+    },
+    "redirectHistory": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["from", "to", "status"],
+        "properties": {
+          "from": { "type": "string", "format": "uri" },
+          "to": { "type": "string", "format": "uri" },
+          "status": { "type": "integer" },
+          "at": { "type": "string", "format": "date-time" }
+        }
+      }
+    },
+    "adoptionTier": { "enum": ["core_runner", "approved_adapter", "optional_adapter", "reference", "watchlist", "quarantined"] },
+    "executionPolicy": { "enum": ["allowlisted", "sandbox_required", "reference_only"] },
+    "resolutionStatus": {
+      "enum": ["active", "redirected", "rate_limited", "blocked_by_provider", "dead", "unresolved", "quarantined"],
+      "description": "Transient provider failures (403/429/timeout/failed HEAD) MUST be recorded as rate_limited or unresolved with evidence — never as dead without a confirmed second observation."
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "targetKind": { "const": "git_repo" } }, "required": ["targetKind"] },
+      "then": { "required": ["repository"] }
+    }
+  ]
+}

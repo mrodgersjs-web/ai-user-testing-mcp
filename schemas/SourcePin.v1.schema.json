@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rig-testlab.dev/schemas/SourcePin/v1",
+  "title": "SourcePin v1",
+  "description": "Exact-SHA submodule pin for one repository. Duplicate discoveries share one pin; the gitlink SHA recorded here MUST equal what .gitmodules + the tree hold.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["entryId", "repoUrl", "owner", "name", "defaultBranch", "commitSha", "submodulePath", "gitmodulesName", "shallowCapable", "reportedSizeKb", "pinState"],
+  "properties": {
+    "entryId": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]*$" },
+    "repoUrl": { "type": "string", "format": "uri" },
+    "owner": { "type": "string", "minLength": 1 },
+    "name": { "type": "string", "minLength": 1 },
+    "defaultBranch": { "type": "string", "minLength": 1 },
+    "commitSha": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
+    "submodulePath": { "type": "string", "pattern": "^sources/(direct|nested)/[a-z0-9._-]+/[a-z0-9._-]+--[a-z0-9._-]+$" },
+    "gitmodulesName": { "type": "string", "minLength": 1 },
+    "shallowCapable": { "type": "boolean", "description": "True when the provider supports fetch-with-shallow-exclude for this commit; false pins full history fetch." },
+    "reportedSizeKb": { "type": "integer", "minimum": 0 },
+    "pinState": { "enum": ["pinned", "pending", "failed", "skipped_nonrepo"] },
+    "lastHydratedAt": { "type": ["string", "null"], "format": "date-time" }
+  }
+}

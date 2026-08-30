@@ -1,0 +1,26 @@
+{
+  "name": "@rig-testlab/mcp-server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "bin": {
+    "rig-testlab-mcp": "./dist/main.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "dev": "node --import tsx ./src/main.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "2.0.0",
+    "@rig-testlab/catalog": "workspace:*",
+    "@rig-testlab/scenario-compiler": "workspace:*",
+    "@rig-testlab/evidence": "workspace:*",
+    "zod": "^4.1.13"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/client": "2.0.0",
+    "tsx": "^4.19.0"
+  }
+}

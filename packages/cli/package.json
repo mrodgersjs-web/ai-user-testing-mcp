@@ -1,0 +1,23 @@
+{
+  "name": "@rig-testlab/cli",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "bin": {
+    "rig-testlab": "./dist/main.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "dev": "node --import tsx ./src/main.ts"
+  },
+  "dependencies": {
+    "@rig-testlab/catalog": "workspace:*",
+    "@rig-testlab/scenario-compiler": "workspace:*",
+    "@rig-testlab/evidence": "workspace:*"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0"
+  }
+}

@@ -1,0 +1,19 @@
+node_modules/
+dist/
+*.tsbuildinfo
+coverage/
+
+# generated local index — catalog.lock.json is the committed source of truth
+.rig-testlab/
+
+# secrets never enter git; credentials live in keychain/provider store
+.env
+.env.*
+!.env.example
+
+# sandbox scratch
+.tmp/
+sandbox/
+
+# editor/os
+.DS_Store

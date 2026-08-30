@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rig-testlab.dev/schemas/CatalogLock/v1",
+  "title": "CatalogLock v1",
+  "description": "The committed source of truth for the governed catalog. The SQLite FTS index is generated from this file and never committed.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "generatedFrom", "nestedCatalogs", "entries", "pins", "statistics"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "generatedFrom": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["repo", "commit", "readmeSha256"],
+      "properties": {
+        "repo": { "const": "TheJambo/awesome-testing" },
+        "commit": { "const": "ff695aac1126d548eb3bc0ceb3d8a0d4e0b9cf93" },
+        "readmeSha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+      }
+    },
+    "nestedCatalogs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "url", "commit", "status"],
+        "properties": {
+          "id": { "$ref": "./ProvenanceEdge.v1.schema.json/properties/sourceCatalogId" },
+          "url": { "type": "string", "format": "uri" },
+          "commit": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
+          "status": { "$ref": "./CatalogEntry.v1.schema.json/properties/resolutionStatus" },
+          "expandedLinkCount": { "type": "integer", "minimum": 0 },
+          "discoveredCatalogCount": { "type": "integer", "minimum": 0, "description": "Catalogs found inside a nested catalog — recorded, never expanded." }
+        }
+      }
+    },
+    "entries": { "type": "array", "items": { "$ref": "./CatalogEntry.v1.schema.json" } },
+    "pins": { "type": "array", "items": { "$ref": "./SourcePin.v1.schema.json" } },
+    "statistics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["firstLevelCount", "uniqueRepos", "byResolutionStatus", "byAdoptionTier"],
+      "properties": {
+        "firstLevelCount": { "type": "integer", "minimum": 0 },
+        "uniqueRepos": { "type": "integer", "minimum": 0 },
+        "byResolutionStatus": {
+          "type": "object",
+          "patternProperties": {
+            "^(active|redirected|rate_limited|blocked_by_provider|dead|unresolved|quarantined)$": { "type": "integer", "minimum": 0 }
+          },
+          "additionalProperties": false
+        },
+        "byAdoptionTier": {
+          "type": "object",
+          "patternProperties": {
+            "^(core_runner|approved_adapter|optional_adapter|reference|watchlist|quarantined)$": { "type": "integer", "minimum": 0 }
+          },
+          "additionalProperties": false
+        }
+      }
+    }
+  }
+}

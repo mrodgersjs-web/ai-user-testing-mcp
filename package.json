@@ -1,0 +1,22 @@
+{
+  "name": "ai-user-testing-mcp",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Private AI user-testing monorepo: governed testing-tool catalog (Awesome Testing @ ff695aa + one nested level as exact-SHA submodule pins), sandboxed reviewed adapters, rig-testlab CLI, MCP server, six-harness agent installer.",
+  "packageManager": "pnpm@11.21.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "build": "pnpm -r build",
+    "typecheck": "pnpm -r typecheck",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0",
+    "vitest": "^4.1.11"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rig-testlab.dev/schemas/RunManifest/v1",
+  "title": "RunManifest v1",
+  "description": "One sandboxed execution of one scenario through one adapter. Terminal states never collapse: blocked, not_evaluated, and cancelled are NOT passed.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["runId", "scenarioId", "adapterId", "sandbox", "state", "startedAt", "finishedAt", "commands", "networkUsed", "credits", "artifacts", "redactionApplied"],
+  "properties": {
+    "runId": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]*$" },
+    "scenarioId": { "type": "string" },
+    "adapterId": { "type": "string" },
+    "sandbox": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["homeDir", "worktree", "readOnlySource", "limitsApplied"],
+      "properties": {
+        "homeDir": { "type": "string", "minLength": 1 },
+        "worktree": { "type": "string", "minLength": 1 },
+        "readOnlySource": { "type": "boolean" },
+        "limitsApplied": { "type": "boolean" }
+      }
+    },
+    "state": { "enum": ["queued", "running", "passed", "failed", "blocked", "not_evaluated", "cancelled"] },
+    "startedAt": { "type": ["string", "null"], "format": "date-time" },
+    "finishedAt": { "type": ["string", "null"], "format": "date-time" },
+    "commands": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["argv", "exitCode"],
+        "properties": {
+          "argv": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+          "exitCode": { "type": ["integer", "null"] },
+          "startedAt": { "type": "string", "format": "date-time" },
+          "finishedAt": { "type": "string", "format": "date-time" }
+        }
+      }
+    },
+    "networkUsed": { "type": "array", "items": { "type": "string" } },
+    "credits": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["estimated", "consumed"],
+      "properties": {
+        "estimated": { "type": "number", "minimum": 0 },
+        "consumed": { "type": "number", "minimum": 0 }
+      }
+    },
+    "failureDetail": { "type": ["string", "null"] },
+    "artifacts": { "type": "array", "items": { "$ref": "./ArtifactReceipt.v1.schema.json" } },
+    "redactionApplied": { "type": "boolean" }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "state": { "const": "passed" } }, "required": ["state"] },
+      "then": {
+        "properties": {
+          "finishedAt": { "type": "string" },
+          "redactionApplied": { "const": true }
+        },
+        "required": ["failureDetail"]
+      }
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rig-testlab.dev/schemas/ScenarioSpec.v1",
+  "title": "ScenarioSpec v1",
+  "description": "Declarative, project-owned testing scenario. Product scenarios live in the owning project (e.g. TransformFit); the compiler resolves adapters and produces a RunManifest.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "project", "platforms", "title", "steps", "requiredAdapters", "requiredEvidence"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]*$" },
+    "project": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]*$" },
+    "platforms": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "enum": ["web", "ios", "android", "api", "data", "ai", "vision", "accessibility", "security", "longitudinal"] }
+    },
+    "title": { "type": "string", "minLength": 1 },
+    "persona": { "type": "string", "description": "Named user persona for AI user-testing sessions." },
+    "steps": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["action", "expected"],
+        "properties": {
+          "action": { "type": "string", "minLength": 1 },
+          "target": { "type": "string" },
+          "expected": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "requiredAdapters": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "requiredEvidence": {
+      "type": "array",
+      "items": { "$ref": "./ArtifactReceipt.v1.schema.json#/properties/kind" }
+    },
+    "budget": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "maxScenarios": { "type": "integer", "minimum": 1 },
+        "maxEstimatedCredits": { "type": "number", "minimum": 0 }
+      },
+      "description": "Required whenever a required adapter is a paid provider; enforced by the compiler."
+    }
+  }
+}

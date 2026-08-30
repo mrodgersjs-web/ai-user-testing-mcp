@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rig-testlab.dev/schemas/ProvenanceEdge/v1",
+  "title": "ProvenanceEdge v1",
+  "description": "One edge connecting a CatalogEntry to the catalog page that linked it. A repository discovered through several catalogs keeps ONE entry and one SourcePin, with one ProvenanceEdge per origin.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["sourceCatalogId", "depth", "catalogCommit", "urlAsLinked", "discoveredAt"],
+  "properties": {
+    "sourceCatalogId": {
+      "type": "string",
+      "description": "Stable id of the catalog page (the Awesome Testing list itself, or one of the 11 referenced catalogs).",
+      "pattern": "^(awesome-testing|[a-z0-9][a-z0-9._-]*--[a-z0-9._-]+)$"
+    },
+    "depth": {
+      "type": "integer",
+      "enum": [1, 2],
+      "description": "1 = linked directly by the pinned Awesome Testing commit; 2 = linked by one of its referenced catalogs. Catalogs found at depth 2 are recorded, never expanded."
+    },
+    "catalogCommit": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$",
+      "description": "Exact commit of the catalog source file that carried the link at resolution time."
+    },
+    "urlAsLinked": {
+      "type": "string",
+      "format": "uri",
+      "description": "The URL exactly as it appeared in the catalog, before any redirect resolution."
+    },
+    "discoveredAt": { "type": "string", "format": "date-time" }
+  }
+}

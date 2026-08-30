@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rig-testlab.dev/schemas/ArtifactReceipt/v1",
+  "title": "ArtifactReceipt v1",
+  "description": "Deterministic artifact receipt binding one evidence file to a run. Content is hash-bound and secret/PII-redacted before persistence.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "runId", "kind", "path", "sha256", "sizeBytes", "capturedAt", "redacted"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]*$" },
+    "runId": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]*$" },
+    "kind": {
+      "enum": ["screenshot", "video", "rrweb", "console_network_trace", "accessibility_tree", "model_transcript", "log", "json_report"]
+    },
+    "path": { "type": "string", "description": "Relative to the evidence store root; absolute paths and traversal are rejected." },
+    "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "sizeBytes": { "type": "integer", "minimum": 0 },
+    "capturedAt": { "type": "string", "format": "date-time" },
+    "redacted": { "type": "boolean", "description": "False is only legal for kinds proven secret-free." }
+  }
+}

@@ -1,0 +1,243 @@
+name: behavior-driven
+version: 1
+description: Behavior-driven workflow - proposal → specs (Markdown with fenced Gherkin) → design → tasks
+artifacts:
+  - id: proposal
+    generates: proposal.md
+    description: Initial proposal document outlining the change
+    template: proposal.md
+    instruction: >
+      Create the proposal document that establishes WHY this change is needed.
+
+
+      Sections:
+
+      - **Why**: 1-2 sentences on the problem or opportunity. What problem does
+      this solve? Why now?
+
+      - **What Changes**: Bullet list of changes. Be specific about new
+      capabilities, modifications, or removals. Mark breaking changes with
+      **BREAKING**.
+
+      - **Capabilities**: Identify which specs will be created or modified:
+        - **New Capabilities**: List capabilities being introduced. Each becomes a new `specs/<name>/spec.md`. Use kebab-case names (e.g., `user-auth`, `data-export`).
+        - **Modified Capabilities**: List existing capabilities whose REQUIREMENTS are changing. Only include if spec-level behavior changes (not just implementation details). Each needs a delta spec file. Check `openspec/specs/` for existing spec names. Leave empty if no requirement changes.
+      - **Impact**: Affected code, APIs, dependencies, or systems.
+
+
+      IMPORTANT: The Capabilities section is critical. It creates the contract
+      between
+
+      proposal and specs phases. Research existing specs before filling this in.
+
+      Each capability listed here will need a corresponding spec file.
+
+
+      Keep it concise (1-2 pages). Focus on the "why" not the "how" -
+
+      implementation details belong in design.md.
+
+
+      This is the foundation - specs, design, and tasks all build on this.
+    requires: []
+  - id: specs
+    generates: "specs/**/spec.md"
+    description: Detailed specifications for the change (Markdown with fenced Gherkin)
+    template: spec.md
+    instruction: |
+      Create `spec.md` spec files that define WHAT the system should do.
+
+      Create one `spec.md` per capability listed in the proposal's Capabilities
+      section — a standard Markdown document: prose (context, rationale, links)
+      may appear anywhere, and ALL executable Gherkin lives inside fenced code
+      blocks.
+
+      Paths:
+      - New capabilities: use the exact kebab-case name from the proposal
+        (specs/<capability>/spec.md).
+      - Modified capabilities: use the existing spec folder name from
+        openspec/specs/<capability>/ when creating the delta spec at
+        specs/<capability>/spec.md.
+
+      Fence contract (the extractor and the acceptance-test runner depend on it):
+      - Gherkin is executable ONLY inside fences opened by ```gherkin at
+        column 0 (info string exactly `gherkin`, nothing more) and closed by
+        ``` at column 0. An indented ```gherkin fence is a hard extraction
+        error; gherkin quoted inside any other fence is treated as prose.
+      - Every spec.md MUST contain at least one gherkin fence.
+      - Multiple gherkin fences concatenate in file order and MUST parse as
+        exactly ONE top-level `Feature:` — the first fence opens with the
+        `Feature:` line (tags, if any, in the same fence immediately above it).
+
+      Gherkin structure (how Gherkin keywords map onto OpenSpec concepts):
+      - **Feature:** — the spec file / capability. Exactly one per spec.md.
+      - **Rule:** — one requirement. Each `Rule:` is followed by a short
+        description line. Use SHALL/MUST for normative requirements (avoid
+        should/may).
+      - **Scenario:** — a concrete example, written with Given/When/Then steps.
+      - Every `Rule:` MUST have at least one `Scenario:`.
+
+      Delta operations use an inline `# @openspec:` marker comment placed
+      INSIDE a gherkin fence, immediately ABOVE the `Rule:` it applies to:
+      - `# @openspec: ADDED` — new requirement (include full Rule + scenarios)
+      - `# @openspec: MODIFIED` — changed behavior (include the FULL updated
+        Rule + all scenarios, not a partial edit)
+      - `# @openspec: REMOVED` — deprecated requirement (the `Rule:` line
+        naming it is enough)
+      - `# @openspec: RENAMED from="<old name>" to="<new name>"` — name change
+        only
+
+      MODIFIED workflow: locate the existing `Rule:` in
+      openspec/specs/<capability>/spec.md, copy the ENTIRE block (Rule
+      description through all scenarios), place it under `# @openspec: MODIFIED`,
+      and edit. Partial MODIFIED content loses detail at archive time — if adding
+      new concerns without changing existing behavior, use ADDED instead.
+
+      Example delta spec.md (prose + fence):
+
+      ````markdown
+      # User authentication changes
+
+      Login is being tightened: accounts must verify their email address
+      before they may log in. See proposal.md for motivation.
+
+      ```gherkin
+      Feature: User authentication changes
+
+        # @openspec: ADDED
+        Rule: Email must be verified before login
+          Unverified accounts MUST NOT be able to log in to the system.
+
+          Scenario: Unverified user is blocked
+            Given an account with an unverified email address
+            When the user attempts to log in
+            Then access is denied
+
+        # @openspec: REMOVED
+        Rule: Session expires after inactivity
+
+        # @openspec: RENAMED from="Password must meet complexity requirements" to="Password complexity is enforced"
+      ```
+      ````
+
+      Specs should be testable - each scenario is a potential test case. The
+      prose renders normally on GitHub; the fences are exactly what the
+      acceptance suite executes.
+    requires:
+      - proposal
+  - id: design
+    generates: design.md
+    description: Technical design document with implementation details
+    template: design.md
+    instruction: >
+      Create the design document that explains HOW to implement the change.
+
+
+      When to include design.md (create only if any apply):
+
+      - Cross-cutting change (multiple services/modules) or new architectural
+      pattern
+
+      - New external dependency or significant data model changes
+
+      - Security, performance, or migration complexity
+
+      - Ambiguity that benefits from technical decisions before coding
+
+
+      Sections:
+
+      - **Context**: Background, current state, constraints, stakeholders
+
+      - **Goals / Non-Goals**: What this design achieves and explicitly excludes
+
+      - **Decisions**: Key technical choices with rationale (why X over Y?).
+      Include alternatives considered for each decision.
+
+      - **Risks / Trade-offs**: Known limitations, things that could go wrong.
+      Format: [Risk] → Mitigation
+
+      - **Migration Plan**: Steps to deploy, rollback strategy (if applicable)
+
+      - **Open Questions**: Outstanding decisions or unknowns to resolve
+
+
+      Focus on architecture and approach, not line-by-line implementation.
+
+      Reference the proposal for motivation and specs for requirements.
+
+
+      Good design docs explain the "why" behind technical decisions.
+    requires:
+      - proposal
+  - id: tasks
+    generates: tasks.md
+    description: Implementation checklist with trackable tasks
+    template: tasks.md
+    instruction: >
+      Create the task list that breaks down the implementation work.
+
+
+      **IMPORTANT: Follow the template below exactly.** The apply phase parses
+
+      checkbox format to track progress. Tasks not using `- [ ]` won't be
+      tracked.
+
+
+      Guidelines:
+
+      - Group related tasks under ## numbered headings
+
+      - Each task MUST be a checkbox: `- [ ] X.Y Task description`
+
+      - Tasks should be small enough to complete in one session
+
+      - Order tasks by dependency (what must be done first?)
+
+
+      Example:
+
+      ```
+
+      ## 1. Setup
+
+
+      - [ ] 1.1 Create new module structure
+
+      - [ ] 1.2 Add dependencies to package.json
+
+
+      ## 2. Core Implementation
+
+
+      - [ ] 2.1 Implement data export function
+
+      - [ ] 2.2 Add CSV formatting utilities
+
+      ```
+
+
+      Reference specs for what needs to be built, design for how to build it.
+
+      Each task should be verifiable - you know when it's done.
+    requires:
+      - specs
+      - design
+apply:
+  requires:
+    - tasks
+  tracks: tasks.md
+  instruction: |
+    Read context files, work through pending tasks, mark complete as you go.
+    Pause if you hit blockers or need clarification.
+format:
+  extension: ".md"
+  fence:
+    open: '^```gherkin\s*$'
+    close: '^```\s*$'
+  # requirement, scenario and delta below match lines INSIDE ```gherkin fences:
+  requirement: '^\s*Rule:\s*(?<name>.+)$'
+  scenario: '^\s*Scenario:'
+  delta:
+    marker: '@openspec:\s*(?<op>ADDED|MODIFIED|REMOVED|RENAMED)'
+    rename: '@openspec:\s*RENAMED\s+from="(?<from>[^"]+)"\s+to="(?<to>[^"]+)"'

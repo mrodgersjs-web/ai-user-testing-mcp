@@ -1,0 +1,24 @@
+schema: behavior-driven
+
+context: |
+  Private AI user-testing monorepo (mrodgersjs-web/ai-user-testing-mcp).
+  Tech stack: Node 22 (>=22.12), TypeScript (NodeNext, strict), pnpm workspaces,
+  JSON Schema draft 2020-12 validated with ajv, MCP TypeScript SDK v2
+  (@modelcontextprotocol/server@2.0.0, stdio transport), SQLite FTS5 via node:sqlite.
+  Non-negotiables:
+  - catalog.lock.json is the committed source of truth; generated index never committed.
+  - Resolvable repos are exact-SHA git-submodule pins under sources/{direct|nested}/…;
+    nothing floats against a branch; no upstream sources committed into the superproject.
+  - Catalogs expand exactly one nested level; discovered catalogs are recorded, not expanded.
+  - Cataloged != executable: only reviewed adapters run, inside ephemeral sandboxes with
+    allowlisted argv prefixes, declared network, CPU/memory/wall-clock/output limits,
+    fail-closed preflight. Blocked/not_evaluated/cancelled can never be reported as passed.
+  - Every discovered resource is represented, including dead/blocked/redirected/
+    rate-limited/unresolved/quarantined entries. 403/429/timeout is never "dead" without
+    confirmed re-observation.
+  - Secrets never enter Git, reports, prompts, logs, or ProofPackets; paid runs are
+    budget-constrained (TestSprite, TestMu/SmartUI are the approved paid grid).
+  - Builder and verifier are separate agents; deterministic code produces the final
+    completion verdict.
+  Domain: governed third-party testing-tool catalog + AI user-testing execution
+  (TransformFit is the connected product project; its app source stays in its own repo).

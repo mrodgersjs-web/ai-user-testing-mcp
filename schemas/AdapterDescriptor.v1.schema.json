@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rig-testlab.dev/schemas/AdapterDescriptor/v1",
+  "title": "AdapterDescriptor v1",
+  "description": "A reviewed adapter — the ONLY things allowed to execute third-party code. Cataloged sources are readable by every agent; execution requires a reviewed adapter.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "adapterVersion", "sourceEntryId", "status", "commandAllowlist", "networkAllowlist", "limits", "credentialMode", "paidProvider", "fixtures", "evidenceKinds"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]*$" },
+    "name": { "type": "string", "minLength": 1 },
+    "adapterVersion": { "type": "string", "minLength": 1 },
+    "sourceEntryId": { "type": "string", "description": "Catalog entry of the underlying tool." },
+    "status": { "enum": ["reviewed", "experimental", "retired"], "description": "Only reviewed adapters may run." },
+    "commandAllowlist": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "array", "items": { "type": "string", "minLength": 1 }, "minItems": 1 },
+      "description": "Permitted argv prefixes. Anything not prefix-matched is refused fail-closed before execution."
+    },
+    "networkAllowlist": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Declared destination host patterns. Empty array means no network access at all."
+    },
+    "limits": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["maxCpuMs", "maxMemoryMb", "maxWallClockS", "maxOutputBytes"],
+      "properties": {
+        "maxCpuMs": { "type": "integer", "minimum": 1 },
+        "maxMemoryMb": { "type": "integer", "minimum": 1 },
+        "maxWallClockS": { "type": "integer", "minimum": 1 },
+        "maxOutputBytes": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "credentialMode": { "enum": ["none", "keychain", "env_store"], "description": "Raw keys never enter Git, reports, prompts, logs, or ProofPackets." },
+    "paidProvider": { "type": "boolean" },
+    "paidGuards": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["maxScenarios", "maxEstimatedCredits"],
+      "properties": {
+        "maxScenarios": { "type": "integer", "minimum": 1 },
+        "maxEstimatedCredits": { "type": "number", "minimum": 0 }
+      }
+    },
+    "fixtures": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["passing", "plantedFailing", "unavailableDependency"],
+      "properties": {
+        "passing": { "type": "string" },
+        "plantedFailing": { "type": "string", "description": "Must force deterministic RED — gates are non-vacuity tested." },
+        "unavailableDependency": { "type": "string" }
+      }
+    },
+    "evidenceKinds": {
+      "type": "array",
+      "items": { "$ref": "./ArtifactReceipt.v1.schema.json#/properties/kind" }
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "paidProvider": { "const": true } }, "required": ["paidProvider"] },
+      "then": { "required": ["paidGuards"] }
+    }
+  ]
+}
