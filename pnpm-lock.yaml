@@ -39,11 +39,27 @@ importers:
       '@modelcontextprotocol/client':
         specifier: 2.0.0
         version: 2.0.0
+      '@types/node':
+        specifier: ^22.10.2
+        version: 22.20.1
       tsx:
         specifier: ^4.19.0
         version: 4.23.12
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
 
-  packages/agent-installer: {}
+  packages/agent-installer:
+    devDependencies:
+      '@rig-testlab/catalog':
+        specifier: workspace:*
+        version: link:../catalog
+      '@types/node':
+        specifier: ^22.10.2
+        version: 22.20.1
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
 
   packages/catalog:
     dependencies:
@@ -53,6 +69,13 @@ importers:
       ajv-formats:
         specifier: ^3.0.1
         version: 3.0.1(ajv@8.20.0)
+    devDependencies:
+      '@types/node':
+        specifier: ^22.10.2
+        version: 22.20.1
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
 
   packages/cli:
     dependencies:
@@ -66,11 +89,36 @@ importers:
         specifier: workspace:*
         version: link:../scenario-compiler
     devDependencies:
+      '@types/node':
+        specifier: ^22.10.2
+        version: 22.20.1
       tsx:
         specifier: ^4.19.0
         version: 4.23.12
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
 
-  packages/evidence: {}
+  packages/evidence:
+    devDependencies:
+      '@rig-testlab/catalog':
+        specifier: workspace:*
+        version: link:../catalog
+      '@types/node':
+        specifier: ^22.10.2
+        version: 22.20.1
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+
+  packages/runner:
+    dependencies:
+      '@rig-testlab/catalog':
+        specifier: workspace:*
+        version: link:../catalog
+      '@rig-testlab/evidence':
+        specifier: workspace:*
+        version: link:../evidence
 
   packages/scenario-compiler:
     dependencies:
@@ -80,6 +128,13 @@ importers:
       ajv:
         specifier: ^8.17.1
         version: 8.20.0
+    devDependencies:
+      '@types/node':
+        specifier: ^22.10.2
+        version: 22.20.1
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
 
 packages:
 

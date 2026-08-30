@@ -1,0 +1,222 @@
+[
+  {
+    "id": "core-runner",
+    "name": "Core Runner",
+    "adapterVersion": "1.0.0",
+    "sourceEntryId": "playwright",
+    "status": "reviewed",
+    "commandAllowlist": [["npx", "playwright", "test"]],
+    "networkAllowlist": [],
+    "limits": { "maxCpuMs": 60000, "maxMemoryMb": 512, "maxWallClockS": 120, "maxOutputBytes": 1000000 },
+    "credentialMode": "none",
+    "paidProvider": false,
+    "fixtures": {
+      "passing": "fixtures/core/passing.json",
+      "plantedFailing": "fixtures/core/planted-failing.json",
+      "unavailableDependency": "fixtures/core/unavailable.json"
+    },
+    "evidenceKinds": ["screenshot", "video", "model_transcript", "json_report"],
+    "adoptionTier": "core_runner",
+    "platforms": ["web", "ios"]
+  },
+  {
+    "id": "approved-runner",
+    "name": "Approved Runner",
+    "adapterVersion": "2.1.0",
+    "sourceEntryId": "cypress",
+    "status": "reviewed",
+    "commandAllowlist": [["npx", "cypress", "run"]],
+    "networkAllowlist": [],
+    "limits": { "maxCpuMs": 60000, "maxMemoryMb": 512, "maxWallClockS": 120, "maxOutputBytes": 1000000 },
+    "credentialMode": "none",
+    "paidProvider": false,
+    "fixtures": {
+      "passing": "fixtures/approved/passing.json",
+      "plantedFailing": "fixtures/approved/planted-failing.json",
+      "unavailableDependency": "fixtures/approved/unavailable.json"
+    },
+    "evidenceKinds": ["screenshot", "json_report"],
+    "adoptionTier": "approved_adapter",
+    "platforms": ["web"]
+  },
+  {
+    "id": "optional-runner",
+    "name": "Optional Runner",
+    "adapterVersion": "0.9.0",
+    "sourceEntryId": "webdriverio",
+    "status": "reviewed",
+    "commandAllowlist": [["npx", "wdio", "run"]],
+    "networkAllowlist": [],
+    "limits": { "maxCpuMs": 60000, "maxMemoryMb": 512, "maxWallClockS": 120, "maxOutputBytes": 1000000 },
+    "credentialMode": "none",
+    "paidProvider": false,
+    "fixtures": {
+      "passing": "fixtures/optional/passing.json",
+      "plantedFailing": "fixtures/optional/planted-failing.json",
+      "unavailableDependency": "fixtures/optional/unavailable.json"
+    },
+    "evidenceKinds": ["screenshot"],
+    "adoptionTier": "optional_adapter",
+    "platforms": ["web"]
+  },
+  {
+    "id": "experimental-runner",
+    "name": "Experimental Runner",
+    "adapterVersion": "0.1.0",
+    "sourceEntryId": "some-new-tool",
+    "status": "experimental",
+    "commandAllowlist": [["npx", "exp", "run"]],
+    "networkAllowlist": [],
+    "limits": { "maxCpuMs": 60000, "maxMemoryMb": 512, "maxWallClockS": 120, "maxOutputBytes": 1000000 },
+    "credentialMode": "none",
+    "paidProvider": false,
+    "fixtures": {
+      "passing": "fixtures/exp/passing.json",
+      "plantedFailing": "fixtures/exp/planted-failing.json",
+      "unavailableDependency": "fixtures/exp/unavailable.json"
+    },
+    "evidenceKinds": ["screenshot"],
+    "adoptionTier": "optional_adapter",
+    "platforms": ["web"]
+  },
+  {
+    "id": "retired-runner",
+    "name": "Retired Runner",
+    "adapterVersion": "1.2.0",
+    "sourceEntryId": "old-tool",
+    "status": "retired",
+    "commandAllowlist": [["npx", "old", "run"]],
+    "networkAllowlist": [],
+    "limits": { "maxCpuMs": 60000, "maxMemoryMb": 512, "maxWallClockS": 120, "maxOutputBytes": 1000000 },
+    "credentialMode": "none",
+    "paidProvider": false,
+    "fixtures": {
+      "passing": "fixtures/retired/passing.json",
+      "plantedFailing": "fixtures/retired/planted-failing.json",
+      "unavailableDependency": "fixtures/retired/unavailable.json"
+    },
+    "evidenceKinds": ["screenshot"],
+    "adoptionTier": "approved_adapter",
+    "platforms": ["web"]
+  },
+  {
+    "id": "paid-runner",
+    "name": "Paid Model Runner",
+    "adapterVersion": "3.0.0",
+    "sourceEntryId": "paid-ai-tester",
+    "status": "reviewed",
+    "commandAllowlist": [["paid-tester", "run"]],
+    "networkAllowlist": ["api.paid-tester.example"],
+    "limits": { "maxCpuMs": 120000, "maxMemoryMb": 1024, "maxWallClockS": 300, "maxOutputBytes": 2000000 },
+    "credentialMode": "env_store",
+    "paidProvider": true,
+    "paidGuards": { "maxScenarios": 5, "maxEstimatedCredits": 10 },
+    "fixtures": {
+      "passing": "fixtures/paid/passing.json",
+      "plantedFailing": "fixtures/paid/planted-failing.json",
+      "unavailableDependency": "fixtures/paid/unavailable.json"
+    },
+    "evidenceKinds": ["model_transcript", "json_report"],
+    "adoptionTier": "optional_adapter",
+    "platforms": ["ai"]
+  },
+  {
+    "id": "paid-guarded",
+    "name": "Paid Guarded Runner",
+    "adapterVersion": "1.5.0",
+    "sourceEntryId": "paid-vision-tester",
+    "status": "reviewed",
+    "commandAllowlist": [["paid-vision", "run"]],
+    "networkAllowlist": ["api.paid-vision.example"],
+    "limits": { "maxCpuMs": 120000, "maxMemoryMb": 1024, "maxWallClockS": 300, "maxOutputBytes": 2000000 },
+    "credentialMode": "env_store",
+    "paidProvider": true,
+    "paidGuards": { "maxScenarios": 100, "maxEstimatedCredits": 1000 },
+    "fixtures": {
+      "passing": "fixtures/paid-guarded/passing.json",
+      "plantedFailing": "fixtures/paid-guarded/planted-failing.json",
+      "unavailableDependency": "fixtures/paid-guarded/unavailable.json"
+    },
+    "evidenceKinds": ["screenshot", "json_report"],
+    "adoptionTier": "optional_adapter",
+    "platforms": ["web"]
+  },
+  {
+    "id": "tie-aaa",
+    "name": "Tie Runner A",
+    "adapterVersion": "1.0.0",
+    "sourceEntryId": "tie-a",
+    "status": "reviewed",
+    "commandAllowlist": [["tie-a", "run"]],
+    "networkAllowlist": [],
+    "limits": { "maxCpuMs": 60000, "maxMemoryMb": 512, "maxWallClockS": 120, "maxOutputBytes": 1000000 },
+    "credentialMode": "none",
+    "paidProvider": false,
+    "fixtures": {
+      "passing": "fixtures/tie-a/passing.json",
+      "plantedFailing": "fixtures/tie-a/planted-failing.json",
+      "unavailableDependency": "fixtures/tie-a/unavailable.json"
+    },
+    "evidenceKinds": ["screenshot"],
+    "adoptionTier": "approved_adapter",
+    "platforms": ["web"]
+  },
+  {
+    "id": "tie-zzz",
+    "name": "Tie Runner Z",
+    "adapterVersion": "1.0.0",
+    "sourceEntryId": "tie-z",
+    "status": "reviewed",
+    "commandAllowlist": [["tie-z", "run"]],
+    "networkAllowlist": [],
+    "limits": { "maxCpuMs": 60000, "maxMemoryMb": 512, "maxWallClockS": 120, "maxOutputBytes": 1000000 },
+    "credentialMode": "none",
+    "paidProvider": false,
+    "fixtures": {
+      "passing": "fixtures/tie-z/passing.json",
+      "plantedFailing": "fixtures/tie-z/planted-failing.json",
+      "unavailableDependency": "fixtures/tie-z/unavailable.json"
+    },
+    "evidenceKinds": ["screenshot"],
+    "adoptionTier": "approved_adapter",
+    "platforms": ["web"]
+  },
+  {
+    "id": "cov-aaa",
+    "name": "Coverage Weak Runner",
+    "adapterVersion": "1.0.0",
+    "sourceEntryId": "cov-a",
+    "status": "reviewed",
+    "commandAllowlist": [["cov-a", "run"]],
+    "networkAllowlist": [],
+    "limits": { "maxCpuMs": 60000, "maxMemoryMb": 512, "maxWallClockS": 120, "maxOutputBytes": 1000000 },
+    "credentialMode": "none",
+    "paidProvider": false,
+    "fixtures": {
+      "passing": "fixtures/cov-a/passing.json",
+      "plantedFailing": "fixtures/cov-a/planted-failing.json",
+      "unavailableDependency": "fixtures/cov-a/unavailable.json"
+    },
+    "evidenceKinds": ["screenshot"],
+    "adoptionTier": "optional_adapter"
+  },
+  {
+    "id": "cov-zzz",
+    "name": "Coverage Strong Runner",
+    "adapterVersion": "1.0.0",
+    "sourceEntryId": "cov-z",
+    "status": "reviewed",
+    "commandAllowlist": [["cov-z", "run"]],
+    "networkAllowlist": [],
+    "limits": { "maxCpuMs": 60000, "maxMemoryMb": 512, "maxWallClockS": 120, "maxOutputBytes": 1000000 },
+    "credentialMode": "none",
+    "paidProvider": false,
+    "fixtures": {
+      "passing": "fixtures/cov-z/passing.json",
+      "plantedFailing": "fixtures/cov-z/planted-failing.json",
+      "unavailableDependency": "fixtures/cov-z/unavailable.json"
+    },
+    "evidenceKinds": ["screenshot", "video"],
+    "adoptionTier": "optional_adapter"
+  }
+]

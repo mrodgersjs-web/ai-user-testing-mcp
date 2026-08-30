@@ -1,15 +1,20 @@
 {
-  "name": "@rig-testlab/agent-installer",
-  "version": "0.1.0",
-  "private": true,
-  "type": "module",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2",
+    "@rig-testlab/catalog": "workspace:*"
+  },
   "exports": {
     ".": "./dist/index.js"
   },
+  "main": "./dist/index.js",
+  "name": "@rig-testlab/agent-installer",
+  "private": true,
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "typecheck": "tsc -p tsconfig.json --noEmit"
-  }
+  },
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "version": "0.1.0"
 }

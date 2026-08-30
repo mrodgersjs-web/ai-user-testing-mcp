@@ -1,16 +1,6 @@
 {
-  "name": "@rig-testlab/mcp-server",
-  "version": "0.1.0",
-  "private": true,
-  "type": "module",
-  "main": "./dist/index.js",
   "bin": {
     "rig-testlab-mcp": "./dist/main.js"
-  },
-  "scripts": {
-    "build": "tsc -p tsconfig.json",
-    "typecheck": "tsc -p tsconfig.json --noEmit",
-    "dev": "node --import tsx ./src/main.ts"
   },
   "dependencies": {
     "@modelcontextprotocol/server": "2.0.0",
@@ -21,6 +11,18 @@
   },
   "devDependencies": {
     "@modelcontextprotocol/client": "2.0.0",
-    "tsx": "^4.19.0"
-  }
+    "tsx": "^4.19.0",
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2"
+  },
+  "main": "./dist/index.js",
+  "name": "@rig-testlab/mcp-server",
+  "private": true,
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "dev": "node --import tsx ./src/main.ts"
+  },
+  "type": "module",
+  "version": "0.1.0"
 }

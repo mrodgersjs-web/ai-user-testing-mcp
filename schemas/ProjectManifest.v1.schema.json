@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rig-testlab.dev/schemas/ProjectManifest/v1",
+  "title": "ProjectManifest v1",
+  "description": "Project-owned declaration of what the scenario compiler may schedule: repo pin, target platforms, scenario suites, and the adapter ids the project is allowed to require.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "repo", "platforms", "suites", "requiredAdapters"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]*$" },
+    "repo": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["url", "revision"],
+      "properties": {
+        "url": { "type": "string", "minLength": 1 },
+        "revision": { "type": "string", "pattern": "^[a-f0-9]{7,64}$", "description": "Exact commit SHA the project is compiled against." }
+      }
+    },
+    "platforms": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "enum": ["web", "ios", "android", "api", "data", "ai", "vision", "accessibility", "security", "longitudinal"] }
+    },
+    "suites": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["path", "scenarioIds"],
+        "properties": {
+          "path": { "type": "string", "minLength": 1 },
+          "scenarioIds": { "type": "array", "items": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]*$" } }
+        }
+      }
+    },
+    "requiredAdapters": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]*$" }
+    }
+  }
+}

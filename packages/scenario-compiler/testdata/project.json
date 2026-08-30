@@ -1,0 +1,12 @@
+{
+  "id": "transformfit",
+  "repo": {
+    "url": "https://github.com/example/transformfit",
+    "revision": "a3f5c9d21e0b4c8d6f7a9e2b1c4d5e6f7a8b9c0d"
+  },
+  "platforms": ["web", "ios", "ai"],
+  "suites": [
+    { "path": "suites/checkout.json", "scenarioIds": ["s-checkout", "s-signin"] }
+  ],
+  "requiredAdapters": ["core-runner", "approved-runner", "optional-runner"]
+}

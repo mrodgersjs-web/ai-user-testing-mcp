@@ -1,19 +1,23 @@
 {
-  "name": "@rig-testlab/catalog",
-  "version": "0.1.0",
-  "private": true,
-  "type": "module",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2"
+  },
   "exports": {
     ".": "./dist/index.js"
   },
+  "main": "./dist/index.js",
+  "name": "@rig-testlab/catalog",
+  "private": true,
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
-  "dependencies": {
-    "ajv": "^8.17.1",
-    "ajv-formats": "^3.0.1"
-  }
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "version": "0.1.0"
 }

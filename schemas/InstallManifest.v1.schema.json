@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rig-testlab.dev/schemas/InstallManifest/v1",
+  "title": "InstallManifest v1",
+  "description": "Caller-provided payload manifest for the six-harness agent installer. All dst paths are absolute or ~/-prefixed (expanded against the installer's home at plan time). The installer refuses paths outside the allowlisted forms and never writes to a path it did not plan.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["packageName", "version", "harnessTargets"],
+  "properties": {
+    "packageName": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]*$" },
+    "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+    "harnessTargets": {
+      "type": "object",
+      "additionalProperties": false,
+      "propertyNames": { "enum": ["codex", "claude", "hermes", "omp", "orca", "prime"] },
+      "properties": {
+        "codex": { "$ref": "#/$defs/harnessTarget" },
+        "claude": { "$ref": "#/$defs/harnessTarget" },
+        "hermes": { "$ref": "#/$defs/harnessTarget" },
+        "omp": { "$ref": "#/$defs/harnessTarget" },
+        "orca": { "$ref": "#/$defs/harnessTarget" },
+        "prime": { "$ref": "#/$defs/harnessTarget" }
+      }
+    }
+  },
+  "$defs": {
+    "pathSpec": {
+      "type": "string",
+      "pattern": "^(/|~/)[^\\0]*$",
+      "description": "Absolute path or ~/ prefix; ~ is expanded against the Installer's home option."
+    },
+    "fileSpec": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["src", "dst"],
+      "properties": {
+        "src": { "$ref": "#/$defs/pathSpec" },
+        "dst": { "$ref": "#/$defs/pathSpec" }
+      }
+    },
+    "configMergeSpec": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["file", "marker", "block"],
+      "properties": {
+        "file": { "$ref": "#/$defs/pathSpec" },
+        "marker": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._:-]{0,80}$", "description": "Whitespace-free id; the installer delimits blocks with 'rig-installer:<marker>:begin|end' lines." },
+        "block": { "type": "string", "description": "Block body inserted between markers. Must not contain the delimiter lines themselves." }
+      }
+    },
+    "aliasSpec": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["dst", "pointsTo"],
+      "properties": {
+        "dst": { "$ref": "#/$defs/pathSpec" },
+        "pointsTo": { "type": "string", "minLength": 1, "description": "Materialized as a single-line pointer file: pointsTo + newline." }
+      }
+    },
+    "harnessTarget": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["files"],
+      "properties": {
+        "files": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/fileSpec" } },
+        "configMerge": { "type": "array", "items": { "$ref": "#/$defs/configMergeSpec" } },
+        "aliases": { "type": "array", "items": { "$ref": "#/$defs/aliasSpec" } }
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+[
+  {
+    "id": "s-checkout",
+    "project": "transformfit",
+    "platforms": ["web"],
+    "title": "Guest checkout completes with confirmation",
+    "steps": [
+      { "action": "click", "target": "#buy-now", "expected": "cart drawer opens" },
+      { "action": "submit", "target": "#checkout-form", "expected": "order confirmation shown" }
+    ],
+    "requiredAdapters": ["approved-runner", "core-runner", "optional-runner"],
+    "requiredEvidence": ["screenshot", "json_report"]
+  },
+  {
+    "id": "s-signin",
+    "project": "transformfit",
+    "platforms": ["web"],
+    "title": "Returning user signs in",
+    "persona": "busy-shopper",
+    "steps": [{ "action": "type", "target": "#email", "expected": "logged in" }],
+    "requiredAdapters": ["core-runner"],
+    "requiredEvidence": ["screenshot"]
+  }
+]
