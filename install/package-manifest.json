@@ -1,0 +1,57 @@
+{
+  "packageName": "ai-user-testing",
+  "version": "1.0.0",
+  "harnessTargets": {
+    "codex": {
+      "files": [
+        { "src": "~/Developer/ai-user-testing-mcp/skills/ai-user-testing/SKILL.md", "dst": "~/.codex/skills/ai-user-testing/SKILL.md" },
+        { "src": "~/Developer/ai-user-testing-mcp/agents/ai-user-testing-engineer.md", "dst": "~/.codex/agents/ai-user-testing-engineer.md" },
+        { "src": "~/Developer/ai-user-testing-mcp/agents/ai-user-testing-verifier.md", "dst": "~/.codex/agents/ai-user-testing-verifier.md" }
+      ],
+      "aliases": [
+        { "dst": "~/.codex/skills/testsprite-engineering-alias/SKILL.md", "pointsTo": "Compatibility alias: use ~/.codex/skills/ai-user-testing/SKILL.md (rig-testlab). TestSprite is a core reviewed adapter within it." }
+      ]
+    },
+    "claude": {
+      "files": [
+        { "src": "~/Developer/ai-user-testing-mcp/skills/ai-user-testing/SKILL.md", "dst": "~/.claude/skills/ai-user-testing/SKILL.md" },
+        { "src": "~/Developer/ai-user-testing-mcp/agents/ai-user-testing-engineer.md", "dst": "~/.claude/agents/ai-user-testing-engineer.md" },
+        { "src": "~/Developer/ai-user-testing-mcp/agents/ai-user-testing-verifier.md", "dst": "~/.claude/agents/ai-user-testing-verifier.md" }
+      ],
+      "aliases": [
+        { "dst": "~/.claude/skills/testsprite-engineering-alias/SKILL.md", "pointsTo": "Compatibility alias: use ~/.claude/skills/ai-user-testing/SKILL.md (rig-testlab). TestSprite is a core reviewed adapter within it." }
+      ]
+    },
+    "hermes": {
+      "files": [
+        { "src": "~/Developer/ai-user-testing-mcp/skills/ai-user-testing/SKILL.md", "dst": "~/.hermes/skills/ai-user-testing/SKILL.md" },
+        { "src": "~/Developer/ai-user-testing-mcp/agents/ai-user-testing-engineer.md", "dst": "~/.hermes/agents/ai-user-testing-engineer.md" },
+        { "src": "~/Developer/ai-user-testing-mcp/agents/ai-user-testing-verifier.md", "dst": "~/.hermes/agents/ai-user-testing-verifier.md" }
+      ],
+      "aliases": [
+        { "dst": "~/.hermes/skills/testsprite-engineering-alias/SKILL.md", "pointsTo": "Compatibility alias: use ~/.hermes/skills/ai-user-testing/SKILL.md (rig-testlab). TestSprite is a core reviewed adapter within it." }
+      ]
+    },
+    "omp": {
+      "files": [
+        { "src": "~/Developer/ai-user-testing-mcp/skills/ai-user-testing/SKILL.md", "dst": "~/.omp/skills/ai-user-testing/SKILL.md" },
+        { "src": "~/Developer/ai-user-testing-mcp/agents/ai-user-testing-engineer.md", "dst": "~/.omp/agents/ai-user-testing-engineer.md" },
+        { "src": "~/Developer/ai-user-testing-mcp/agents/ai-user-testing-verifier.md", "dst": "~/.omp/agents/ai-user-testing-verifier.md" }
+      ]
+    },
+    "orca": {
+      "files": [
+        { "src": "~/Developer/ai-user-testing-mcp/skills/ai-user-testing/SKILL.md", "dst": "~/.orca/skills/ai-user-testing/SKILL.md" },
+        { "src": "~/Developer/ai-user-testing-mcp/agents/ai-user-testing-engineer.md", "dst": "~/.orca/agents/ai-user-testing-engineer.md" },
+        { "src": "~/Developer/ai-user-testing-mcp/agents/ai-user-testing-verifier.md", "dst": "~/.orca/agents/ai-user-testing-verifier.md" }
+      ]
+    },
+    "prime": {
+      "files": [
+        { "src": "~/Developer/ai-user-testing-mcp/skills/ai-user-testing/SKILL.md", "dst": "~/.prime/skills/ai-user-testing/SKILL.md" },
+        { "src": "~/Developer/ai-user-testing-mcp/agents/ai-user-testing-engineer.md", "dst": "~/.prime/agents/ai-user-testing-engineer.md" },
+        { "src": "~/Developer/ai-user-testing-mcp/agents/ai-user-testing-verifier.md", "dst": "~/.prime/agents/ai-user-testing-verifier.md" }
+      ]
+    }
+  }
+}

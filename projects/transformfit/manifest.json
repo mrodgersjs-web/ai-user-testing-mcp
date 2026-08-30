@@ -1,0 +1,25 @@
+{
+  "id": "transformfit",
+  "repo": {
+    "url": "git@github.com:Rodgers-Intelligence-Group/transformfit-flutter.git",
+    "revision": "a941606097d533ffaac8ea5440c8f7d684e32257"
+  },
+  "platforms": ["web", "ios", "api", "data", "ai", "vision", "accessibility", "security", "longitudinal"],
+  "suites": [
+    { "path": "e2e/cypress", "scenarioIds": ["tf-web-onboarding", "tf-web-workout-day", "tf-web-today-a11y", "tf-web-today-vision"] },
+    { "path": "testsprite_tests", "scenarioIds": ["tf-tc001-workout-receipt", "tf-tc004-wellness-checkin", "tf-tc007-pain-safety"] },
+    { "path": "gates", "scenarioIds": ["tf-ios-sim-smoke", "tf-api-coach-contract", "tf-data-boundary-inputs", "tf-ai-persona-evals", "tf-sec-baseline-scan", "tf-long-week-sim"] }
+  ],
+  "requiredAdapters": [
+    "cypress",
+    "cypress-axe",
+    "appium-xcuitest",
+    "testsprite",
+    "promptfoo",
+    "bruno-openapi",
+    "owasp-zap",
+    "datamimic",
+    "malformed-fixtures",
+    "mockserver"
+  ]
+}
