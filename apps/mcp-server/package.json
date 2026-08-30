@@ -1,12 +1,13 @@
 {
   "bin": {
-    "rig-testlab-mcp": "./dist/main.js"
+    "rig-testlab-mcp": "./dist/index.js"
   },
   "dependencies": {
     "@modelcontextprotocol/server": "2.0.0",
     "@rig-testlab/catalog": "workspace:*",
     "@rig-testlab/scenario-compiler": "workspace:*",
     "@rig-testlab/evidence": "workspace:*",
+    "@rig-testlab/runner": "workspace:*",
     "zod": "^4.1.13"
   },
   "devDependencies": {
@@ -20,8 +21,7 @@
   "private": true,
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "typecheck": "tsc -p tsconfig.json --noEmit",
-    "dev": "node --import tsx ./src/main.ts"
+    "dev": "node --import tsx ./src/index.ts"
   },
   "type": "module",
   "version": "0.1.0"

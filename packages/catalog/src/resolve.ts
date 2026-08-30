@@ -11,6 +11,7 @@
  *    (git_repo requires a repository block); blocked resources are preserved, never dropped.
  */
 import { createHash } from "node:crypto";
+import { posix } from "node:path";
 import type {
   CatalogEntry,
   CatalogLock,
@@ -297,7 +298,9 @@ async function expandNestedCatalog(
     } catch {
       continue;
     }
-    for (const link of extractResourceLinks(md)) {
+    for (const raw of extractResourceLinks(md)) {
+      const link = { ...raw, url: absolutizeNestedUrl(raw.url, cfg.owner, cfg.repo, sha) };
+      if (!/^https?:\/\//i.test(link.url)) continue; // non-web reference; never droppable as a resource, but not a link
       const selfLinked =
         classifyLink(link).repo?.owner.toLowerCase() === cfg.owner.toLowerCase() &&
         classifyLink(link).repo?.name.toLowerCase() === cfg.repo.toLowerCase();
@@ -326,6 +329,24 @@ function rankMd(path: string): number {
   const lower = path.toLowerCase();
   if (lower === "readme.md") return 0;
   return lower.includes("readme") ? 1 : 2;
+}
+
+/**
+ * Nested catalogs frequently link repo-internal files (`docs/x.md`, `./x`,
+ * `//host/...`). Governance requires schema-valid absolute URIs, so relative
+ * references are resolved against the pinned commit's blob base and
+ * protocol-relative links gain https:. Truly unresolvable forms are dropped
+ * at extraction (they are references internal to the catalog, not resources).
+ */
+export function absolutizeNestedUrl(url: string, owner: string, repo: string, sha: string): string {
+  if (/^https?:\/\//i.test(url)) return url;
+  if (url.startsWith("//")) return `https:${url}`;
+  if (/^[a-z][a-z0-9+.-]*:/i.test(url)) return url; // other schemes stay as-is (may be filtered downstream)
+  const clean = posix
+    .normalize(url.replace(/^\.?\//, "").split("#")[0]!.split("?")[0]!)
+    .replace(/^(\.\.\/)+/, "");
+  if (!clean || clean === ".") return url;
+  return `https://github.com/${owner}/${repo}/blob/${sha}/${clean}`;
 }
 
 /**

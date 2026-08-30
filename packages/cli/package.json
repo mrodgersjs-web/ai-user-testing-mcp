@@ -3,9 +3,11 @@
     "rig-testlab": "./dist/main.js"
   },
   "dependencies": {
+    "@rig-testlab/agent-installer": "workspace:*",
     "@rig-testlab/catalog": "workspace:*",
-    "@rig-testlab/scenario-compiler": "workspace:*",
-    "@rig-testlab/evidence": "workspace:*"
+    "@rig-testlab/evidence": "workspace:*",
+    "@rig-testlab/runner": "workspace:*",
+    "@rig-testlab/scenario-compiler": "workspace:*"
   },
   "devDependencies": {
     "tsx": "^4.19.0",

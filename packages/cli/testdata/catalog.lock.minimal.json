@@ -1,0 +1,547 @@
+{
+  "entries": [
+    {
+      "adoptionTier": "watchlist",
+      "canonicalUrl": "https://training.example.com/appium",
+      "capabilities": [
+        "reference"
+      ],
+      "categories": [
+        "resources"
+      ],
+      "credentialRequirement": "free_account",
+      "description": "Appium Training — fixture entry (non-repository resource).",
+      "executionPolicy": "reference_only",
+      "id": "appium-training",
+      "lastValidation": {
+        "at": "2026-08-28T21:20:23Z",
+        "method": "http_get"
+      },
+      "license": {
+        "kind": "unknown",
+        "spdx": null
+      },
+      "name": "Appium Training",
+      "provenance": [
+        {
+          "catalogCommit": "ff695aac1126d548eb3bc0ceb3d8a0d4e0b9cf93",
+          "depth": 1,
+          "discoveredAt": "2026-08-28T21:20:23Z",
+          "sourceCatalogId": "awesome-testing",
+          "urlAsLinked": "https://training.example.com/appium"
+        }
+      ],
+      "redirectHistory": [],
+      "resolutionStatus": "rate_limited",
+      "targetKind": "training"
+    },
+    {
+      "adoptionTier": "reference",
+      "canonicalUrl": "https://example.com/aost",
+      "capabilities": [
+        "reference"
+      ],
+      "categories": [
+        "resources"
+      ],
+      "credentialRequirement": "none",
+      "description": "The Art of Software Testing — fixture entry (non-repository resource).",
+      "executionPolicy": "reference_only",
+      "id": "art-of-software-testing",
+      "lastValidation": {
+        "at": "2026-08-28T21:20:23Z",
+        "method": "manual"
+      },
+      "license": {
+        "kind": "restrictive",
+        "spdx": null
+      },
+      "name": "The Art of Software Testing",
+      "provenance": [
+        {
+          "catalogCommit": "ff695aac1126d548eb3bc0ceb3d8a0d4e0b9cf93",
+          "depth": 1,
+          "discoveredAt": "2026-08-28T21:20:23Z",
+          "sourceCatalogId": "awesome-testing",
+          "urlAsLinked": "https://example.com/aost"
+        }
+      ],
+      "redirectHistory": [],
+      "resolutionStatus": "active",
+      "targetKind": "book"
+    },
+    {
+      "adoptionTier": "reference",
+      "canonicalUrl": "https://github.com/community/awesome-a11y",
+      "capabilities": [
+        "reference"
+      ],
+      "categories": [
+        "resources"
+      ],
+      "credentialRequirement": "free_account",
+      "description": "Awesome Accessibility (license missing) — fixture entry (non-repository resource).",
+      "executionPolicy": "reference_only",
+      "id": "community--awesome-a11y",
+      "lastValidation": {
+        "at": "2026-08-28T21:20:23Z",
+        "method": "http_get"
+      },
+      "license": {
+        "kind": "missing",
+        "spdx": null
+      },
+      "name": "Awesome Accessibility (license missing)",
+      "provenance": [
+        {
+          "catalogCommit": "ff695aac1126d548eb3bc0ceb3d8a0d4e0b9cf93",
+          "depth": 1,
+          "discoveredAt": "2026-08-28T21:20:23Z",
+          "sourceCatalogId": "awesome-testing",
+          "urlAsLinked": "https://github.com/community/awesome-a11y"
+        }
+      ],
+      "redirectHistory": [],
+      "resolutionStatus": "active",
+      "targetKind": "awesome_list"
+    },
+    {
+      "adoptionTier": "core_runner",
+      "canonicalUrl": "https://github.com/cypress-io/cypress",
+      "capabilities": [
+        "automation"
+      ],
+      "categories": [
+        "test-automation"
+      ],
+      "credentialRequirement": "none",
+      "description": "Cypress — fixture entry.",
+      "executionPolicy": "allowlisted",
+      "id": "cypress-io--cypress",
+      "lastValidation": {
+        "at": "2026-08-28T21:20:23Z",
+        "httpStatus": 200,
+        "method": "github_api"
+      },
+      "license": {
+        "kind": "permissive",
+        "spdx": "MIT"
+      },
+      "name": "Cypress",
+      "provenance": [
+        {
+          "catalogCommit": "ff695aac1126d548eb3bc0ceb3d8a0d4e0b9cf93",
+          "depth": 1,
+          "discoveredAt": "2026-08-28T21:20:23Z",
+          "sourceCatalogId": "awesome-testing",
+          "urlAsLinked": "https://github.com/cypress-io/cypress"
+        }
+      ],
+      "redirectHistory": [],
+      "repository": {
+        "commitSha": "f48c18e43038b17bf6a90afc145c76ffda2dd419",
+        "defaultBranch": "main",
+        "name": "cypress",
+        "owner": "cypress-io",
+        "reportedSizeKb": 120000,
+        "submodulePath": "sources/direct/cypress-io/cypress-io--cypress"
+      },
+      "resolutionStatus": "active",
+      "targetKind": "git_repo"
+    },
+    {
+      "adoptionTier": "optional_adapter",
+      "canonicalUrl": "https://github.com/getgauge/gauge",
+      "capabilities": [
+        "automation"
+      ],
+      "categories": [
+        "test-automation"
+      ],
+      "credentialRequirement": "none",
+      "description": "Gauge — fixture entry.",
+      "executionPolicy": "sandbox_required",
+      "id": "gauge-test--gauge",
+      "lastValidation": {
+        "at": "2026-08-28T21:20:23Z",
+        "httpStatus": 200,
+        "method": "github_api"
+      },
+      "license": {
+        "kind": "copyleft",
+        "spdx": "GPL-3.0-only"
+      },
+      "name": "Gauge",
+      "provenance": [
+        {
+          "catalogCommit": "ff695aac1126d548eb3bc0ceb3d8a0d4e0b9cf93",
+          "depth": 1,
+          "discoveredAt": "2026-08-28T21:20:23Z",
+          "sourceCatalogId": "awesome-testing",
+          "urlAsLinked": "https://github.com/getgauge/gauge"
+        }
+      ],
+      "redirectHistory": [],
+      "repository": {
+        "commitSha": "82a657b27ebf2ad19ba01d0b8b88715aab52e65a",
+        "defaultBranch": "main",
+        "name": "gauge",
+        "owner": "getgauge",
+        "reportedSizeKb": 25000,
+        "submodulePath": "sources/direct/getgauge/gauge-test--gauge"
+      },
+      "resolutionStatus": "active",
+      "targetKind": "git_repo"
+    },
+    {
+      "adoptionTier": "approved_adapter",
+      "canonicalUrl": "https://github.com/microsoft/playwright",
+      "capabilities": [
+        "automation"
+      ],
+      "categories": [
+        "test-automation"
+      ],
+      "credentialRequirement": "none",
+      "description": "Playwright — fixture entry.",
+      "executionPolicy": "sandbox_required",
+      "id": "microsoft--playwright",
+      "lastValidation": {
+        "at": "2026-08-28T21:20:23Z",
+        "httpStatus": 200,
+        "method": "github_api"
+      },
+      "license": {
+        "kind": "permissive",
+        "spdx": "Apache-2.0"
+      },
+      "name": "Playwright",
+      "provenance": [
+        {
+          "catalogCommit": "ff695aac1126d548eb3bc0ceb3d8a0d4e0b9cf93",
+          "depth": 1,
+          "discoveredAt": "2026-08-28T21:20:23Z",
+          "sourceCatalogId": "awesome-testing",
+          "urlAsLinked": "https://github.com/microsoft/playwright"
+        },
+        {
+          "catalogCommit": "233562de1a0288b139c4fa40b7d189f806e906ee",
+          "depth": 2,
+          "discoveredAt": "2026-08-28T21:20:23Z",
+          "sourceCatalogId": "ssharper--awesome-playwright",
+          "urlAsLinked": "https://github.com/microsoft/playwright"
+        }
+      ],
+      "redirectHistory": [],
+      "repository": {
+        "commitSha": "3c26f290f5f506759164f4cf236ca5b0cd0875c5",
+        "defaultBranch": "main",
+        "name": "playwright",
+        "owner": "microsoft",
+        "reportedSizeKb": 90000,
+        "submodulePath": "sources/direct/microsoft/microsoft--playwright"
+      },
+      "resolutionStatus": "active",
+      "targetKind": "git_repo"
+    },
+    {
+      "adoptionTier": "watchlist",
+      "canonicalUrl": "https://qaforums.example.com",
+      "capabilities": [
+        "reference"
+      ],
+      "categories": [
+        "resources"
+      ],
+      "credentialRequirement": "none",
+      "description": "QA Forums (dead) — fixture entry (non-repository resource).",
+      "executionPolicy": "reference_only",
+      "id": "qaforums--dead",
+      "lastValidation": {
+        "at": "2026-08-28T21:20:23Z",
+        "method": "manual"
+      },
+      "license": {
+        "kind": "unknown",
+        "spdx": null
+      },
+      "name": "QA Forums (dead)",
+      "provenance": [
+        {
+          "catalogCommit": "ff695aac1126d548eb3bc0ceb3d8a0d4e0b9cf93",
+          "depth": 1,
+          "discoveredAt": "2026-08-28T21:20:23Z",
+          "sourceCatalogId": "awesome-testing",
+          "urlAsLinked": "https://qaforums.example.com"
+        }
+      ],
+      "redirectHistory": [],
+      "resolutionStatus": "dead",
+      "targetKind": "website"
+    },
+    {
+      "adoptionTier": "core_runner",
+      "canonicalUrl": "https://github.com/SeleniumHQ/selenium",
+      "capabilities": [
+        "automation"
+      ],
+      "categories": [
+        "test-automation"
+      ],
+      "credentialRequirement": "none",
+      "description": "Selenium — fixture entry.",
+      "executionPolicy": "allowlisted",
+      "id": "seleniumhq--selenium",
+      "lastValidation": {
+        "at": "2026-08-28T21:20:23Z",
+        "httpStatus": 200,
+        "method": "github_api"
+      },
+      "license": {
+        "kind": "permissive",
+        "spdx": "Apache-2.0"
+      },
+      "name": "Selenium",
+      "provenance": [
+        {
+          "catalogCommit": "ff695aac1126d548eb3bc0ceb3d8a0d4e0b9cf93",
+          "depth": 1,
+          "discoveredAt": "2026-08-28T21:20:23Z",
+          "sourceCatalogId": "awesome-testing",
+          "urlAsLinked": "https://github.com/SeleniumHQ/selenium"
+        }
+      ],
+      "redirectHistory": [],
+      "repository": {
+        "commitSha": "1eebbe421afe07b0e8bed081e1874714ab8beb78",
+        "defaultBranch": "main",
+        "name": "selenium",
+        "owner": "seleniumhq",
+        "reportedSizeKb": 400000,
+        "submodulePath": "sources/direct/seleniumhq/seleniumhq--selenium"
+      },
+      "resolutionStatus": "active",
+      "targetKind": "git_repo"
+    },
+    {
+      "adoptionTier": "watchlist",
+      "canonicalUrl": "https://newsletter.example.com",
+      "capabilities": [
+        "reference"
+      ],
+      "categories": [
+        "resources"
+      ],
+      "credentialRequirement": "free_account",
+      "description": "The Testing Trajectory — fixture entry (non-repository resource).",
+      "executionPolicy": "reference_only",
+      "id": "testing-trajectory",
+      "lastValidation": {
+        "at": "2026-08-28T21:20:23Z",
+        "method": "http_get"
+      },
+      "license": {
+        "kind": "unknown",
+        "spdx": null
+      },
+      "name": "The Testing Trajectory",
+      "provenance": [
+        {
+          "catalogCommit": "ff695aac1126d548eb3bc0ceb3d8a0d4e0b9cf93",
+          "depth": 1,
+          "discoveredAt": "2026-08-28T21:20:23Z",
+          "sourceCatalogId": "awesome-testing",
+          "urlAsLinked": "https://newsletter.example.com"
+        }
+      ],
+      "redirectHistory": [],
+      "resolutionStatus": "unresolved",
+      "targetKind": "newsletter"
+    },
+    {
+      "adoptionTier": "watchlist",
+      "canonicalUrl": "https://testrig.example.com",
+      "capabilities": [
+        "reference"
+      ],
+      "categories": [
+        "resources"
+      ],
+      "credentialRequirement": "paid",
+      "description": "TestRig Cloud — fixture entry (non-repository resource).",
+      "executionPolicy": "reference_only",
+      "id": "testrig--cloud",
+      "lastValidation": {
+        "at": "2026-08-28T21:20:23Z",
+        "method": "http_get"
+      },
+      "license": {
+        "kind": "restrictive",
+        "spdx": null
+      },
+      "name": "TestRig Cloud",
+      "provenance": [
+        {
+          "catalogCommit": "ff695aac1126d548eb3bc0ceb3d8a0d4e0b9cf93",
+          "depth": 1,
+          "discoveredAt": "2026-08-28T21:20:23Z",
+          "sourceCatalogId": "awesome-testing",
+          "urlAsLinked": "https://testrig.example.com"
+        }
+      ],
+      "redirectHistory": [],
+      "resolutionStatus": "active",
+      "targetKind": "saas"
+    },
+    {
+      "adoptionTier": "approved_adapter",
+      "canonicalUrl": "https://github.com/usebruno/bruno",
+      "capabilities": [
+        "automation"
+      ],
+      "categories": [
+        "test-automation"
+      ],
+      "credentialRequirement": "none",
+      "description": "Bruno — fixture entry.",
+      "executionPolicy": "allowlisted",
+      "id": "usebruno--bruno",
+      "lastValidation": {
+        "at": "2026-08-28T21:20:23Z",
+        "httpStatus": 200,
+        "method": "github_api"
+      },
+      "license": {
+        "kind": "permissive",
+        "spdx": "MIT"
+      },
+      "name": "Bruno",
+      "provenance": [
+        {
+          "catalogCommit": "ff695aac1126d548eb3bc0ceb3d8a0d4e0b9cf93",
+          "depth": 1,
+          "discoveredAt": "2026-08-28T21:20:23Z",
+          "sourceCatalogId": "awesome-testing",
+          "urlAsLinked": "https://github.com/usebruno/bruno"
+        }
+      ],
+      "redirectHistory": [],
+      "repository": {
+        "commitSha": "d338fc52616248426241eee97c1a1e3f21d71936",
+        "defaultBranch": "main",
+        "name": "bruno",
+        "owner": "usebruno",
+        "reportedSizeKb": 30000,
+        "submodulePath": "sources/direct/usebruno/usebruno--bruno"
+      },
+      "resolutionStatus": "redirected",
+      "targetKind": "git_repo"
+    }
+  ],
+  "generatedFrom": {
+    "commit": "ff695aac1126d548eb3bc0ceb3d8a0d4e0b9cf93",
+    "readmeSha256": "9942a8f5f705fc9ad2366611e123638e5698bc07c191df013fc2636d2c10469f",
+    "repo": "TheJambo/awesome-testing"
+  },
+  "nestedCatalogs": [
+    {
+      "commit": "a2d06f41fadc3b7ce411043a8bffd79f95ce0699",
+      "discoveredCatalogCount": 1,
+      "expandedLinkCount": 14,
+      "id": "ssharper--awesome-playwright",
+      "status": "active",
+      "url": "https://github.com/ssharper/awesome-playwright"
+    }
+  ],
+  "pins": [
+    {
+      "commitSha": "f48c18e43038b17bf6a90afc145c76ffda2dd419",
+      "defaultBranch": "main",
+      "entryId": "cypress-io--cypress",
+      "gitmodulesName": "cypress-io--cypress",
+      "lastHydratedAt": "2026-08-29T06:00:00Z",
+      "name": "cypress",
+      "owner": "cypress-io",
+      "pinState": "pinned",
+      "repoUrl": "https://github.com/cypress-io/cypress",
+      "reportedSizeKb": 120000,
+      "shallowCapable": true,
+      "submodulePath": "sources/direct/cypress-io/cypress-io--cypress"
+    },
+    {
+      "commitSha": "82a657b27ebf2ad19ba01d0b8b88715aab52e65a",
+      "defaultBranch": "main",
+      "entryId": "gauge-test--gauge",
+      "gitmodulesName": "gauge-test--gauge",
+      "lastHydratedAt": null,
+      "name": "gauge",
+      "owner": "getgauge",
+      "pinState": "failed",
+      "repoUrl": "https://github.com/getgauge/gauge",
+      "reportedSizeKb": 25000,
+      "shallowCapable": true,
+      "submodulePath": "sources/direct/getgauge/gauge-test--gauge"
+    },
+    {
+      "commitSha": "3c26f290f5f506759164f4cf236ca5b0cd0875c5",
+      "defaultBranch": "main",
+      "entryId": "microsoft--playwright",
+      "gitmodulesName": "microsoft--playwright",
+      "lastHydratedAt": null,
+      "name": "playwright",
+      "owner": "microsoft",
+      "pinState": "pending",
+      "repoUrl": "https://github.com/microsoft/playwright",
+      "reportedSizeKb": 90000,
+      "shallowCapable": true,
+      "submodulePath": "sources/direct/microsoft/microsoft--playwright"
+    },
+    {
+      "commitSha": "1eebbe421afe07b0e8bed081e1874714ab8beb78",
+      "defaultBranch": "main",
+      "entryId": "seleniumhq--selenium",
+      "gitmodulesName": "seleniumhq--selenium",
+      "lastHydratedAt": "2026-08-29T06:00:00Z",
+      "name": "selenium",
+      "owner": "seleniumhq",
+      "pinState": "pinned",
+      "repoUrl": "https://github.com/SeleniumHQ/selenium",
+      "reportedSizeKb": 400000,
+      "shallowCapable": true,
+      "submodulePath": "sources/direct/seleniumhq/seleniumhq--selenium"
+    },
+    {
+      "commitSha": "d338fc52616248426241eee97c1a1e3f21d71936",
+      "defaultBranch": "main",
+      "entryId": "usebruno--bruno",
+      "gitmodulesName": "usebruno--bruno",
+      "lastHydratedAt": null,
+      "name": "bruno",
+      "owner": "usebruno",
+      "pinState": "pinned",
+      "repoUrl": "https://github.com/usebruno/bruno",
+      "reportedSizeKb": 30000,
+      "shallowCapable": true,
+      "submodulePath": "sources/direct/usebruno/usebruno--bruno"
+    }
+  ],
+  "schemaVersion": 1,
+  "statistics": {
+    "byAdoptionTier": {
+      "approved_adapter": 2,
+      "core_runner": 2,
+      "optional_adapter": 1,
+      "reference": 2,
+      "watchlist": 4
+    },
+    "byResolutionStatus": {
+      "active": 7,
+      "dead": 1,
+      "rate_limited": 1,
+      "redirected": 1,
+      "unresolved": 1
+    },
+    "firstLevelCount": 11,
+    "uniqueRepos": 5
+  }
+}
