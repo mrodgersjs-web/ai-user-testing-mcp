@@ -1,0 +1,1740 @@
+[submodule "abhivaikar--howtheytest"]
+	path = sources/direct/abhivaikar/abhivaikar--howtheytest
+	url = https://github.com/abhivaikar/howtheytest
+[submodule "ai-dashboad--flutter-skill"]
+	path = sources/direct/ai-dashboad/ai-dashboad--flutter-skill
+	url = https://github.com/ai-dashboad/flutter-skill
+[submodule "aiqualitylab--ai-natural-language-tests"]
+	path = sources/direct/aiqualitylab/aiqualitylab--ai-natural-language-tests
+	url = https://github.com/aiqualitylab/ai-natural-language-tests
+[submodule "aliesbelik--awesome-jmeter"]
+	path = sources/direct/aliesbelik/aliesbelik--awesome-jmeter
+	url = https://github.com/aliesbelik/awesome-jmeter
+[submodule "altansayan--mock-jutsu-api"]
+	path = sources/direct/altansayan/altansayan--mock-jutsu-api
+	url = https://github.com/altansayan/mock-jutsu-api
+[submodule "bats-core--bats-core"]
+	path = sources/direct/bats-core/bats-core--bats-core
+	url = https://github.com/bats-core/bats-core
+[submodule "be-next--awesome-performance-engineering"]
+	path = sources/direct/be-next/be-next--awesome-performance-engineering
+	url = https://github.com/be-next/awesome-performance-engineering
+[submodule "brancogao--webhook-debugger"]
+	path = sources/direct/brancogao/brancogao--webhook-debugger
+	url = https://github.com/brancogao/webhook-debugger
+[submodule "christian-bromann--awesome-selenium"]
+	path = sources/direct/christian-bromann/christian-bromann--awesome-selenium
+	url = https://github.com/christian-bromann/awesome-selenium
+[submodule "christowolf--awesome-testing-blogs"]
+	path = sources/direct/christowolf/christowolf--awesome-testing-blogs
+	url = https://github.com/ChristoWolf/awesome-testing-blogs
+[submodule "dashcamio--goodlooks"]
+	path = sources/direct/dashcamio/dashcamio--goodlooks
+	url = https://github.com/testdriverai/goodlooks
+[submodule "ehmicky--test-each"]
+	path = sources/direct/ehmicky/ehmicky--test-each
+	url = https://github.com/ehmicky/test-each
+[submodule "evaliphy--evaliphy"]
+	path = sources/direct/evaliphy/evaliphy--evaliphy
+	url = https://github.com/Evaliphy/evaliphy
+[submodule "faiscadev--fakecloud"]
+	path = sources/direct/faiscadev/faiscadev--fakecloud
+	url = https://github.com/faiscadev/fakecloud
+[submodule "fityanos--quality-assurance-road-map"]
+	path = sources/direct/fityanos/fityanos--quality-assurance-road-map
+	url = https://github.com/fityanos/awesome-quality-assurance-roadmap
+[submodule "foundry-rs--foundry"]
+	path = sources/direct/foundry-rs/foundry-rs--foundry
+	url = https://github.com/foundry-rs/foundry
+[submodule "get-skipper--skipper"]
+	path = sources/direct/get-skipper/get-skipper--skipper
+	url = https://github.com/get-skipper/skipper
+[submodule "getmockd--mockd"]
+	path = sources/direct/getmockd/getmockd--mockd
+	url = https://github.com/getmockd/mockd
+[submodule "getsynth--synth"]
+	path = sources/direct/getsynth/getsynth--synth
+	url = https://github.com/shuttle-hq/synth
+[submodule "golikovichev--postman2pytest"]
+	path = sources/direct/golikovichev/golikovichev--postman2pytest
+	url = https://github.com/golikovichev/postman2pytest
+[submodule "jagracey--awesome-unicode"]
+	path = sources/direct/jagracey/jagracey--awesome-unicode
+	url = https://github.com/jagracey/Awesome-Unicode
+[submodule "jg8481--robot-framework-solidity-testing-toolkit"]
+	path = sources/direct/jg8481/jg8481--robot-framework-solidity-testing-toolkit
+	url = https://github.com/jg8481/Robot-Framework-Solidity-Testing-Toolkit
+[submodule "jiongfeng--waterfall-ai-test-platform"]
+	path = sources/direct/jiongfeng/jiongfeng--waterfall-ai-test-platform
+	url = https://github.com/jiongfeng/waterfall-ai-test-platform
+[submodule "jo-duchan--tapflow"]
+	path = sources/direct/jo-duchan/jo-duchan--tapflow
+	url = https://github.com/jo-duchan/tapflow
+[submodule "jumpstarter-dev--jumpstarter"]
+	path = sources/direct/jumpstarter-dev/jumpstarter-dev--jumpstarter
+	url = https://github.com/jumpstarter-dev/jumpstarter
+[submodule "justiceo--spectest"]
+	path = sources/direct/justiceo/justiceo--spectest
+	url = https://github.com/justiceo/spectest
+[submodule "jwekavanagh--agentskeptic"]
+	path = sources/direct/jwekavanagh/jwekavanagh--agentskeptic
+	url = https://github.com/jwekavanagh/agentskeptic
+[submodule "karlhorky--learn-to-program"]
+	path = sources/direct/karlhorky/karlhorky--learn-to-program
+	url = https://github.com/karlhorky/learn-to-program
+[submodule "kdeldycke--awesome-falsehood"]
+	path = sources/direct/kdeldycke/kdeldycke--awesome-falsehood
+	url = https://github.com/kdeldycke/awesome-falsehood
+[submodule "keploy--keploy"]
+	path = sources/direct/keploy/keploy--keploy
+	url = https://github.com/keploy/keploy
+[submodule "kiwitcms--kiwi"]
+	path = sources/direct/kiwitcms/kiwitcms--kiwi
+	url = https://github.com/kiwitcms/Kiwi
+[submodule "kznr02--opentester"]
+	path = sources/direct/kznr02/kznr02--opentester
+	url = https://github.com/kznr02/OpenTester
+[submodule "ligurio--awesome-software-quality"]
+	path = sources/direct/ligurio/ligurio--awesome-software-quality
+	url = https://github.com/ligurio/sqa-wiki
+[submodule "majdukovic--frontrow"]
+	path = sources/direct/majdukovic/majdukovic--frontrow
+	url = https://github.com/majdukovic/frontrow
+[submodule "mathewsachin--captura"]
+	path = sources/direct/mathewsachin/mathewsachin--captura
+	url = https://github.com/MathewSachin/Captura
+[submodule "mathiaspaulenko--awesome-behave"]
+	path = sources/direct/mathiaspaulenko/mathiaspaulenko--awesome-behave
+	url = https://github.com/MathiasPaulenko/awesome-behave
+[submodule "minimaxir--big-list-of-naughty-strings"]
+	path = sources/direct/minimaxir/minimaxir--big-list-of-naughty-strings
+	url = https://github.com/minimaxir/big-list-of-naughty-strings
+[submodule "mock-server--mockserver-monorepo"]
+	path = sources/direct/mock-server/mock-server--mockserver-monorepo
+	url = https://github.com/mock-server/mockserver-monorepo
+[submodule "mozarkai--optics-framework"]
+	path = sources/direct/mozarkai/mozarkai--optics-framework
+	url = https://github.com/mozarkai/optics-framework
+[submodule "nikita-filonov--load-testing-hub-panel"]
+	path = sources/direct/nikita-filonov/nikita-filonov--load-testing-hub-panel
+	url = https://github.com/Nikita-Filonov/load-testing-hub-panel
+[submodule "nikita-filonov--swagger-coverage-tool"]
+	path = sources/direct/nikita-filonov/nikita-filonov--swagger-coverage-tool
+	url = https://github.com/Nikita-Filonov/swagger-coverage-tool
+[submodule "nikita-filonov--tests-coverage-tool"]
+	path = sources/direct/nikita-filonov/nikita-filonov--tests-coverage-tool
+	url = https://github.com/Nikita-Filonov/tests-coverage-tool
+[submodule "nikita-filonov--ui-coverage-scenario-tool"]
+	path = sources/direct/nikita-filonov/nikita-filonov--ui-coverage-scenario-tool
+	url = https://github.com/Nikita-Filonov/ui-coverage-scenario-tool
+[submodule "ozorown--frostbyte-screenshot-action"]
+	path = sources/direct/ozorown/ozorown--frostbyte-screenshot-action
+	url = https://github.com/Robocular/frostbyte-screenshot-action
+[submodule "paragonie--awesome-appsec"]
+	path = sources/direct/paragonie/paragonie--awesome-appsec
+	url = https://github.com/paragonie/awesome-appsec
+[submodule "projectdiscovery--nuclei"]
+	path = sources/direct/projectdiscovery/projectdiscovery--nuclei
+	url = https://github.com/projectdiscovery/nuclei
+[submodule "promptfoo--promptfoo"]
+	path = sources/direct/promptfoo/promptfoo--promptfoo
+	url = https://github.com/promptfoo/promptfoo
+[submodule "qawolf--qawolf"]
+	path = sources/direct/qawolf/qawolf--qawolf
+	url = https://github.com/qawolf/cli
+[submodule "rapiddweller--datamimic"]
+	path = sources/direct/rapiddweller/rapiddweller--datamimic
+	url = https://github.com/rapiddweller/datamimic
+[submodule "restqa--restqa"]
+	path = sources/direct/restqa/restqa--restqa
+	url = https://github.com/restqa/restqa
+[submodule "retest--recheck-web"]
+	path = sources/direct/retest/retest--recheck-web
+	url = https://github.com/retest/recheck-web
+[submodule "rrweb-io--rrweb"]
+	path = sources/direct/rrweb-io/rrweb-io--rrweb
+	url = https://github.com/rrweb-io/rrweb
+[submodule "rubycdp--ferrum"]
+	path = sources/direct/rubycdp/rubycdp--ferrum
+	url = https://github.com/rubycdp/ferrum
+[submodule "sbilly--awesome-security"]
+	path = sources/direct/sbilly/sbilly--awesome-security
+	url = https://github.com/sbilly/awesome-security
+[submodule "sherlo-io--sherlo"]
+	path = sources/direct/sherlo-io/sherlo-io--sherlo
+	url = https://github.com/sherlo-io/sherlo
+[submodule "sindresorhus--awesome"]
+	path = sources/direct/sindresorhus/sindresorhus--awesome
+	url = https://github.com/sindresorhus/awesome
+[submodule "supernovae-st--nika"]
+	path = sources/direct/supernovae-st/supernovae-st--nika
+	url = https://github.com/supernovae-st/nika
+[submodule "tenro-ai--tenro-python"]
+	path = sources/direct/tenro-ai/tenro-ai--tenro-python
+	url = https://github.com/tenro-ai/tenro-python
+[submodule "test-zeus-ai--testzeus-hercules"]
+	path = sources/direct/test-zeus-ai/test-zeus-ai--testzeus-hercules
+	url = https://github.com/test-zeus-ai/testzeus-hercules
+[submodule "testlinkopensourcetrms--testlink-code"]
+	path = sources/direct/testlinkopensourcetrms/testlinkopensourcetrms--testlink-code
+	url = https://github.com/TestLinkOpenSourceTRMS/testlink-code
+[submodule "thejambo--todointerviewtest"]
+	path = sources/direct/thejambo/thejambo--todointerviewtest
+	url = https://github.com/TheJambo/ToDoInterviewTest
+[submodule "trytouca--trytouca"]
+	path = sources/direct/trytouca/trytouca--trytouca
+	url = https://github.com/trytouca/trytouca
+[submodule "tugkanboz--awesome-ai-testing"]
+	path = sources/direct/tugkanboz/tugkanboz--awesome-ai-testing
+	url = https://github.com/tugkanboz/awesome-ai-testing
+[submodule "usebruno--bruno"]
+	path = sources/direct/usebruno/usebruno--bruno
+	url = https://github.com/usebruno/bruno
+[submodule "utilhatch--json-validation-test-cases"]
+	path = sources/direct/utilhatch/utilhatch--json-validation-test-cases
+	url = https://github.com/UtilHatch/json-validation-test-cases
+[submodule "vertaaux--cli"]
+	path = sources/direct/vertaaux/vertaaux--cli
+	url = https://github.com/VertaaUX/cli
+[submodule "virajkulkarni14--awesome-cucumber"]
+	path = sources/direct/virajkulkarni14/virajkulkarni14--awesome-cucumber
+	url = https://github.com/virajkulkarni14/Awesome-Cucumber
+[submodule "vitalets--playwright-bdd"]
+	path = sources/direct/vitalets/vitalets--playwright-bdd
+	url = https://github.com/vitalets/playwright-bdd
+[submodule "voicetestdev--voicetest"]
+	path = sources/direct/voicetestdev/voicetestdev--voicetest
+	url = https://github.com/voicetestdev/voicetest
+[submodule "vostride--agent-qa"]
+	path = sources/direct/vostride/vostride--agent-qa
+	url = https://github.com/vostride/agent-qa
+[submodule "wiremock--wiremock"]
+	path = sources/direct/wiremock/wiremock--wiremock
+	url = https://github.com/wiremock/wiremock
+[submodule "xnbox--deepfakehttp"]
+	path = sources/direct/xnbox/xnbox--deepfakehttp
+	url = https://github.com/xnbox/DeepfakeHTTP
+[submodule "zaproxy--zaproxy"]
+	path = sources/direct/zaproxy/zaproxy--zaproxy
+	url = https://github.com/zaproxy/zaproxy
+[submodule "0x4d31--awesome-threat-detection"]
+	path = sources/nested/0x4d31/0x4d31--awesome-threat-detection
+	url = https://github.com/0x4D31/awesome-threat-detection
+[submodule "0xnr--awesome-analytics"]
+	path = sources/nested/0xnr/0xnr--awesome-analytics
+	url = https://github.com/oxnr/awesome-analytics
+[submodule "2gis--winium"]
+	path = sources/nested/2gis/2gis--winium
+	url = https://github.com/2gis/Winium
+[submodule "51j0--android-storage-extractor"]
+	path = sources/nested/51j0/51j0--android-storage-extractor
+	url = https://github.com/51j0/Android-Storage-Extractor
+[submodule "99designs--aws-vault"]
+	path = sources/nested/99designs/99designs--aws-vault
+	url = https://github.com/99designs/aws-vault
+[submodule "aboul3la--sublist3r"]
+	path = sources/nested/aboul3la/aboul3la--sublist3r
+	url = https://github.com/aboul3la/Sublist3r
+[submodule "admc--wd"]
+	path = sources/nested/admc/admc--wd
+	url = https://github.com/admc/wd
+[submodule "adrianmo--jmeter-backend-azure"]
+	path = sources/nested/adrianmo/adrianmo--jmeter-backend-azure
+	url = https://github.com/adrianmo/jmeter-backend-azure
+[submodule "aerokube--ggr"]
+	path = sources/nested/aerokube/aerokube--ggr
+	url = https://github.com/aerokube/ggr
+[submodule "aerokube--lightning-java"]
+	path = sources/nested/aerokube/aerokube--lightning-java
+	url = https://github.com/aerokube/lightning-java
+[submodule "aerokube--moon"]
+	path = sources/nested/aerokube/aerokube--moon
+	url = https://github.com/aerokube/moon
+[submodule "aerokube--selenoid"]
+	path = sources/nested/aerokube/aerokube--selenoid
+	url = https://github.com/aerokube/selenoid
+[submodule "afranken--jmeter-analysis-maven-plugin"]
+	path = sources/nested/afranken/afranken--jmeter-analysis-maven-plugin
+	url = https://github.com/afranken/jmeter-analysis-maven-plugin
+[submodule "akopytov--sysbench"]
+	path = sources/nested/akopytov/akopytov--sysbench
+	url = https://github.com/akopytov/sysbench
+[submodule "alerta--alerta"]
+	path = sources/nested/alerta/alerta--alerta
+	url = https://github.com/alerta/alerta
+[submodule "alexei-led--pumba"]
+	path = sources/nested/alexei-led/alexei-led--pumba
+	url = https://github.com/alexei-led/pumba
+[submodule "aliesbelik--awesome-gatling"]
+	path = sources/nested/aliesbelik/aliesbelik--awesome-gatling
+	url = https://github.com/aliesbelik/awesome-gatling
+[submodule "aliesbelik--awesome-locust"]
+	path = sources/nested/aliesbelik/aliesbelik--awesome-locust
+	url = https://github.com/aliesbelik/awesome-locust
+[submodule "aliesbelik--awesome-tsung"]
+	path = sources/nested/aliesbelik/aliesbelik--awesome-tsung
+	url = https://github.com/aliesbelik/awesome-tsung
+[submodule "aliesbelik--how-they-load"]
+	path = sources/nested/aliesbelik/aliesbelik--how-they-load
+	url = https://github.com/aliesbelik/how-they-load
+[submodule "aliesbelik--load-testing-toolkit"]
+	path = sources/nested/aliesbelik/aliesbelik--load-testing-toolkit
+	url = https://github.com/aliesbelik/load-testing-toolkit
+[submodule "anasoid--jmeter-as-code"]
+	path = sources/nested/anasoid/anasoid--jmeter-as-code
+	url = https://github.com/anasoid/jmeter-as-code
+[submodule "anasoid--jmeter-logstash"]
+	path = sources/nested/anasoid/anasoid--jmeter-logstash
+	url = https://github.com/anasoid/jmeter-logstash
+[submodule "anboralabs--intellij-jmeter"]
+	path = sources/nested/anboralabs/anboralabs--intellij-jmeter
+	url = https://github.com/anboralabs/intellij-jmeter
+[submodule "andrewdjackson--behavedemo"]
+	path = sources/nested/andrewdjackson/andrewdjackson--behavedemo
+	url = https://github.com/andrewdjackson/behavedemo
+[submodule "anthonygauthier--jmeter-elasticsearch-backend-listener"]
+	path = sources/nested/anthonygauthier/anthonygauthier--jmeter-elasticsearch-backend-listener
+	url = https://github.com/anthonygauthier/jmeter-elasticsearch-backend-listener
+[submodule "aol--moloch"]
+	path = sources/nested/aol/aol--moloch
+	url = https://github.com/arkime/arkime
+[submodule "apache--incubator-metron"]
+	path = sources/nested/apache/apache--incubator-metron
+	url = https://github.com/apache/metron
+[submodule "apache--incubator-spot"]
+	path = sources/nested/apache/apache--incubator-spot
+	url = https://github.com/apache/incubator-spot
+[submodule "apache--jmeter"]
+	path = sources/nested/apache/apache--jmeter
+	url = https://github.com/apache/jmeter
+[submodule "apache--skywalking"]
+	path = sources/nested/apache/apache--skywalking
+	url = https://github.com/apache/skywalking
+[submodule "apache--superset"]
+	path = sources/nested/apache/apache--superset
+	url = https://github.com/apache/superset
+[submodule "apsdehal--awesome-ctf"]
+	path = sources/nested/apsdehal/apsdehal--awesome-ctf
+	url = https://github.com/apsdehal/awesome-ctf
+[submodule "aptimyze--os-jmeter-aws"]
+	path = sources/nested/aptimyze/aptimyze--os-jmeter-aws
+	url = https://github.com/Aptimyze/os-jmeter-aws
+[submodule "aquasecurity--trivy"]
+	path = sources/nested/aquasecurity/aquasecurity--trivy
+	url = https://github.com/aquasecurity/trivy
+[submodule "artilleryio--artillery"]
+	path = sources/nested/artilleryio/artilleryio--artillery
+	url = https://github.com/artilleryio/artillery
+[submodule "ashishb--android-security-awesome"]
+	path = sources/nested/ashishb/ashishb--android-security-awesome
+	url = https://github.com/ashishb/android-security-awesome
+[submodule "async-profiler--async-profiler"]
+	path = sources/nested/async-profiler/async-profiler--async-profiler
+	url = https://github.com/async-profiler/async-profiler
+[submodule "atata-framework--atata"]
+	path = sources/nested/atata-framework/atata-framework--atata
+	url = https://github.com/atata-framework/atata
+[submodule "atinfo--awesome-test-automation"]
+	path = sources/nested/atinfo/atinfo--awesome-test-automation
+	url = https://github.com/atinfo/awesome-test-automation
+[submodule "awesome-foss--awesome-sysadmin"]
+	path = sources/nested/awesome-foss/awesome-foss--awesome-sysadmin
+	url = https://github.com/awesome-foss/awesome-sysadmin
+[submodule "awesome-selfhosted--awesome-selfhosted"]
+	path = sources/nested/awesome-selfhosted/awesome-selfhosted--awesome-selfhosted
+	url = https://github.com/awesome-selfhosted/awesome-selfhosted
+[submodule "aws-solutions--distributed-load-testing-on-aws"]
+	path = sources/nested/aws-solutions/aws-solutions--distributed-load-testing-on-aws
+	url = https://github.com/aws-solutions/distributed-load-testing-on-aws
+[submodule "axboe--fio"]
+	path = sources/nested/axboe/axboe--fio
+	url = https://github.com/axboe/fio
+[submodule "azure-samples--jmeter-aci-terraform"]
+	path = sources/nested/azure-samples/azure-samples--jmeter-aci-terraform
+	url = https://github.com/Azure-Samples/jmeter-aci-terraform
+[submodule "baalmor--cve-ape"]
+	path = sources/nested/baalmor/baalmor--cve-ape
+	url = https://github.com/Baalmor/cve-ape
+[submodule "baidu--openrasp"]
+	path = sources/nested/baidu/baidu--openrasp
+	url = https://github.com/baidu/openrasp
+[submodule "bayandin--awesome-awesomeness"]
+	path = sources/nested/bayandin/bayandin--awesome-awesomeness
+	url = https://github.com/bayandin/awesome-awesomeness
+[submodule "bearer--bearer"]
+	path = sources/nested/bearer/bearer--bearer
+	url = https://github.com/Bearer/bearer
+[submodule "behave-contrib--behave-gui"]
+	path = sources/nested/behave-contrib/behave-contrib--behave-gui
+	url = https://github.com/behave-contrib/behave-gui
+[submodule "behave-contrib--behave-html-formatter"]
+	path = sources/nested/behave-contrib/behave-contrib--behave-html-formatter
+	url = https://github.com/behave-contrib/behave-html-formatter
+[submodule "behave-contrib--behave-html-pretty-formatter"]
+	path = sources/nested/behave-contrib/behave-contrib--behave-html-pretty-formatter
+	url = https://github.com/behave-contrib/behave-html-pretty-formatter
+[submodule "behave-contrib--try-behave"]
+	path = sources/nested/behave-contrib/behave-contrib--try-behave
+	url = https://github.com/behave-contrib/try-behave
+[submodule "behave-restful--behave-restful"]
+	path = sources/nested/behave-restful/behave-restful--behave-restful
+	url = https://github.com/abantos/behave-restful
+[submodule "behave--behave"]
+	path = sources/nested/behave/behave--behave
+	url = https://github.com/behave/behave
+[submodule "behave--behave-django"]
+	path = sources/nested/behave/behave--behave-django
+	url = https://github.com/behave/behave-django
+[submodule "benc-uk--k6-reporter"]
+	path = sources/nested/benc-uk/benc-uk--k6-reporter
+	url = https://github.com/benc-uk/k6-reporter
+[submodule "bencherdev--bencher"]
+	path = sources/nested/bencherdev/bencherdev--bencher
+	url = https://github.com/bencherdev/bencher
+[submodule "benfred--py-spy"]
+	path = sources/nested/benfred/benfred--py-spy
+	url = https://github.com/benfred/py-spy
+[submodule "binhnguyennus--awesome-scalability"]
+	path = sources/nested/binhnguyennus/binhnguyennus--awesome-scalability
+	url = https://github.com/binhnguyennus/awesome-scalability
+[submodule "blazemeter--correlationrecorder"]
+	path = sources/nested/blazemeter/blazemeter--correlationrecorder
+	url = https://github.com/Blazemeter/CorrelationRecorder
+[submodule "blazemeter--hlsplugin"]
+	path = sources/nested/blazemeter/blazemeter--hlsplugin
+	url = https://github.com/Blazemeter/HLSPlugin
+[submodule "blazemeter--rteplugin"]
+	path = sources/nested/blazemeter/blazemeter--rteplugin
+	url = https://github.com/Blazemeter/RTEPlugin
+[submodule "blazemeter--siebelplugin"]
+	path = sources/nested/blazemeter/blazemeter--siebelplugin
+	url = https://github.com/Blazemeter/SiebelPlugin
+[submodule "blazemeter--taurus"]
+	path = sources/nested/blazemeter/blazemeter--taurus
+	url = https://github.com/Blazemeter/taurus
+[submodule "bogdananton--selenium-setup"]
+	path = sources/nested/bogdananton/bogdananton--selenium-setup
+	url = https://github.com/bogdananton/Selenium-Setup
+[submodule "bojand--ghz"]
+	path = sources/nested/bojand/bojand--ghz
+	url = https://github.com/bojand/ghz
+[submodule "bonigarcia--webdrivermanager"]
+	path = sources/nested/bonigarcia/bonigarcia--webdrivermanager
+	url = https://github.com/bonigarcia/webdrivermanager
+[submodule "bountyyfi--lonkero"]
+	path = sources/nested/bountyyfi/bountyyfi--lonkero
+	url = https://github.com/bountyyfi/lonkero
+[submodule "bpftrace--bpftrace"]
+	path = sources/nested/bpftrace/bpftrace--bpftrace
+	url = https://github.com/bpftrace/bpftrace
+[submodule "bravostudiodev--bravo-grid"]
+	path = sources/nested/bravostudiodev/bravostudiodev--bravo-grid
+	url = https://github.com/bravostudiodev/bravo-grid
+[submodule "brexhq--substation"]
+	path = sources/nested/brexhq/brexhq--substation
+	url = https://github.com/brexhq/substation
+[submodule "brianfrankcooper--ycsb"]
+	path = sources/nested/brianfrankcooper/brianfrankcooper--ycsb
+	url = https://github.com/brianfrankcooper/YCSB
+[submodule "bridgecrewio--checkov"]
+	path = sources/nested/bridgecrewio/bridgecrewio--checkov
+	url = https://github.com/bridgecrewio/checkov
+[submodule "bugazelle--hello-jmeter-plugin"]
+	path = sources/nested/bugazelle/bugazelle--hello-jmeter-plugin
+	url = https://github.com/Bugazelle/hello-jmeter-plugin
+[submodule "bunkerity--bunkerweb"]
+	path = sources/nested/bunkerity/bunkerity--bunkerweb
+	url = https://github.com/bunkerity/bunkerweb
+[submodule "caesar0301--awesome-pcaptools"]
+	path = sources/nested/caesar0301/caesar0301--awesome-pcaptools
+	url = https://github.com/caesar0301/awesome-pcaptools
+[submodule "carpedm20--awesome-hacking"]
+	path = sources/nested/carpedm20/carpedm20--awesome-hacking
+	url = https://github.com/carpedm20/awesome-hacking
+[submodule "catchpoint--webpagetest"]
+	path = sources/nested/catchpoint/catchpoint--webpagetest
+	url = https://github.com/catchpoint/WebPageTest
+[submodule "cert-polska--artemis"]
+	path = sources/nested/cert-polska/cert-polska--artemis
+	url = https://github.com/CERT-Polska/Artemis
+[submodule "certsocietegenerale--fir"]
+	path = sources/nested/certsocietegenerale/certsocietegenerale--fir
+	url = https://github.com/certsocietegenerale/FIR
+[submodule "certtools--intelmq"]
+	path = sources/nested/certtools/certtools--intelmq
+	url = https://github.com/certtools/intelmq
+[submodule "cfpb--jmeter-bootstrap"]
+	path = sources/nested/cfpb/cfpb--jmeter-bootstrap
+	url = https://github.com/cfpb/jmeter-bootstrap
+[submodule "chaos-mesh--chaos-mesh"]
+	path = sources/nested/chaos-mesh/chaos-mesh--chaos-mesh
+	url = https://github.com/chaos-mesh/chaos-mesh
+[submodule "chaosync-org--awesome-ai-agent-testing"]
+	path = sources/nested/chaosync-org/chaosync-org--awesome-ai-agent-testing
+	url = https://github.com/chaosync-org/awesome-ai-agent-testing
+[submodule "checkly--checkly-cli"]
+	path = sources/nested/checkly/checkly--checkly-cli
+	url = https://github.com/checkly/checkly-cli
+[submodule "checkmarx--kics"]
+	path = sources/nested/checkmarx/checkmarx--kics
+	url = https://github.com/Checkmarx/kics
+[submodule "checkmk--checkmk"]
+	path = sources/nested/checkmk/checkmk--checkmk
+	url = https://github.com/Checkmk/checkmk
+[submodule "chriskite--anemone"]
+	path = sources/nested/chriskite/chriskite--anemone
+	url = https://github.com/chriskite/anemone
+[submodule "cilium--hubble"]
+	path = sources/nested/cilium/cilium--hubble
+	url = https://github.com/cilium/hubble
+[submodule "cisco-open-source--qtwebdriver"]
+	path = sources/nested/cisco-open-source/cisco-open-source--qtwebdriver
+	url = https://github.com/cisco-open-source/qtwebdriver
+[submodule "cleder--awesome-python-testing"]
+	path = sources/nested/cleder/cleder--awesome-python-testing
+	url = https://github.com/cleder/awesome-python-testing
+[submodule "clickhouse--clickhouse"]
+	path = sources/nested/clickhouse/clickhouse--clickhouse
+	url = https://github.com/ClickHouse/ClickHouse
+[submodule "clicksecurity--data_hacking"]
+	path = sources/nested/clicksecurity/clicksecurity--data_hacking
+	url = https://github.com/SuperCowPowers/data_hacking
+[submodule "cloudflare--redoctober"]
+	path = sources/nested/cloudflare/cloudflare--redoctober
+	url = https://github.com/cloudflare/redoctober
+[submodule "cloudsecurelab--security-acronyms"]
+	path = sources/nested/cloudsecurelab/cloudsecurelab--security-acronyms
+	url = https://github.com/cloudsecurelab/security-acronyms
+[submodule "cmu-db--benchbase"]
+	path = sources/nested/cmu-db/cmu-db--benchbase
+	url = https://github.com/cmu-db/benchbase
+[submodule "cncf--tag-app-delivery"]
+	path = sources/nested/cncf/cncf--tag-app-delivery
+	url = https://github.com/cncf/tag-app-delivery
+[submodule "cncf--tag-observability"]
+	path = sources/nested/cncf/cncf--tag-observability
+	url = https://github.com/cncf/tag-observability
+[submodule "codeborne--selenide"]
+	path = sources/nested/codeborne/codeborne--selenide
+	url = https://github.com/selenide/selenide
+[submodule "codegram--spinach"]
+	path = sources/nested/codegram/codegram--spinach
+	url = https://github.com/codegram/spinach
+[submodule "codesenberg--bombardier"]
+	path = sources/nested/codesenberg/codesenberg--bombardier
+	url = https://github.com/codesenberg/bombardier
+[submodule "codeyourweb--fastfinder"]
+	path = sources/nested/codeyourweb/codeyourweb--fastfinder
+	url = https://github.com/codeyourweb/fastfinder
+[submodule "colinianking--stress-ng"]
+	path = sources/nested/colinianking/colinianking--stress-ng
+	url = https://github.com/ColinIanKing/stress-ng
+[submodule "concurrencylabs--jmeter-cw-logs"]
+	path = sources/nested/concurrencylabs/concurrencylabs--jmeter-cw-logs
+	url = https://github.com/concurrencylabs/jmeter-cw-logs
+[submodule "conradirwin--dotgpg"]
+	path = sources/nested/conradirwin/conradirwin--dotgpg
+	url = https://github.com/ConradIrwin/dotgpg
+[submodule "corca-ai--awesome-llm-security"]
+	path = sources/nested/corca-ai/corca-ai--awesome-llm-security
+	url = https://github.com/corca-ai/awesome-llm-security
+[submodule "coreb1t--awesome-pentest-cheat-sheets"]
+	path = sources/nested/coreb1t/coreb1t--awesome-pentest-cheat-sheets
+	url = https://github.com/coreb1t/awesome-pentest-cheat-sheets
+[submodule "corelight--zeek2es"]
+	path = sources/nested/corelight/corelight--zeek2es
+	url = https://github.com/corelight/zeek2es
+[submodule "coroot--coroot"]
+	path = sources/nested/coroot/coroot--coroot
+	url = https://github.com/coroot/coroot
+[submodule "correlatedsecurity--awesome-soar"]
+	path = sources/nested/correlatedsecurity/correlatedsecurity--awesome-soar
+	url = https://github.com/correlatedsecurity/Awesome-SOAR
+[submodule "cossacklabs--acra"]
+	path = sources/nested/cossacklabs/cossacklabs--acra
+	url = https://github.com/cossacklabs/acra
+[submodule "cossacklabs--themis"]
+	path = sources/nested/cossacklabs/cossacklabs--themis
+	url = https://github.com/cossacklabs/themis
+[submodule "criterion-rs--criterion.rs"]
+	path = sources/nested/criterion-rs/criterion-rs--criterion.rs
+	url = https://github.com/criterion-rs/criterion.rs
+[submodule "crki76--python-behave-sample-project"]
+	path = sources/nested/crki76/crki76--python-behave-sample-project
+	url = https://github.com/crki76/Python-Behave-sample-project
+[submodule "crowdsecurity--crowdsec"]
+	path = sources/nested/crowdsecurity/crowdsecurity--crowdsec
+	url = https://github.com/crowdsecurity/crowdsec
+[submodule "csirtgadgets--massive-octo-spice"]
+	path = sources/nested/csirtgadgets/csirtgadgets--massive-octo-spice
+	url = https://github.com/csirtgadgets/massive-octo-spice
+[submodule "cucumber--cucumber-js"]
+	path = sources/nested/cucumber/cucumber--cucumber-js
+	url = https://github.com/cucumber/cucumber-js
+[submodule "cybertec-postgresql--pgwatch"]
+	path = sources/nested/cybertec-postgresql/cybertec-postgresql--pgwatch
+	url = https://github.com/cybertec-postgresql/pgwatch
+[submodule "d6y--jchav"]
+	path = sources/nested/d6y/d6y--jchav
+	url = https://github.com/d6y/jchav
+[submodule "daluu--autoitdriverserver"]
+	path = sources/nested/daluu/daluu--autoitdriverserver
+	url = https://github.com/daluu/AutoItDriverServer
+[submodule "daluu--autopydriverserver"]
+	path = sources/nested/daluu/daluu--autopydriverserver
+	url = https://github.com/daluu/AutoPyDriverServer
+[submodule "damianszczepanik--cucumber-reporting"]
+	path = sources/nested/damianszczepanik/damianszczepanik--cucumber-reporting
+	url = https://github.com/damianszczepanik/cucumber-reporting
+[submodule "darcy-framework--darcy-webdriver"]
+	path = sources/nested/darcy-framework/darcy-framework--darcy-webdriver
+	url = https://github.com/darcy-framework/darcy-webdriver
+[submodule "darold--pgbadger"]
+	path = sources/nested/darold/darold--pgbadger
+	url = https://github.com/darold/pgbadger
+[submodule "darrensmithwtc--jmeter-backend-newrelic"]
+	path = sources/nested/darrensmithwtc/darrensmithwtc--jmeter-backend-newrelic
+	url = https://github.com/darrensmithwtc/jmeter-backend-newrelic
+[submodule "dastergon--awesome-chaos-engineering"]
+	path = sources/nested/dastergon/dastergon--awesome-chaos-engineering
+	url = https://github.com/dastergon/awesome-chaos-engineering
+[submodule "datadog--jmeter-datadog-backend-listener"]
+	path = sources/nested/datadog/datadog--jmeter-datadog-backend-listener
+	url = https://github.com/DataDog/jmeter-datadog-backend-listener
+[submodule "datafaker-net--datafaker"]
+	path = sources/nested/datafaker-net/datafaker-net--datafaker
+	url = https://github.com/datafaker-net/datafaker
+[submodule "decalage2--awesome-security-hardening"]
+	path = sources/nested/decalage2/decalage2--awesome-security-hardening
+	url = https://github.com/decalage2/awesome-security-hardening
+[submodule "deepfence--packetstreamer"]
+	path = sources/nested/deepfence/deepfence--packetstreamer
+	url = https://github.com/deepfence/PacketStreamer
+[submodule "deepfence--secretscanner"]
+	path = sources/nested/deepfence/deepfence--secretscanner
+	url = https://github.com/deepfence/SecretScanner
+[submodule "deepfence--threatmapper"]
+	path = sources/nested/deepfence/deepfence--threatmapper
+	url = https://github.com/deepfence/ThreatMapper
+[submodule "desaster--kippo"]
+	path = sources/nested/desaster/desaster--kippo
+	url = https://github.com/desaster/kippo
+[submodule "dev-sec--ansible-os-hardening"]
+	path = sources/nested/dev-sec/dev-sec--ansible-os-hardening
+	url = https://github.com/dev-sec/ansible-collection-hardening
+[submodule "devicefarmer--stf"]
+	path = sources/nested/devicefarmer/devicefarmer--stf
+	url = https://github.com/DeviceFarmer/stf
+[submodule "diogo-fernan--ir-rescue"]
+	path = sources/nested/diogo-fernan/diogo-fernan--ir-rescue
+	url = https://github.com/diogo-fernan/ir-rescue
+[submodule "dipankardandapat--python_selenium_bdd_framework"]
+	path = sources/nested/dipankardandapat/dipankardandapat--python_selenium_bdd_framework
+	url = https://github.com/DipankarDandapat/Python_Selenium_BDD_Framework
+[submodule "dmolchanenko--lookingglass"]
+	path = sources/nested/dmolchanenko/dmolchanenko--lookingglass
+	url = https://github.com/dmolchanenko/LookingGlass
+[submodule "docbleach--docbleach"]
+	path = sources/nested/docbleach/docbleach--docbleach
+	url = https://github.com/docbleach/DocBleach
+[submodule "dogoncouch--logdissect"]
+	path = sources/nested/dogoncouch/dogoncouch--logdissect
+	url = https://github.com/dogoncouch/logdissect
+[submodule "dogoncouch--logesp"]
+	path = sources/nested/dogoncouch/dogoncouch--logesp
+	url = https://github.com/dogoncouch/LogESP
+[submodule "doyensec--awesome-electronjs-hacking"]
+	path = sources/nested/doyensec/doyensec--awesome-electronjs-hacking
+	url = https://github.com/doyensec/awesome-electronjs-hacking
+[submodule "dperfly--fiddler2jmeter"]
+	path = sources/nested/dperfly/dperfly--fiddler2jmeter
+	url = https://github.com/dperfly/fiddler2jmeter
+[submodule "dynatrace-oss--jmeter-dynatrace-plugin"]
+	path = sources/nested/dynatrace-oss/dynatrace-oss--jmeter-dynatrace-plugin
+	url = https://github.com/dynatrace-oss/jmeter-dynatrace-plugin
+[submodule "dzuluagaapigee--apigee-ci-jenkins-git-maven-jmeter"]
+	path = sources/nested/dzuluagaapigee/dzuluagaapigee--apigee-ci-jenkins-git-maven-jmeter
+	url = https://github.com/dzuluagaapigee/apigee-ci-jenkins-git-maven-jmeter
+[submodule "elastic--elasticsearch"]
+	path = sources/nested/elastic/elastic--elasticsearch
+	url = https://github.com/elastic/elasticsearch
+[submodule "elastic--kibana"]
+	path = sources/nested/elastic/elastic--kibana
+	url = https://github.com/elastic/kibana
+[submodule "eldaduzman--pymeter"]
+	path = sources/nested/eldaduzman/eldaduzman--pymeter
+	url = https://github.com/eldaduzman/pymeter
+[submodule "elgalu--docker-selenium"]
+	path = sources/nested/elgalu/elgalu--docker-selenium
+	url = https://github.com/elgalu/docker-selenium
+[submodule "enapiuz--awesome-monitoring"]
+	path = sources/nested/enapiuz/enapiuz--awesome-monitoring
+	url = https://github.com/Enapiuz/awesome-monitoring
+[submodule "enaqx--awesome-pentest"]
+	path = sources/nested/enaqx/enaqx--awesome-pentest
+	url = https://github.com/enaqx/awesome-pentest
+[submodule "endgameinc--binarypig"]
+	path = sources/nested/endgameinc/endgameinc--binarypig
+	url = https://github.com/endgameinc/binarypig
+[submodule "engn33r--awesome-bluetooth-security"]
+	path = sources/nested/engn33r/engn33r--awesome-bluetooth-security
+	url = https://github.com/engn33r/awesome-bluetooth-security
+[submodule "enkessler--cuke_linter"]
+	path = sources/nested/enkessler/enkessler--cuke_linter
+	url = https://github.com/enkessler/cuke_linter
+[submodule "esnet--iperf"]
+	path = sources/nested/esnet/esnet--iperf
+	url = https://github.com/esnet/iperf
+[submodule "evilsocket--opensnitch"]
+	path = sources/nested/evilsocket/evilsocket--opensnitch
+	url = https://github.com/evilsocket/opensnitch
+[submodule "facebook--php-webdriver"]
+	path = sources/nested/facebook/facebook--php-webdriver
+	url = https://github.com/php-webdriver/php-webdriver
+[submodule "faker-js--faker"]
+	path = sources/nested/faker-js/faker-js--faker
+	url = https://github.com/faker-js/faker
+[submodule "fingerprintjs--fingerprint-android"]
+	path = sources/nested/fingerprintjs/fingerprintjs--fingerprint-android
+	url = https://github.com/fingerprintjs/fingerprintjs-android
+[submodule "fingerprintjs--fingerprintjs"]
+	path = sources/nested/fingerprintjs/fingerprintjs--fingerprintjs
+	url = https://github.com/fingerprintjs/fingerprintjs
+[submodule "fireeye--iocs"]
+	path = sources/nested/fireeye/fireeye--iocs
+	url = https://github.com/mandiant/iocs
+[submodule "firezone--firezone"]
+	path = sources/nested/firezone/firezone--firezone
+	url = https://github.com/firezone/firezone
+[submodule "flanksource--sre-learning-resources"]
+	path = sources/nested/flanksource/flanksource--sre-learning-resources
+	url = https://github.com/flanksource/sre-learning-resources
+[submodule "fleetdm--fleet"]
+	path = sources/nested/fleetdm/fleetdm--fleet
+	url = https://github.com/fleetdm/fleet
+[submodule "fluent--fluent-bit"]
+	path = sources/nested/fluent/fluent--fluent-bit
+	url = https://github.com/fluent/fluent-bit
+[submodule "fluent--fluentd"]
+	path = sources/nested/fluent/fluent--fluentd
+	url = https://github.com/fluent/fluentd
+[submodule "foospidy--honeypy"]
+	path = sources/nested/foospidy/foospidy--honeypy
+	url = https://github.com/foospidy/HoneyPy
+[submodule "fortio--fortio"]
+	path = sources/nested/fortio/fortio--fortio
+	url = https://github.com/fortio/fortio
+[submodule "frida--frida"]
+	path = sources/nested/frida/frida--frida
+	url = https://github.com/frida/frida
+[submodule "friz-zy--awesome-linux-containers"]
+	path = sources/nested/friz-zy/friz-zy--awesome-linux-containers
+	url = https://github.com/Friz-zy/awesome-linux-containers
+[submodule "fugue--credstash"]
+	path = sources/nested/fugue/fugue--credstash
+	url = https://github.com/fugue/credstash
+[submodule "gamelinux--passivedns"]
+	path = sources/nested/gamelinux/gamelinux--passivedns
+	url = https://github.com/gamelinux/passivedns
+[submodule "gatling--gatling"]
+	path = sources/nested/gatling/gatling--gatling
+	url = https://github.com/gatling/gatling
+[submodule "geiserx--website-diff"]
+	path = sources/nested/geiserx/geiserx--website-diff
+	url = https://github.com/GeiserX/Wayback-Diff
+[submodule "getanteon--anteon"]
+	path = sources/nested/getanteon/getanteon--anteon
+	url = https://github.com/getanteon/anteon
+[submodule "getredash--redash"]
+	path = sources/nested/getredash/getredash--redash
+	url = https://github.com/getredash/redash
+[submodule "getsentry--sentry"]
+	path = sources/nested/getsentry/getsentry--sentry
+	url = https://github.com/getsentry/sentry
+[submodule "ggkiokas--parallelbehaveallureflow"]
+	path = sources/nested/ggkiokas/ggkiokas--parallelbehaveallureflow
+	url = https://github.com/ggkiokas/ParallelBehaveAllureFlow
+[submodule "giltene--wrk2"]
+	path = sources/nested/giltene/giltene--wrk2
+	url = https://github.com/giltene/wrk2
+[submodule "google--google-authenticator"]
+	path = sources/nested/google/google--google-authenticator
+	url = https://github.com/google/google-authenticator
+[submodule "google--grr"]
+	path = sources/nested/google/google--grr
+	url = https://github.com/google/grr
+[submodule "google--perfetto"]
+	path = sources/nested/google/google--perfetto
+	url = https://github.com/google/perfetto
+[submodule "google--pprof"]
+	path = sources/nested/google/google--pprof
+	url = https://github.com/google/pprof
+[submodule "google--rekall"]
+	path = sources/nested/google/google--rekall
+	url = https://github.com/google/rekall
+[submodule "google--stenographer"]
+	path = sources/nested/google/google--stenographer
+	url = https://github.com/google/stenographer
+[submodule "google--webdriver.dart"]
+	path = sources/nested/google/google--webdriver.dart
+	url = https://github.com/google/webdriver.dart
+[submodule "googlechrome--lighthouse"]
+	path = sources/nested/googlechrome/googlechrome--lighthouse
+	url = https://github.com/GoogleChrome/lighthouse
+[submodule "googlechrome--lighthouse-ci"]
+	path = sources/nested/googlechrome/googlechrome--lighthouse-ci
+	url = https://github.com/GoogleChrome/lighthouse-ci
+[submodule "govanguard--legion"]
+	path = sources/nested/govanguard/govanguard--legion
+	url = https://github.com/Abacus-Group-RTO/legion
+[submodule "gpotter2--awesome-scapy"]
+	path = sources/nested/gpotter2/gpotter2--awesome-scapy
+	url = https://github.com/secdev/awesome-scapy
+[submodule "grafana--alloy"]
+	path = sources/nested/grafana/grafana--alloy
+	url = https://github.com/grafana/alloy
+[submodule "grafana--awesome-k6"]
+	path = sources/nested/grafana/grafana--awesome-k6
+	url = https://github.com/grafana/awesome-k6
+[submodule "grafana--faro-web-sdk"]
+	path = sources/nested/grafana/grafana--faro-web-sdk
+	url = https://github.com/grafana/faro-web-sdk
+[submodule "grafana--grafana"]
+	path = sources/nested/grafana/grafana--grafana
+	url = https://github.com/grafana/grafana
+[submodule "grafana--k6"]
+	path = sources/nested/grafana/grafana--k6
+	url = https://github.com/grafana/k6
+[submodule "grafana--k6-studio"]
+	path = sources/nested/grafana/grafana--k6-studio
+	url = https://github.com/grafana/k6-studio
+[submodule "grafana--loki"]
+	path = sources/nested/grafana/grafana--loki
+	url = https://github.com/grafana/loki
+[submodule "grafana--mimir"]
+	path = sources/nested/grafana/grafana--mimir
+	url = https://github.com/grafana/mimir
+[submodule "grafana--pyroscope"]
+	path = sources/nested/grafana/grafana--pyroscope
+	url = https://github.com/grafana/pyroscope
+[submodule "grafana--tempo"]
+	path = sources/nested/grafana/grafana--tempo
+	url = https://github.com/grafana/tempo
+[submodule "grapheneos--hardened_malloc"]
+	path = sources/nested/grapheneos/grapheneos--hardened_malloc
+	url = https://github.com/GrapheneOS/hardened_malloc
+[submodule "graphite-project--graphite-web"]
+	path = sources/nested/graphite-project/graphite-project--graphite-web
+	url = https://github.com/graphite-project/graphite-web
+[submodule "graylog2--graylog2-server"]
+	path = sources/nested/graylog2/graylog2--graylog2-server
+	url = https://github.com/Graylog2/graylog2-server
+[submodule "greptimeteam--greptimedb"]
+	path = sources/nested/greptimeteam/greptimeteam--greptimedb
+	url = https://github.com/GreptimeTeam/greptimedb
+[submodule "guardicore--monkey"]
+	path = sources/nested/guardicore/guardicore--monkey
+	url = https://github.com/guardicore/monkey
+[submodule "harlan-zw--unlighthouse"]
+	path = sources/nested/harlan-zw/harlan-zw--unlighthouse
+	url = https://github.com/harlan-zw/unlighthouse
+[submodule "hatoo--oha"]
+	path = sources/nested/hatoo/hatoo--oha
+	url = https://github.com/hatoo/oha
+[submodule "hdrhistogram--hdrhistogram"]
+	path = sources/nested/hdrhistogram/hdrhistogram--hdrhistogram
+	url = https://github.com/HdrHistogram/HdrHistogram
+[submodule "hellofresh--kangal"]
+	path = sources/nested/hellofresh/hellofresh--kangal
+	url = https://github.com/hellofresh/kangal
+[submodule "henritersteeg--cuke4vs"]
+	path = sources/nested/henritersteeg/henritersteeg--cuke4vs
+	url = https://github.com/henritersteeg/cuke4vs
+[submodule "henryhoggard--awesome-arm-exploitation"]
+	path = sources/nested/henryhoggard/henryhoggard--awesome-arm-exploitation
+	url = https://github.com/HenryHoggard/awesome-arm-exploitation
+[submodule "hrcorval--behavex"]
+	path = sources/nested/hrcorval/hrcorval--behavex
+	url = https://github.com/hrcorval/behavex
+[submodule "hslatman--awesome-threat-intelligence"]
+	path = sources/nested/hslatman/hslatman--awesome-threat-intelligence
+	url = https://github.com/hslatman/awesome-threat-intelligence
+[submodule "hugeinc--behave-parallel"]
+	path = sources/nested/hugeinc/hugeinc--behave-parallel
+	url = https://github.com/hugeinc/behave-parallel
+[submodule "hyperdxio--hyperdx"]
+	path = sources/nested/hyperdxio/hyperdxio--hyperdx
+	url = https://github.com/hyperdxio/hyperdx
+[submodule "hyperfoil--hyperfoil"]
+	path = sources/nested/hyperfoil/hyperfoil--hyperfoil
+	url = https://github.com/Hyperfoil/Hyperfoil
+[submodule "ibotpeaches--apktool"]
+	path = sources/nested/ibotpeaches/ibotpeaches--apktool
+	url = https://github.com/iBotPeaches/Apktool
+[submodule "icinga--icinga2"]
+	path = sources/nested/icinga/icinga--icinga2
+	url = https://github.com/Icinga/icinga2
+[submodule "iljabauer--behave-teamcity"]
+	path = sources/nested/iljabauer/iljabauer--behave-teamcity
+	url = https://github.com/iljabauer/behave-teamcity
+[submodule "influxdata--influxdb"]
+	path = sources/nested/influxdata/influxdata--influxdb
+	url = https://github.com/influxdata/influxdb
+[submodule "influxdata--telegraf"]
+	path = sources/nested/influxdata/influxdata--telegraf
+	url = https://github.com/influxdata/telegraf
+[submodule "infoslack--awesome-web-hacking"]
+	path = sources/nested/infoslack/infoslack--awesome-web-hacking
+	url = https://github.com/infoslack/awesome-web-hacking
+[submodule "innogames--ltc"]
+	path = sources/nested/innogames/innogames--ltc
+	url = https://github.com/innogames/ltc
+[submodule "inquest--awesome-yara"]
+	path = sources/nested/inquest/inquest--awesome-yara
+	url = https://github.com/pedramamini/awesome-yara
+[submodule "insidersec--insider"]
+	path = sources/nested/insidersec/insidersec--insider
+	url = https://github.com/insidersec/insider
+[submodule "insidetrust--awesome-ai-pentest"]
+	path = sources/nested/insidetrust/insidetrust--awesome-ai-pentest
+	url = https://github.com/insidetrust/awesome-ai-pentest
+[submodule "intuit--autometer"]
+	path = sources/nested/intuit/intuit--autometer
+	url = https://github.com/intuit/autometer
+[submodule "intuit--karate"]
+	path = sources/nested/intuit/intuit--karate
+	url = https://github.com/karatelabs/karate
+[submodule "iovisor--bcc"]
+	path = sources/nested/iovisor/iovisor--bcc
+	url = https://github.com/iovisor/bcc
+[submodule "ir193--amextractor"]
+	path = sources/nested/ir193/ir193--amextractor
+	url = https://github.com/ir193/AMExtractor
+[submodule "ironbee--ironbee"]
+	path = sources/nested/ironbee/ironbee--ironbee
+	url = https://github.com/ironbee/ironbee
+[submodule "isgasho--finshir"]
+	path = sources/nested/isgasho/isgasho--finshir
+	url = https://github.com/isgasho/finshir
+[submodule "jaegertracing--jaeger"]
+	path = sources/nested/jaegertracing/jaegertracing--jaeger
+	url = https://github.com/jaegertracing/jaeger
+[submodule "jagt--clumsy"]
+	path = sources/nested/jagt/jagt--clumsy
+	url = https://github.com/jagt/clumsy
+[submodule "jakejarvis--awesome-shodan-queries"]
+	path = sources/nested/jakejarvis/jakejarvis--awesome-shodan-queries
+	url = https://github.com/jakejarvis/awesome-shodan-queries
+[submodule "jenkinsci--cucumber-reports-plugin"]
+	path = sources/nested/jenkinsci/jenkinsci--cucumber-reports-plugin
+	url = https://github.com/jenkinsci/cucumber-reports-plugin
+[submodule "jfifield--ant-jmeter"]
+	path = sources/nested/jfifield/jfifield--ant-jmeter
+	url = https://github.com/jfifield/ant-jmeter
+[submodule "jimevans--strontium"]
+	path = sources/nested/jimevans/jimevans--strontium
+	url = https://github.com/jimevans/strontium
+[submodule "jmeter-gradle-plugin--jmeter-gradle-plugin"]
+	path = sources/nested/jmeter-gradle-plugin/jmeter-gradle-plugin--jmeter-gradle-plugin
+	url = https://github.com/jmeter-gradle-plugin/jmeter-gradle-plugin
+[submodule "jmeter-maven-plugin--jmeter-maven-plugin"]
+	path = sources/nested/jmeter-maven-plugin/jmeter-maven-plugin--jmeter-maven-plugin
+	url = https://github.com/jmeter-maven-plugin/jmeter-maven-plugin
+[submodule "jnv--lists"]
+	path = sources/nested/jnv/jnv--lists
+	url = https://github.com/jnv/lists
+[submodule "joe-shenouda--awesome-cyber-skills"]
+	path = sources/nested/joe-shenouda/joe-shenouda--awesome-cyber-skills
+	url = https://github.com/joe-shenouda/awesome-cyber-skills
+[submodule "johrstrom--jmeter-prometheus-plugin"]
+	path = sources/nested/johrstrom/johrstrom--jmeter-prometheus-plugin
+	url = https://github.com/johrstrom/jmeter-prometheus-plugin
+[submodule "jtorgan--jmeter_plugin"]
+	path = sources/nested/jtorgan/jtorgan--jmeter_plugin
+	url = https://github.com/jtorgan/jmeter_plugin
+[submodule "jtpereyda--boofuzz"]
+	path = sources/nested/jtpereyda/jtpereyda--boofuzz
+	url = https://github.com/jtpereyda/boofuzz
+[submodule "k4m4--movies-for-hackers"]
+	path = sources/nested/k4m4/k4m4--movies-for-hackers
+	url = https://github.com/k4m4/movies-for-hackers
+[submodule "k8sgpt-ai--k8sgpt"]
+	path = sources/nested/k8sgpt-ai/k8sgpt-ai--k8sgpt
+	url = https://github.com/k8sgpt-ai/k8sgpt
+[submodule "kai5263499--container-security-awesome"]
+	path = sources/nested/kai5263499/kai5263499--container-security-awesome
+	url = https://github.com/kai5263499/container-security-awesome
+[submodule "kai5263499--osx-security-awesome"]
+	path = sources/nested/kai5263499/kai5263499--osx-security-awesome
+	url = https://github.com/kai5263499/osx-security-awesome
+[submodule "kaplanelad--shellfirm"]
+	path = sources/nested/kaplanelad/kaplanelad--shellfirm
+	url = https://github.com/kaplanelad/shellfirm
+[submodule "karatelabs--karate"]
+	path = sources/nested/karatelabs/karatelabs--karate
+	url = https://github.com/karatelabs/karate
+[submodule "karimhabush--cyberowl"]
+	path = sources/nested/karimhabush/karimhabush--cyberowl
+	url = https://github.com/karimhabush/cyberowl
+[submodule "keephq--keep"]
+	path = sources/nested/keephq/keephq--keep
+	url = https://github.com/keephq/keep
+[submodule "khadinxc--sigma2kql"]
+	path = sources/nested/khadinxc/khadinxc--sigma2kql
+	url = https://github.com/Khadinxc/Sigma2KQL
+[submodule "khadinxc--sigma2spl"]
+	path = sources/nested/khadinxc/khadinxc--sigma2spl
+	url = https://github.com/Khadinxc/Sigma2SPL
+[submodule "khadinxc--terrasigma"]
+	path = sources/nested/khadinxc/khadinxc--terrasigma
+	url = https://github.com/Khadinxc/TerraSigma
+[submodule "khast3x--redcloud"]
+	path = sources/nested/khast3x/khast3x--redcloud
+	url = https://github.com/khast3x/Redcloud
+[submodule "kiali--kiali"]
+	path = sources/nested/kiali/kiali--kiali
+	url = https://github.com/kiali/kiali
+[submodule "kirillyu--jmeterreports"]
+	path = sources/nested/kirillyu/kirillyu--jmeterreports
+	url = https://github.com/kirillyu/jmeterReports
+[submodule "kishanbagaria--padding-oracle-attacker"]
+	path = sources/nested/kishanbagaria/kishanbagaria--padding-oracle-attacker
+	url = https://github.com/KishanBagaria/padding-oracle-attacker
+[submodule "kolesnikovm--jmeter-prometheus-listener"]
+	path = sources/nested/kolesnikovm/kolesnikovm--jmeter-prometheus-listener
+	url = https://github.com/kolesnikovm/jmeter-prometheus-listener
+[submodule "kowalcj0--gee"]
+	path = sources/nested/kowalcj0/kowalcj0--gee
+	url = https://github.com/kowalcj0/gee
+[submodule "kubernauts--jmeter-kubernetes"]
+	path = sources/nested/kubernauts/kubernauts--jmeter-kubernetes
+	url = https://github.com/kubernauts/jmeter-kubernetes
+[submodule "kurolabs--stegcloak"]
+	path = sources/nested/kurolabs/kurolabs--stegcloak
+	url = https://github.com/KuroLabs/stegcloak
+[submodule "lanmaster53--recon-ng"]
+	path = sources/nested/lanmaster53/lanmaster53--recon-ng
+	url = https://github.com/lanmaster53/recon-ng
+[submodule "ligurio--sqa-wiki"]
+	path = sources/nested/ligurio/ligurio--sqa-wiki
+	url = https://github.com/ligurio/sqa-wiki
+[submodule "linkerd--linkerd2"]
+	path = sources/nested/linkerd/linkerd--linkerd2
+	url = https://github.com/linkerd/linkerd2
+[submodule "lirantal--is-website-vulnerable"]
+	path = sources/nested/lirantal/lirantal--is-website-vulnerable
+	url = https://github.com/lirantal/is-website-vulnerable
+[submodule "lissy93--awesome-privacy"]
+	path = sources/nested/lissy93/lissy93--awesome-privacy
+	url = https://github.com/lissy93/awesome-privacy
+[submodule "lissy93--personal-security-checklist"]
+	path = sources/nested/lissy93/lissy93--personal-security-checklist
+	url = https://github.com/lissy93/personal-security-checklist
+[submodule "litmuschaos--litmus"]
+	path = sources/nested/litmuschaos/litmuschaos--litmus
+	url = https://github.com/litmuschaos/litmus
+[submodule "lk-geimfari--mimesis"]
+	path = sources/nested/lk-geimfari/lk-geimfari--mimesis
+	url = https://github.com/lk-geimfari/mimesis
+[submodule "lmc-eu--steward"]
+	path = sources/nested/lmc-eu/lmc-eu--steward
+	url = https://github.com/lmc-eu/steward
+[submodule "loadium--postman2jmx"]
+	path = sources/nested/loadium/loadium--postman2jmx
+	url = https://github.com/Loadium/postman2jmx
+[submodule "locustio--locust"]
+	path = sources/nested/locustio/locustio--locust
+	url = https://github.com/locustio/locust
+[submodule "louislam--uptime-kuma"]
+	path = sources/nested/louislam/louislam--uptime-kuma
+	url = https://github.com/louislam/uptime-kuma
+[submodule "ludeknovy--jtl-reporter"]
+	path = sources/nested/ludeknovy/ludeknovy--jtl-reporter
+	url = https://github.com/ludeknovy/jtl-reporter
+[submodule "lunasec-io--lunasec"]
+	path = sources/nested/lunasec-io/lunasec-io--lunasec
+	url = https://github.com/lunasec-io/lunasec
+[submodule "lyft--confidant"]
+	path = sources/nested/lyft/lyft--confidant
+	url = https://github.com/lyft/confidant
+[submodule "magnologan--awesome-k8s-security"]
+	path = sources/nested/magnologan/magnologan--awesome-k8s-security
+	url = https://github.com/magnologan/awesome-k8s-security
+[submodule "manishpatwari--webdriveragent"]
+	path = sources/nested/manishpatwari/manishpatwari--webdriveragent
+	url = https://github.com/manishPatwari/WebDriverAgent
+[submodule "marcwebbie--passpie"]
+	path = sources/nested/marcwebbie/marcwebbie--passpie
+	url = https://github.com/marcwebbie/passpie
+[submodule "marshyski--sshwatch"]
+	path = sources/nested/marshyski/marshyski--sshwatch
+	url = https://github.com/marshyski/sshwatch
+[submodule "matanolabs--matano"]
+	path = sources/nested/matanolabs/matanolabs--matano
+	url = https://github.com/matanolabs/matano
+[submodule "mathiaspaulenko--behave-comments"]
+	path = sources/nested/mathiaspaulenko/mathiaspaulenko--behave-comments
+	url = https://github.com/MathiasPaulenko/behave-comments
+[submodule "mathiaspaulenko--behave-data"]
+	path = sources/nested/mathiaspaulenko/mathiaspaulenko--behave-data
+	url = https://github.com/MathiasPaulenko/behave-data
+[submodule "mathiaspaulenko--behave-doctor"]
+	path = sources/nested/mathiaspaulenko/mathiaspaulenko--behave-doctor
+	url = https://github.com/MathiasPaulenko/behave-doctor
+[submodule "mathiaspaulenko--behave-format"]
+	path = sources/nested/mathiaspaulenko/mathiaspaulenko--behave-format
+	url = https://github.com/MathiasPaulenko/behave-format
+[submodule "mathiaspaulenko--behave-gen"]
+	path = sources/nested/mathiaspaulenko/mathiaspaulenko--behave-gen
+	url = https://github.com/MathiasPaulenko/behave-gen
+[submodule "mathiaspaulenko--behave-kit"]
+	path = sources/nested/mathiaspaulenko/mathiaspaulenko--behave-kit
+	url = https://github.com/MathiasPaulenko/behave-kit
+[submodule "mathiaspaulenko--behave-lint"]
+	path = sources/nested/mathiaspaulenko/mathiaspaulenko--behave-lint
+	url = https://github.com/MathiasPaulenko/behave-lint
+[submodule "mathiaspaulenko--behave-model"]
+	path = sources/nested/mathiaspaulenko/mathiaspaulenko--behave-model
+	url = https://github.com/MathiasPaulenko/behave-model
+[submodule "mathiaspaulenko--behave-modern-console-report"]
+	path = sources/nested/mathiaspaulenko/mathiaspaulenko--behave-modern-console-report
+	url = https://github.com/MathiasPaulenko/behave-modern-console-report
+[submodule "mathiaspaulenko--behave-modern-file-reports"]
+	path = sources/nested/mathiaspaulenko/mathiaspaulenko--behave-modern-file-reports
+	url = https://github.com/MathiasPaulenko/behave-modern-file-report
+[submodule "mathiaspaulenko--behave-modern-html-report"]
+	path = sources/nested/mathiaspaulenko/mathiaspaulenko--behave-modern-html-report
+	url = https://github.com/MathiasPaulenko/behave-modern-html-report
+[submodule "mathiaspaulenko--behave-modern-json-report"]
+	path = sources/nested/mathiaspaulenko/mathiaspaulenko--behave-modern-json-report
+	url = https://github.com/MathiasPaulenko/behave-modern-json-report
+[submodule "mathiaspaulenko--behave-modern-md-report"]
+	path = sources/nested/mathiaspaulenko/mathiaspaulenko--behave-modern-md-report
+	url = https://github.com/MathiasPaulenko/behave-modern-md-report
+[submodule "mathiaspaulenko--behave-modern-sheets-report"]
+	path = sources/nested/mathiaspaulenko/mathiaspaulenko--behave-modern-sheets-report
+	url = https://github.com/MathiasPaulenko/behave-modern-sheets-report
+[submodule "mathiaspaulenko--behave-pool"]
+	path = sources/nested/mathiaspaulenko/mathiaspaulenko--behave-pool
+	url = https://github.com/MathiasPaulenko/behave-pool
+[submodule "mathiaspaulenko--behave-priority"]
+	path = sources/nested/mathiaspaulenko/mathiaspaulenko--behave-priority
+	url = https://github.com/MathiasPaulenko/behave-priority
+[submodule "mathiaspaulenko--behave-retry"]
+	path = sources/nested/mathiaspaulenko/mathiaspaulenko--behave-retry
+	url = https://github.com/MathiasPaulenko/behave-retry
+[submodule "mathiaspaulenko--behave-runner"]
+	path = sources/nested/mathiaspaulenko/mathiaspaulenko--behave-runner
+	url = https://github.com/MathiasPaulenko/behave-runner
+[submodule "mathiaspaulenko--behave-steplib"]
+	path = sources/nested/mathiaspaulenko/mathiaspaulenko--behave-steplib
+	url = https://github.com/MathiasPaulenko/behave-steplib
+[submodule "mathiaspaulenko--behave-tables"]
+	path = sources/nested/mathiaspaulenko/mathiaspaulenko--behave-tables
+	url = https://github.com/MathiasPaulenko/behave-tables
+[submodule "mathiaspaulenko--behave-trace"]
+	path = sources/nested/mathiaspaulenko/mathiaspaulenko--behave-trace
+	url = https://github.com/MathiasPaulenko/behave-trace
+[submodule "mathiaspaulenko--cookiecutter-example"]
+	path = sources/nested/mathiaspaulenko/mathiaspaulenko--cookiecutter-example
+	url = https://github.com/MathiasPaulenko/cookiecutter-example
+[submodule "mathiaspaulenko--python-behave-examples"]
+	path = sources/nested/mathiaspaulenko/mathiaspaulenko--python-behave-examples
+	url = https://github.com/MathiasPaulenko/python-behave-examples
+[submodule "mcollina--autocannon"]
+	path = sources/nested/mcollina/mcollina--autocannon
+	url = https://github.com/mcollina/autocannon
+[submodule "mderevyankoaqa--jmeter-influxdb2-listener-plugin"]
+	path = sources/nested/mderevyankoaqa/mderevyankoaqa--jmeter-influxdb2-listener-plugin
+	url = https://github.com/mderevyankoaqa/jmeter-influxdb2-listener-plugin
+[submodule "meirwah--awesome-incident-response"]
+	path = sources/nested/meirwah/meirwah--awesome-incident-response
+	url = https://github.com/meirwah/awesome-incident-response
+[submodule "metersphere--metersphere"]
+	path = sources/nested/metersphere/metersphere--metersphere
+	url = https://github.com/metersphere/metersphere
+[submodule "mherrmann--selenium-python-helium"]
+	path = sources/nested/mherrmann/mherrmann--selenium-python-helium
+	url = https://github.com/mherrmann/helium
+[submodule "microcks--microcks"]
+	path = sources/nested/microcks/microcks--microcks
+	url = https://github.com/microcks/microcks
+[submodule "microfocus--silkappdriver"]
+	path = sources/nested/microfocus/microfocus--silkappdriver
+	url = https://github.com/MicroFocus/SilkAppDriver
+[submodule "microsoft--hydralab"]
+	path = sources/nested/microsoft/microsoft--hydralab
+	url = https://github.com/microsoft/HydraLab
+[submodule "microsoft--playwright"]
+	path = sources/nested/microsoft/microsoft--playwright
+	url = https://github.com/microsoft/playwright
+[submodule "microsoft--winappdriver"]
+	path = sources/nested/microsoft/microsoft--winappdriver
+	url = https://github.com/microsoft/WinAppDriver
+[submodule "mock-server--mockserver"]
+	path = sources/nested/mock-server/mock-server--mockserver
+	url = https://github.com/mock-server/mockserver-monorepo
+[submodule "mostafa--xk6-kafka"]
+	path = sources/nested/mostafa/mostafa--xk6-kafka
+	url = https://github.com/mostafa/xk6-kafka
+[submodule "mountebank-testing--mountebank"]
+	path = sources/nested/mountebank-testing/mountebank-testing--mountebank
+	url = https://github.com/mountebank-testing/mountebank
+[submodule "mozilla--geckodriver"]
+	path = sources/nested/mozilla/mozilla--geckodriver
+	url = https://github.com/mozilla/geckodriver
+[submodule "mozilla--sops"]
+	path = sources/nested/mozilla/mozilla--sops
+	url = https://github.com/getsops/sops
+[submodule "mpesen--awesome-industrial-control-system-security"]
+	path = sources/nested/mpesen/mpesen--awesome-industrial-control-system-security
+	url = https://github.com/mekin/awesome-industrial-control-system-security
+[submodule "mutablesecurity--mutablesecurity"]
+	path = sources/nested/mutablesecurity/mutablesecurity--mutablesecurity
+	url = https://github.com/MutableSecurity/mutablesecurity
+[submodule "mxschmitt--awesome-playwright"]
+	path = sources/nested/mxschmitt/mxschmitt--awesome-playwright
+	url = https://github.com/mxschmitt/awesome-playwright
+[submodule "nagiosenterprises--nagioscore"]
+	path = sources/nested/nagiosenterprises/nagiosenterprises--nagioscore
+	url = https://github.com/NagiosEnterprises/nagioscore
+[submodule "nbs-system--naxsi"]
+	path = sources/nested/nbs-system/nbs-system--naxsi
+	url = https://github.com/nbs-system/naxsi
+[submodule "neo23x0--loki"]
+	path = sources/nested/neo23x0/neo23x0--loki
+	url = https://github.com/Neo23x0/Loki
+[submodule "netdata--netdata"]
+	path = sources/nested/netdata/netdata--netdata
+	url = https://github.com/netdata/netdata
+[submodule "netflix--chaosmonkey"]
+	path = sources/nested/netflix/netflix--chaosmonkey
+	url = https://github.com/Netflix/chaosmonkey
+[submodule "nil0x42--phpsploit"]
+	path = sources/nested/nil0x42/nil0x42--phpsploit
+	url = https://github.com/nil0x42/phpsploit
+[submodule "nosqlbench--nosqlbench"]
+	path = sources/nested/nosqlbench/nosqlbench--nosqlbench
+	url = https://github.com/nosqlbench/nosqlbench
+[submodule "novatecconsulting--jmeter-influxdb-writer"]
+	path = sources/nested/novatecconsulting/novatecconsulting--jmeter-influxdb-writer
+	url = https://github.com/NovatecConsulting/JMeter-InfluxDB-Writer
+[submodule "nucleuscloud--neosync"]
+	path = sources/nested/nucleuscloud/nucleuscloud--neosync
+	url = https://github.com/nucleuscloud/neosync
+[submodule "nxgn-kd01--react2shell-scanner"]
+	path = sources/nested/nxgn-kd01/nxgn-kd01--react2shell-scanner
+	url = https://github.com/nxgn-kd01/react2shell-scanner
+[submodule "nxgn-kd01--shai-hulud-scanner"]
+	path = sources/nested/nxgn-kd01/nxgn-kd01--shai-hulud-scanner
+	url = https://github.com/nxgn-kd01/shai-hulud-scanner
+[submodule "odigos-io--odigos"]
+	path = sources/nested/odigos-io/odigos-io--odigos
+	url = https://github.com/odigos-io/odigos
+[submodule "oliverlloyd--jmeter-ec2"]
+	path = sources/nested/oliverlloyd/oliverlloyd--jmeter-ec2
+	url = https://github.com/oliverlloyd/jmeter-ec2
+[submodule "omergulen--awesome-bdd"]
+	path = sources/nested/omergulen/omergulen--awesome-bdd
+	url = https://github.com/omergulen/awesome-bdd
+[submodule "open-telemetry--opentelemetry-collector"]
+	path = sources/nested/open-telemetry/open-telemetry--opentelemetry-collector
+	url = https://github.com/open-telemetry/opentelemetry-collector
+[submodule "open-telemetry--opentelemetry-ebpf-instrumentation"]
+	path = sources/nested/open-telemetry/open-telemetry--opentelemetry-ebpf-instrumentation
+	url = https://github.com/open-telemetry/opentelemetry-ebpf-instrumentation
+[submodule "openai--human-eval"]
+	path = sources/nested/openai/openai--human-eval
+	url = https://github.com/openai/human-eval
+[submodule "openappsec--openappsec"]
+	path = sources/nested/openappsec/openappsec--openappsec
+	url = https://github.com/openappsec/openappsec
+[submodule "openjdk--jmc"]
+	path = sources/nested/openjdk/openjdk--jmc
+	url = https://github.com/openjdk/jmc
+[submodule "openjdk--jmh"]
+	path = sources/nested/openjdk/openjdk--jmh
+	url = https://github.com/openjdk/jmh
+[submodule "openobserve--openobserve"]
+	path = sources/nested/openobserve/openobserve--openobserve
+	url = https://github.com/openobserve/openobserve
+[submodule "opensearch-project--opensearch"]
+	path = sources/nested/opensearch-project/opensearch-project--opensearch
+	url = https://github.com/opensearch-project/OpenSearch
+[submodule "opensearch-project--opensearch-dashboards"]
+	path = sources/nested/opensearch-project/opensearch-project--opensearch-dashboards
+	url = https://github.com/opensearch-project/OpenSearch-Dashboards
+[submodule "openslo--openslo"]
+	path = sources/nested/openslo/openslo--openslo
+	url = https://github.com/OpenSLO/OpenSLO
+[submodule "opensoc--opensoc"]
+	path = sources/nested/opensoc/opensoc--opensoc
+	url = https://github.com/OpenSOC/opensoc
+[submodule "openzipkin--zipkin"]
+	path = sources/nested/openzipkin/openzipkin--zipkin
+	url = https://github.com/openzipkin/zipkin
+[submodule "orange-opensource--hurl"]
+	path = sources/nested/orange-opensource/orange-opensource--hurl
+	url = https://github.com/Orange-OpenSource/hurl
+[submodule "owasp-amass--amass"]
+	path = sources/nested/owasp-amass/owasp-amass--amass
+	url = https://github.com/owasp-amass/amass
+[submodule "owasp--owasp-mstg"]
+	path = sources/nested/owasp/owasp--owasp-mstg
+	url = https://github.com/OWASP/mastg
+[submodule "pactortester--swaggerjmx"]
+	path = sources/nested/pactortester/pactortester--swaggerjmx
+	url = https://github.com/Pactortester/swaggerjmx
+[submodule "padok-team--cognito-scanner"]
+	path = sources/nested/padok-team/padok-team--cognito-scanner
+	url = https://github.com/padok-team/cognito-scanner
+[submodule "palindromelabs--awesome-websocket-security"]
+	path = sources/nested/palindromelabs/palindromelabs--awesome-websocket-security
+	url = https://github.com/PalindromeLabs/awesome-websocket-security
+[submodule "paralax--awesome-honeypots"]
+	path = sources/nested/paralax/paralax--awesome-honeypots
+	url = https://github.com/paralax/awesome-honeypots
+[submodule "parca-dev--parca"]
+	path = sources/nested/parca-dev/parca-dev--parca
+	url = https://github.com/parca-dev/parca
+[submodule "paulsec--awesome-sec-talks"]
+	path = sources/nested/paulsec/paulsec--awesome-sec-talks
+	url = https://github.com/PaulSec/awesome-sec-talks
+[submodule "paypal--selion"]
+	path = sources/nested/paypal/paypal--selion
+	url = https://github.com/paypal/SeLion
+[submodule "percona--pg_stat_monitor"]
+	path = sources/nested/percona/percona--pg_stat_monitor
+	url = https://github.com/percona/pg_stat_monitor
+[submodule "percona--pmm"]
+	path = sources/nested/percona/percona--pmm
+	url = https://github.com/percona/pmm
+[submodule "perfana--perfana-jmeter-timescaledb"]
+	path = sources/nested/perfana/perfana--perfana-jmeter-timescaledb
+	url = https://github.com/perfana/perfana-jmeter-timescaledb
+[submodule "perses--perses"]
+	path = sources/nested/perses/perses--perses
+	url = https://github.com/perses/perses
+[submodule "petegrimsdale--aks_testing_fwk"]
+	path = sources/nested/petegrimsdale/petegrimsdale--aks_testing_fwk
+	url = https://github.com/petegrimsdale/aks_testing_fwk
+[submodule "pfarb--awesome-crypto-papers"]
+	path = sources/nested/pfarb/pfarb--awesome-crypto-papers
+	url = https://github.com/pFarb/awesome-crypto-papers
+[submodule "pfq--pfq"]
+	path = sources/nested/pfq/pfq--pfq
+	url = https://github.com/pfq/PFQ
+[submodule "phoronix-test-suite--phoronix-test-suite"]
+	path = sources/nested/phoronix-test-suite/phoronix-test-suite--phoronix-test-suite
+	url = https://github.com/phoronix-test-suite/phoronix-test-suite
+[submodule "pinpoint-apm--pinpoint"]
+	path = sources/nested/pinpoint-apm/pinpoint-apm--pinpoint
+	url = https://github.com/pinpoint-apm/pinpoint
+[submodule "pixie-io--pixie"]
+	path = sources/nested/pixie-io/pixie-io--pixie
+	url = https://github.com/pixie-io/pixie
+[submodule "pompelmi--pompelmi"]
+	path = sources/nested/pompelmi/pompelmi--pompelmi
+	url = https://github.com/pompelmi/pompelmi
+[submodule "postmodern--spidr"]
+	path = sources/nested/postmodern/postmodern--spidr
+	url = https://github.com/postmodern/spidr
+[submodule "pragmaticflow--nbomber"]
+	path = sources/nested/pragmaticflow/pragmaticflow--nbomber
+	url = https://github.com/PragmaticFlow/NBomber
+[submodule "princeton-nlp--swe-bench"]
+	path = sources/nested/princeton-nlp/princeton-nlp--swe-bench
+	url = https://github.com/SWE-bench/SWE-bench
+[submodule "probelabs--goreplay"]
+	path = sources/nested/probelabs/probelabs--goreplay
+	url = https://github.com/probelabs/goreplay
+[submodule "processone--tsung"]
+	path = sources/nested/processone/processone--tsung
+	url = https://github.com/processone/tsung
+[submodule "prometheus--alertmanager"]
+	path = sources/nested/prometheus/prometheus--alertmanager
+	url = https://github.com/prometheus/alertmanager
+[submodule "prometheus--prometheus"]
+	path = sources/nested/prometheus/prometheus--prometheus
+	url = https://github.com/prometheus/prometheus
+[submodule "pry0cc--axiom"]
+	path = sources/nested/pry0cc/pry0cc--axiom
+	url = https://github.com/pry0cc/axiom
+[submodule "ptswarm--reflutter"]
+	path = sources/nested/ptswarm/ptswarm--reflutter
+	url = https://github.com/ptswarm/reFlutter
+[submodule "puppeteer--puppeteer"]
+	path = sources/nested/puppeteer/puppeteer--puppeteer
+	url = https://github.com/puppeteer/puppeteer
+[submodule "pyrra-dev--pyrra"]
+	path = sources/nested/pyrra-dev/pyrra-dev--pyrra
+	url = https://github.com/pyrra-dev/pyrra
+[submodule "qainsights--hamster"]
+	path = sources/nested/qainsights/qainsights--hamster
+	url = https://github.com/QAInsights/hamster
+[submodule "qainsights--jeval"]
+	path = sources/nested/qainsights/qainsights--jeval
+	url = https://github.com/QAInsights/JEval
+[submodule "quark-engine--quark-engine"]
+	path = sources/nested/quark-engine/quark-engine--quark-engine
+	url = https://github.com/ev-flow/quark-engine
+[submodule "questdb--questdb"]
+	path = sources/nested/questdb/questdb--questdb
+	url = https://github.com/questdb/questdb
+[submodule "qytera-gmbh--jmeterharimporterplugin"]
+	path = sources/nested/qytera-gmbh/qytera-gmbh--jmeterharimporterplugin
+	url = https://github.com/Qytera-Gmbh/JMeterHARImporterPlugin
+[submodule "rabbitmq--rabbitmq-perf-test"]
+	path = sources/nested/rabbitmq/rabbitmq--rabbitmq-perf-test
+	url = https://github.com/rabbitmq/rabbitmq-perf-test
+[submodule "rabbitstack--fibratus"]
+	path = sources/nested/rabbitstack/rabbitstack--fibratus
+	url = https://github.com/rabbitstack/fibratus
+[submodule "rafael-santiago--pig"]
+	path = sources/nested/rafael-santiago/rafael-santiago--pig
+	url = https://github.com/rafael-santiago/pig
+[submodule "rajatthareja--reportbuilder"]
+	path = sources/nested/rajatthareja/rajatthareja--reportbuilder
+	url = https://github.com/rajatthareja/ReportBuilder
+[submodule "rakyll--hey"]
+	path = sources/nested/rakyll/rakyll--hey
+	url = https://github.com/rakyll/hey
+[submodule "rapid7--metasploit-framework"]
+	path = sources/nested/rapid7/rapid7--metasploit-framework
+	url = https://github.com/rapid7/metasploit-framework
+[submodule "rbillon59--jmeter-k8s-starterkit"]
+	path = sources/nested/rbillon59/rbillon59--jmeter-k8s-starterkit
+	url = https://github.com/Rbillon59/jmeter-k8s-starterkit
+[submodule "redshiftzero--awesome-threat-modeling"]
+	path = sources/nested/redshiftzero/redshiftzero--awesome-threat-modeling
+	url = https://github.com/redshiftzero/awesome-threat-modeling
+[submodule "redteampentesting--monsoon"]
+	path = sources/nested/redteampentesting/redteampentesting--monsoon
+	url = https://github.com/RedTeamPentesting/monsoon
+[submodule "remiflavien1--awesome-anti-forensic"]
+	path = sources/nested/remiflavien1/remiflavien1--awesome-anti-forensic
+	url = https://github.com/shadawck/awesome-anti-forensic
+[submodule "rest-assured--rest-assured"]
+	path = sources/nested/rest-assured/rest-assured--rest-assured
+	url = https://github.com/rest-assured/rest-assured
+[submodule "retracedhq--retraced"]
+	path = sources/nested/retracedhq/retracedhq--retraced
+	url = https://github.com/retracedhq/retraced
+[submodule "rfunix--pompem"]
+	path = sources/nested/rfunix/rfunix--pompem
+	url = https://github.com/rfunix/Pompem
+[submodule "ripe-ncc--hadoop-pcap"]
+	path = sources/nested/ripe-ncc/ripe-ncc--hadoop-pcap
+	url = https://github.com/RIPE-NCC/hadoop-pcap
+[submodule "robusta-dev--holmesgpt"]
+	path = sources/nested/robusta-dev/robusta-dev--holmesgpt
+	url = https://github.com/HolmesGPT/holmesgpt
+[submodule "rooprob--vim-behave"]
+	path = sources/nested/rooprob/rooprob--vim-behave
+	url = https://github.com/rooprob/vim-behave
+[submodule "rshipp--awesome-malware-analysis"]
+	path = sources/nested/rshipp/rshipp--awesome-malware-analysis
+	url = https://github.com/rshipp/awesome-malware-analysis
+[submodule "rspamd--rspamd"]
+	path = sources/nested/rspamd/rspamd--rspamd
+	url = https://github.com/rspamd/rspamd
+[submodule "rsyslog--rsyslog"]
+	path = sources/nested/rsyslog/rsyslog--rsyslog
+	url = https://github.com/rsyslog/rsyslog
+[submodule "run-x--awesome-kubernetes"]
+	path = sources/nested/run-x/run-x--awesome-kubernetes
+	url = https://github.com/run-x/awesome-kubernetes
+[submodule "rustscan--rustscan"]
+	path = sources/nested/rustscan/rustscan--rustscan
+	url = https://github.com/bee-san/RustScan
+[submodule "rusty-ferris-club--recon"]
+	path = sources/nested/rusty-ferris-club/rusty-ferris-club--recon
+	url = https://github.com/rusty-ferris-club/recon
+[submodule "rusty-ferris-club--shellclear"]
+	path = sources/nested/rusty-ferris-club/rusty-ferris-club--shellclear
+	url = https://github.com/rusty-ferris-club/shellclear
+[submodule "schemathesis--schemathesis"]
+	path = sources/nested/schemathesis/schemathesis--schemathesis
+	url = https://github.com/schemathesis/schemathesis
+[submodule "segmentio--chamber"]
+	path = sources/nested/segmentio/segmentio--chamber
+	url = https://github.com/segmentio/chamber
+[submodule "selefra--selefra"]
+	path = sources/nested/selefra/selefra--selefra
+	url = https://github.com/selefra/selefra
+[submodule "seleniumhq--docker-selenium"]
+	path = sources/nested/seleniumhq/seleniumhq--docker-selenium
+	url = https://github.com/SeleniumHQ/docker-selenium
+[submodule "seleniumquery--seleniumquery"]
+	path = sources/nested/seleniumquery/seleniumquery--seleniumquery
+	url = https://github.com/seleniumQuery/seleniumQuery
+[submodule "sercheo87--convert-postman-jmeter"]
+	path = sources/nested/sercheo87/sercheo87--convert-postman-jmeter
+	url = https://github.com/sercheo87/convert-postman-jmeter
+[submodule "sergiomarotco--network-segmentation-cheat-sheet"]
+	path = sources/nested/sergiomarotco/sergiomarotco--network-segmentation-cheat-sheet
+	url = https://github.com/sergiomarotco/Network-segmentation-cheat-sheet
+[submodule "sergueik--swet"]
+	path = sources/nested/sergueik/sergueik--swet
+	url = https://github.com/sergueik/SWET
+[submodule "serhatbolsu--appium-python-bdd"]
+	path = sources/nested/serhatbolsu/serhatbolsu--appium-python-bdd
+	url = https://github.com/serhatbolsu/appium-python-bdd
+[submodule "serputko--performance-testing-framework"]
+	path = sources/nested/serputko/serputko--performance-testing-framework
+	url = https://github.com/serputko/performance-testing-framework
+[submodule "sgoeschl--jmeter-sla-report"]
+	path = sources/nested/sgoeschl/sgoeschl--jmeter-sla-report
+	url = https://github.com/sgoeschl/jmeter-sla-report
+[submodule "sharkdp--hyperfine"]
+	path = sources/nested/sharkdp/sharkdp--hyperfine
+	url = https://github.com/sharkdp/hyperfine
+[submodule "shopify--toxiproxy"]
+	path = sources/nested/shopify/shopify--toxiproxy
+	url = https://github.com/Shopify/toxiproxy
+[submodule "sierra-research--tau-bench"]
+	path = sources/nested/sierra-research/sierra-research--tau-bench
+	url = https://github.com/sierra-research/tau-bench
+[submodule "signoz--signoz"]
+	path = sources/nested/signoz/signoz--signoz
+	url = https://github.com/SigNoz/signoz
+[submodule "simsong--tcpflow"]
+	path = sources/nested/simsong/simsong--tcpflow
+	url = https://github.com/simsong/tcpflow
+[submodule "sitespeedio--sitespeed.io"]
+	path = sources/nested/sitespeedio/sitespeedio--sitespeed.io
+	url = https://github.com/sitespeedio/sitespeed.io
+[submodule "skylot--jadx"]
+	path = sources/nested/skylot/skylot--jadx
+	url = https://github.com/skylot/jadx
+[submodule "slok--sloth"]
+	path = sources/nested/slok/slok--sloth
+	url = https://github.com/slok/sloth
+[submodule "smicyk--groovy-jmeter"]
+	path = sources/nested/smicyk/smicyk--groovy-jmeter
+	url = https://github.com/smicyk/groovy-jmeter
+[submodule "smithmicro--jmeter-ecs"]
+	path = sources/nested/smithmicro/smithmicro--jmeter-ecs
+	url = https://github.com/smithmicro/jmeter-ecs
+[submodule "sonarqubecommunity--sonar-jmeter"]
+	path = sources/nested/sonarqubecommunity/sonarqubecommunity--sonar-jmeter
+	url = https://github.com/SonarQubeCommunity/sonar-jmeter
+[submodule "soprasteria--jmeter2influxdb"]
+	path = sources/nested/soprasteria/soprasteria--jmeter2influxdb
+	url = https://github.com/soprasteria/jmeter2influxdb
+[submodule "soumyaevan--python_behave_selenium_bdd"]
+	path = sources/nested/soumyaevan/soumyaevan--python_behave_selenium_bdd
+	url = https://github.com/soumyaevan/Python_Behave_Selenium_BDD
+[submodule "soxoj--maigret"]
+	path = sources/nested/soxoj/soxoj--maigret
+	url = https://github.com/soxoj/maigret
+[submodule "spectolabs--hoverfly"]
+	path = sources/nested/spectolabs/spectolabs--hoverfly
+	url = https://github.com/SpectoLabs/hoverfly
+[submodule "spectralops--keyscope"]
+	path = sources/nested/spectralops/spectralops--keyscope
+	url = https://github.com/SpectralOps/keyscope
+[submodule "spectralops--netz"]
+	path = sources/nested/spectralops/spectralops--netz
+	url = https://github.com/SpectralOps/netz
+[submodule "spectralops--preflight"]
+	path = sources/nested/spectralops/spectralops--preflight
+	url = https://github.com/SpectralOps/preflight
+[submodule "spectralops--teller"]
+	path = sources/nested/spectralops/spectralops--teller
+	url = https://github.com/tellerops/teller
+[submodule "squadcasthub--awesome-sre-tools"]
+	path = sources/nested/squadcasthub/squadcasthub--awesome-sre-tools
+	url = https://github.com/SquadcastHub/awesome-sre-tools
+[submodule "stackexchange--blackbox"]
+	path = sources/nested/stackexchange/stackexchange--blackbox
+	url = https://github.com/StackExchange/blackbox
+[submodule "starkandwayne--safe"]
+	path = sources/nested/starkandwayne/starkandwayne--safe
+	url = https://github.com/egen/safe
+[submodule "statsd--statsd"]
+	path = sources/nested/statsd/statsd--statsd
+	url = https://github.com/statsd/statsd
+[submodule "stepci--stepci"]
+	path = sources/nested/stepci/stepci--stepci
+	url = https://github.com/stepci/stepci
+[submodule "sterodium--selenium-grid-extensions"]
+	path = sources/nested/sterodium/sterodium--selenium-grid-extensions
+	url = https://github.com/sterodium/selenium-grid-extensions
+[submodule "storyyeller--enjarify"]
+	path = sources/nested/storyyeller/storyyeller--enjarify
+	url = https://github.com/Storyyeller/enjarify
+[submodule "swisskyrepo--payloadsallthethings"]
+	path = sources/nested/swisskyrepo/swisskyrepo--payloadsallthethings
+	url = https://github.com/swisskyrepo/PayloadsAllTheThings
+[submodule "sylvinus--node-crawler"]
+	path = sources/nested/sylvinus/sylvinus--node-crawler
+	url = https://github.com/bda-research/node-crawler
+[submodule "tag1consulting--goose"]
+	path = sources/nested/tag1consulting/tag1consulting--goose
+	url = https://github.com/tag1consulting/goose
+[submodule "taleliyahu--awesome-security-newsletters"]
+	path = sources/nested/taleliyahu/taleliyahu--awesome-security-newsletters
+	url = https://github.com/TalEliyahu/awesome-security-newsletters
+[submodule "tenzir--vast"]
+	path = sources/nested/tenzir/tenzir--vast
+	url = https://github.com/tenzir/tenzir
+[submodule "tfsec--tfsec"]
+	path = sources/nested/tfsec/tfsec--tfsec
+	url = https://github.com/aquasecurity/tfsec
+[submodule "thanos-io--thanos"]
+	path = sources/nested/thanos-io/thanos-io--thanos
+	url = https://github.com/thanos-io/thanos
+[submodule "thehappydinoa--awesome-censys-queries"]
+	path = sources/nested/thehappydinoa/thehappydinoa--awesome-censys-queries
+	url = https://github.com/thehappydinoa/awesome-censys-queries
+[submodule "thejambo--awesome-testing"]
+	path = sources/nested/thejambo/thejambo--awesome-testing
+	url = https://github.com/TheJambo/awesome-testing
+[submodule "theofidry--awesome-mutation-testing"]
+	path = sources/nested/theofidry/theofidry--awesome-mutation-testing
+	url = https://github.com/theofidry/awesome-mutation-testing
+[submodule "thubbo--jmeter-plugins-for-apache-dubbo"]
+	path = sources/nested/thubbo/thubbo--jmeter-plugins-for-apache-dubbo
+	url = https://github.com/thubbo/jmeter-plugins-for-apache-dubbo
+[submodule "tijme--angularjs-csti-scanner"]
+	path = sources/nested/tijme/tijme--angularjs-csti-scanner
+	url = https://github.com/tijme/angularjs-csti-scanner
+[submodule "tilblechschmidt--webgrid"]
+	path = sources/nested/tilblechschmidt/tilblechschmidt--webgrid
+	url = https://github.com/TilBlechschmidt/WebGrid
+[submodule "tilln--jmeter-junit-reporter"]
+	path = sources/nested/tilln/tilln--jmeter-junit-reporter
+	url = https://github.com/tilln/jmeter-junit-reporter
+[submodule "timescale--timescaledb"]
+	path = sources/nested/timescale/timescale--timescaledb
+	url = https://github.com/timescale/timescaledb
+[submodule "tmobile--loadtest"]
+	path = sources/nested/tmobile/tmobile--loadtest
+	url = https://github.com/tmobile/loadtest
+[submodule "tnich--honssh"]
+	path = sources/nested/tnich/tnich--honssh
+	url = https://github.com/tnich/honssh
+[submodule "tonyphipps--meerkat"]
+	path = sources/nested/tonyphipps/tonyphipps--meerkat
+	url = https://github.com/TonyPhipps/Meerkat
+[submodule "tpc-council--hammerdb"]
+	path = sources/nested/tpc-council/tpc-council--hammerdb
+	url = https://github.com/TPC-Council/HammerDB
+[submodule "trivago--cluecumber-report-plugin"]
+	path = sources/nested/trivago/trivago--cluecumber-report-plugin
+	url = https://github.com/trivago/cluecumber
+[submodule "trivago--cucable-plugin"]
+	path = sources/nested/trivago/trivago--cucable-plugin
+	url = https://github.com/trivago/cucable-plugin
+[submodule "trustedsec--ptf"]
+	path = sources/nested/trustedsec/trustedsec--ptf
+	url = https://github.com/trustedsec/ptf
+[submodule "tsenart--vegeta"]
+	path = sources/nested/tsenart/tsenart--vegeta
+	url = https://github.com/tsenart/vegeta
+[submodule "twin--gatus"]
+	path = sources/nested/twin/twin--gatus
+	url = https://github.com/TwiN/gatus
+[submodule "tylertreat--comcast"]
+	path = sources/nested/tylertreat/tylertreat--comcast
+	url = https://github.com/tylertreat/comcast
+[submodule "ubikingenierie--ulp-observability-plugin"]
+	path = sources/nested/ubikingenierie/ubikingenierie--ulp-observability-plugin
+	url = https://github.com/ubikingenierie/ulp-observability-plugin
+[submodule "udcide--udcide"]
+	path = sources/nested/udcide/udcide--udcide
+	url = https://github.com/UDcide/udcide
+[submodule "umangbhatia786--applitools-with-behave"]
+	path = sources/nested/umangbhatia786/umangbhatia786--applitools-with-behave
+	url = https://github.com/umangbhatia786/Applitools-With-Behave
+[submodule "undeadlist--trust-scan"]
+	path = sources/nested/undeadlist/undeadlist--trust-scan
+	url = https://github.com/undeadlist/trust-scan
+[submodule "usarmyresearchlab--dshell"]
+	path = sources/nested/usarmyresearchlab/usarmyresearchlab--dshell
+	url = https://github.com/USArmyResearchLab/Dshell
+[submodule "v8blink--chromium-based-xss-taint-tracking"]
+	path = sources/nested/v8blink/v8blink--chromium-based-xss-taint-tracking
+	url = https://github.com/v8blink/Chromium-based-XSS-Taint-Tracking
+[submodule "vdaburon--har-convertor-jmeter-plugin"]
+	path = sources/nested/vdaburon/vdaburon--har-convertor-jmeter-plugin
+	url = https://github.com/vdaburon/har-convertor-jmeter-plugin
+[submodule "vdaburon--jmeter-elastic-apm"]
+	path = sources/nested/vdaburon/vdaburon--jmeter-elastic-apm
+	url = https://github.com/vdaburon/jmeter-elastic-apm
+[submodule "vdaburon--jmeter-graph-tool-maven-plugin"]
+	path = sources/nested/vdaburon/vdaburon--jmeter-graph-tool-maven-plugin
+	url = https://github.com/vdaburon/jmeter-graph-tool-maven-plugin
+[submodule "vdaburon--junitreportkpicomparejmeterreportcsv"]
+	path = sources/nested/vdaburon/vdaburon--junitreportkpicomparejmeterreportcsv
+	url = https://github.com/vdaburon/JUnitReportKpiCompareJMeterReportCsv
+[submodule "vdaburon--junitreportkpijmeterdashboardstats"]
+	path = sources/nested/vdaburon/vdaburon--junitreportkpijmeterdashboardstats
+	url = https://github.com/vdaburon/JUnitReportKpiJMeterDashboardStats
+[submodule "vdaburon--junitreportkpijmeterreportcsv"]
+	path = sources/nested/vdaburon/vdaburon--junitreportkpijmeterreportcsv
+	url = https://github.com/vdaburon/JUnitReportKpiJMeterReportCsv
+[submodule "vectordotdev--vector"]
+	path = sources/nested/vectordotdev/vectordotdev--vector
+	url = https://github.com/vectordotdev/vector
+[submodule "veeranalyticsltd--jmeter-backend-listener-kafka"]
+	path = sources/nested/veeranalyticsltd/veeranalyticsltd--jmeter-backend-listener-kafka
+	url = https://github.com/veeranalyticsltd/jmeter-backend-listener-kafka
+[submodule "victoriametrics--victorialogs"]
+	path = sources/nested/victoriametrics/victoriametrics--victorialogs
+	url = https://github.com/VictoriaMetrics/VictoriaLogs
+[submodule "victoriametrics--victoriametrics"]
+	path = sources/nested/victoriametrics/victoriametrics--victoriametrics
+	url = https://github.com/VictoriaMetrics/VictoriaMetrics
+[submodule "vinta--awesome-python"]
+	path = sources/nested/vinta/vinta--awesome-python
+	url = https://github.com/vinta/awesome-python
+[submodule "volatilityfoundation--volatility"]
+	path = sources/nested/volatilityfoundation/volatilityfoundation--volatility
+	url = https://github.com/volatilityfoundation/volatility
+[submodule "wazuh--wazuh"]
+	path = sources/nested/wazuh/wazuh--wazuh
+	url = https://github.com/wazuh/wazuh
+[submodule "web-arena-x--webarena"]
+	path = sources/nested/web-arena-x/web-arena-x--webarena
+	url = https://github.com/web-arena-x/webarena
+[submodule "webdriverio--webdrivercss"]
+	path = sources/nested/webdriverio/webdriverio--webdrivercss
+	url = https://github.com/webdriverio-boneyard/webdrivercss
+[submodule "wg--wrk"]
+	path = sources/nested/wg/wg--wrk
+	url = https://github.com/wg/wrk
+[submodule "wix--wix-http-testkit"]
+	path = sources/nested/wix/wix--wix-http-testkit
+	url = https://github.com/wix-incubator/wix-http-testkit
+[submodule "wrike--callisto"]
+	path = sources/nested/wrike/wrike--callisto
+	url = https://github.com/wrike/callisto
+[submodule "yashaka--selene"]
+	path = sources/nested/yashaka/yashaka--selene
+	url = https://github.com/yashaka/selene
+[submodule "zabbix--zabbix"]
+	path = sources/nested/zabbix/zabbix--zabbix
+	url = https://github.com/zabbix/zabbix
+[submodule "zalando--zalenium"]
+	path = sources/nested/zalando/zalando--zalenium
+	url = https://github.com/zalando/zalenium
+[submodule "zalopay-oss--jmeter-grpc-plugin"]
+	path = sources/nested/zalopay-oss/zalopay-oss--jmeter-grpc-plugin
+	url = https://github.com/zalopay-oss/jmeter-grpc-plugin
+[submodule "zalopay-oss--jmeter-grpc-request"]
+	path = sources/nested/zalopay-oss/zalopay-oss--jmeter-grpc-request
+	url = https://github.com/zalopay-oss/jmeter-grpc-request
+[submodule "zaproxy--zap-api-nodejs"]
+	path = sources/nested/zaproxy/zaproxy--zap-api-nodejs
+	url = https://github.com/zaproxy/zap-api-nodejs
+[submodule "zeroq--amun"]
+	path = sources/nested/zeroq/zeroq--amun
+	url = https://github.com/zeroq/amun
+[submodule "zigrin-security--cakefuzzer"]
+	path = sources/nested/zigrin-security/zigrin-security--cakefuzzer
+	url = https://github.com/Zigrin-Security/CakeFuzzer
+[submodule "zoranpandovski--awesome-testing-tools"]
+	path = sources/nested/zoranpandovski/zoranpandovski--awesome-testing-tools
+	url = https://github.com/ZoranPandovski/awesome-testing-tools
