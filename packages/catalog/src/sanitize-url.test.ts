@@ -20,3 +20,11 @@ describe("sanitizeLinkUrl", () => {
     });
   }
 });
+
+describe("sanitizeLinkUrl fragment hardening", () => {
+  it("encodes a second # inside the fragment (gitter-style)", () => {
+    const out = sanitizeLinkUrl("https://app.gitter.im/#/room/#aliesbelik_jmeter-chat:gitter.im");
+    expect(out).toBe("https://app.gitter.im/#/room/%23aliesbelik_jmeter-chat:gitter.im");
+    expect((out.match(/#/g) ?? []).length).toBe(1);
+  });
+});

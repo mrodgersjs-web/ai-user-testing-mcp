@@ -72,7 +72,14 @@ export function sanitizeLinkUrl(url: string): string {
       out = encodeURI(out);
     }
   }
-  return out.replace(URI_ILLEGAL_ASCII, (c) => encodeURIComponent(c));
+  out = out.replace(URI_ILLEGAL_ASCII, (c) => encodeURIComponent(c));
+  // A second `#` inside the fragment is not a legal URI character; only the
+  // first `#` is the fragment delimiter (e.g. gitter room links).
+  const hashIdx = out.indexOf("#");
+  if (hashIdx >= 0) {
+    out = out.slice(0, hashIdx + 1) + out.slice(hashIdx + 1).replace(/#/g, "%23");
+  }
+  return out;
 }
 
 /** Extract every resource bullet outside skipped sections. */
