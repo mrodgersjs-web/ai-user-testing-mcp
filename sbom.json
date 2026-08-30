@@ -1,0 +1,312 @@
+{
+  "schemaVersion": 1,
+  "tool": "rig-testlab-sbom",
+  "generatedFrom": "pnpm-lock.yaml",
+  "importers": [
+    "apps/mcp-server",
+    "packages/agent-installer",
+    "packages/catalog",
+    "packages/cli",
+    "packages/evidence",
+    "packages/runner",
+    "packages/scenario-compiler"
+  ],
+  "packages": [
+    {
+      "name": "ajv",
+      "version": "8.20.0"
+    },
+    {
+      "name": "ajv-formats",
+      "version": "3.0.1"
+    },
+    {
+      "name": "ajv-formats",
+      "version": "3.0.1(ajv@8.20.0)"
+    },
+    {
+      "name": "assertion-error",
+      "version": "2.0.1"
+    },
+    {
+      "name": "assertion-error@2.0.1: {}\n\n  chai@6.2.2: {}\n\n  convert-source-map@2.0.0: {}\n\n  cross-spawn",
+      "version": "7.0.6"
+    },
+    {
+      "name": "chai",
+      "version": "6.2.2"
+    },
+    {
+      "name": "convert-source-map",
+      "version": "2.0.0"
+    },
+    {
+      "name": "cross-spawn",
+      "version": "7.0.6"
+    },
+    {
+      "name": "detect-libc",
+      "version": "2.1.2"
+    },
+    {
+      "name": "detect-libc@2.1.2: {}\n\n  es-module-lexer@2.3.2: {}\n\n  esbuild",
+      "version": "0.28.2"
+    },
+    {
+      "name": "es-module-lexer",
+      "version": "2.3.2"
+    },
+    {
+      "name": "esbuild",
+      "version": "0.28.2"
+    },
+    {
+      "name": "estree-walker",
+      "version": "3.0.3"
+    },
+    {
+      "name": "eventsource",
+      "version": "3.0.7"
+    },
+    {
+      "name": "eventsource-parser",
+      "version": "3.1.1"
+    },
+    {
+      "name": "eventsource-parser@3.1.1: {}\n\n  eventsource",
+      "version": "3.0.7"
+    },
+    {
+      "name": "expect-type",
+      "version": "1.4.0"
+    },
+    {
+      "name": "expect-type@1.4.0: {}\n\n  fast-deep-equal@3.1.3: {}\n\n  fast-uri@3.1.6: {}\n\n  fdir",
+      "version": "6.5.0(picomatch@4.0.7)"
+    },
+    {
+      "name": "fast-deep-equal",
+      "version": "3.1.3"
+    },
+    {
+      "name": "fast-uri",
+      "version": "3.1.6"
+    },
+    {
+      "name": "fdir",
+      "version": "6.5.0"
+    },
+    {
+      "name": "fsevents",
+      "version": "2.3.3"
+    },
+    {
+      "name": "isexe",
+      "version": "2.0.0"
+    },
+    {
+      "name": "isexe@2.0.0: {}\n\n  jose@6.2.10: {}\n\n  json-schema-traverse@1.0.0: {}\n\n  lightningcss-android-arm64",
+      "version": "1.33.0"
+    },
+    {
+      "name": "jose",
+      "version": "6.2.10"
+    },
+    {
+      "name": "json-schema-traverse",
+      "version": "1.0.0"
+    },
+    {
+      "name": "lightningcss",
+      "version": "1.33.0"
+    },
+    {
+      "name": "lightningcss-android-arm64",
+      "version": "1.33.0"
+    },
+    {
+      "name": "lightningcss-darwin-arm64",
+      "version": "1.33.0"
+    },
+    {
+      "name": "lightningcss-darwin-x64",
+      "version": "1.33.0"
+    },
+    {
+      "name": "lightningcss-freebsd-x64",
+      "version": "1.33.0"
+    },
+    {
+      "name": "lightningcss-linux-arm-gnueabihf",
+      "version": "1.33.0"
+    },
+    {
+      "name": "lightningcss-linux-arm64-gnu",
+      "version": "1.33.0"
+    },
+    {
+      "name": "lightningcss-linux-arm64-musl",
+      "version": "1.33.0"
+    },
+    {
+      "name": "lightningcss-linux-x64-gnu",
+      "version": "1.33.0"
+    },
+    {
+      "name": "lightningcss-linux-x64-musl",
+      "version": "1.33.0"
+    },
+    {
+      "name": "lightningcss-win32-arm64-msvc",
+      "version": "1.33.0"
+    },
+    {
+      "name": "lightningcss-win32-x64-msvc",
+      "version": "1.33.0"
+    },
+    {
+      "name": "magic-string",
+      "version": "0.30.21"
+    },
+    {
+      "name": "nanoid",
+      "version": "3.3.18"
+    },
+    {
+      "name": "nanoid@3.3.18: {}\n\n  obug@2.1.4: {}\n\n  path-key@3.1.1: {}\n\n  pathe@2.0.3: {}\n\n  picocolors@1.1.1: {}\n\n  picomatch@4.0.7: {}\n\n  pkce-challenge@5.0.1: {}\n\n  postcss",
+      "version": "8.5.26"
+    },
+    {
+      "name": "obug",
+      "version": "2.1.4"
+    },
+    {
+      "name": "packages/catalog:\n    dependencies:\n      ajv:\n        specifier: ^8.17.1\n        version: 8.20.0\n      ajv-formats:\n        specifier: ^3.0.1\n        version: 3.0.1(ajv",
+      "version": "8.20.0)\n    devDependencies"
+    },
+    {
+      "name": "path-key",
+      "version": "3.1.1"
+    },
+    {
+      "name": "pathe",
+      "version": "2.0.3"
+    },
+    {
+      "name": "picocolors",
+      "version": "1.1.1"
+    },
+    {
+      "name": "picomatch",
+      "version": "4.0.7"
+    },
+    {
+      "name": "pkce-challenge",
+      "version": "5.0.1"
+    },
+    {
+      "name": "postcss",
+      "version": "8.5.26"
+    },
+    {
+      "name": "require-from-string",
+      "version": "2.0.2"
+    },
+    {
+      "name": "require-from-string@2.0.2: {}\n\n  rolldown",
+      "version": "1.2.6"
+    },
+    {
+      "name": "rolldown",
+      "version": "1.2.6"
+    },
+    {
+      "name": "shebang-command",
+      "version": "2.0.0"
+    },
+    {
+      "name": "shebang-regex",
+      "version": "3.0.0"
+    },
+    {
+      "name": "shebang-regex@3.0.0: {}\n\n  siginfo@2.0.0: {}\n\n  source-map-js@1.2.1: {}\n\n  stackback@0.0.2: {}\n\n  std-env@4.2.0: {}\n\n  tinybench@2.9.0: {}\n\n  tinyexec@1.3.0: {}\n\n  tinyglobby",
+      "version": "0.2.17"
+    },
+    {
+      "name": "siginfo",
+      "version": "2.0.0"
+    },
+    {
+      "name": "source-map-js",
+      "version": "1.2.1"
+    },
+    {
+      "name": "stackback",
+      "version": "0.0.2"
+    },
+    {
+      "name": "std-env",
+      "version": "4.2.0"
+    },
+    {
+      "name": "tinybench",
+      "version": "2.9.0"
+    },
+    {
+      "name": "tinyexec",
+      "version": "1.3.0"
+    },
+    {
+      "name": "tinyglobby",
+      "version": "0.2.17"
+    },
+    {
+      "name": "tinyrainbow",
+      "version": "3.1.1"
+    },
+    {
+      "name": "tinyrainbow@3.1.1: {}\n\n  tsx",
+      "version": "4.23.12"
+    },
+    {
+      "name": "tsx",
+      "version": "4.23.12"
+    },
+    {
+      "name": "typescript",
+      "version": "5.9.3"
+    },
+    {
+      "name": "typescript@5.9.3: {}\n\n  undici-types@6.21.0: {}\n\n  vite",
+      "version": "8.2.2(@types/node@22.20.1)(esbuild@0.28.2)(tsx@4.23.12)"
+    },
+    {
+      "name": "undici-types",
+      "version": "6.21.0"
+    },
+    {
+      "name": "vite",
+      "version": "8.2.2"
+    },
+    {
+      "name": "vitest",
+      "version": "4.1.11"
+    },
+    {
+      "name": "vitest",
+      "version": "4.1.11(@types/node@22.20.1)(vite@8.2.2(@types/node@22.20.1)(esbuild@0.28.2)(tsx@4.23.12))"
+    },
+    {
+      "name": "which",
+      "version": "2.0.2"
+    },
+    {
+      "name": "why-is-node-running",
+      "version": "2.3.0"
+    },
+    {
+      "name": "zod",
+      "version": "4.5.2"
+    }
+  ]
+}

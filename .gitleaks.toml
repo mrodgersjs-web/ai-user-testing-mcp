@@ -12,5 +12,9 @@ regexes = [
 ]
 paths = [
   '''packages/catalog/testdata/''',
-  '''adapters/.*/fixtures/'''
+  '''adapters/.*/fixtures/''',
+  # redactor adversarial corpus: synthetic tokens by construction
+  '''packages/evidence/src/redact.test.ts''',
+  '''packages/evidence/src/receipts.test.ts''',
+  '''packages/runner/src/execute-run.test.ts'''
 ]
