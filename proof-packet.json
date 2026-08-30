@@ -1,0 +1,145 @@
+{
+  "schemaVersion": 1,
+  "claim": "ai-user-testing-mcp release: governed catalog (1,849 entries, 580 exact-SHA gitlinks), sandboxed runner, 24 reviewed adapters, CLI + MCP, six-harness install receipts, TransformFit smoke compiled and executed to honest terminal states (7 failed, 4 blocked, 2 queued — toolchain/provider deliberately absent, zero credential spend; no success asserted for any run); private remote equals local HEAD",
+  "repoCommit": "d209bef3a86c898312beada16529d1c336ed901e",
+  "catalogHash": "7ad7910b6b99b7d7d4fec2907c406c029ebcad271963e7629c1874dd3523e6bf",
+  "sourcePinHash": "d98891c5233281fd7d2c475daf44f1af7cecc99025402d2fdac2935309c2c1a1",
+  "tests": [
+    {
+      "name": "workspace tests",
+      "command": "pnpm exec vitest run",
+      "exitCode": 0,
+      "summary": "      Tests  225 passed (225) |    Start at  15:03:56 |    Duration  1.46s (transform 2.39s, setup 0ms, import 4.16s, tests 3.40s, environment 1ms)"
+    },
+    {
+      "name": "workspace build",
+      "command": "pnpm -r build",
+      "exitCode": 0,
+      "summary": "packages/cli build$ tsc -p tsconfig.json | packages/cli build: Done | apps/mcp-server build: Done"
+    },
+    {
+      "name": "pins gate",
+      "command": "node scripts/verify-pins.mjs",
+      "exitCode": 0,
+      "summary": "pins↔gitlinks EQUAL across 580 sources"
+    },
+    {
+      "name": "doctor",
+      "command": "./node_modules/.bin/tsx packages/cli/src/main.ts doctor",
+      "exitCode": 0,
+      "summary": "PASS [blocking] adapters-dir: 24 valid descriptors | PASS [blocking] sandbox-writable: /Users/rig128gb/Developer/ai-user-testing-mcp/.rig-testlab/sandbox writable | INFO [info]     credentials: GH_TOKEN=present GITHUB_TOKEN=present RIG_TESTLAB_PROMPTFOO_TOKEN=absent RIG_TESTLAB_TESTMU_SMARTUI_TOKEN="
+    }
+  ],
+  "agentInstallReceipts": [
+    {
+      "harness": "claude",
+      "receiptPath": "/Users/rig128gb/.rig-installer/receipts/ai-user-testing/1.0.0/claude/receipt.json",
+      "sha256": "e6a17e223f50315d21e145b252b629bc74d8660f511cd963b9412586b9c08e78"
+    },
+    {
+      "harness": "codex",
+      "receiptPath": "/Users/rig128gb/.rig-installer/receipts/ai-user-testing/1.0.0/codex/receipt.json",
+      "sha256": "09094a3e693749db98c88251d5eb01b19bf7127e25fbde0be6e86d91f32b2293"
+    },
+    {
+      "harness": "hermes",
+      "receiptPath": "/Users/rig128gb/.rig-installer/receipts/ai-user-testing/1.0.0/hermes/receipt.json",
+      "sha256": "e81785565bb311b85aca90b74c4bb2e589a0d6bac577368b64defae45d4a43cc"
+    },
+    {
+      "harness": "omp",
+      "receiptPath": "/Users/rig128gb/.rig-installer/receipts/ai-user-testing/1.0.0/omp/receipt.json",
+      "sha256": "ba6c9d7c947783eae0f28a20ac1a347d0804f023d33238d2d03964df221aa59a"
+    },
+    {
+      "harness": "orca",
+      "receiptPath": "/Users/rig128gb/.rig-installer/receipts/ai-user-testing/1.0.0/orca/receipt.json",
+      "sha256": "09648192558c6e2ea5cb5942c0148a6c12a6489cf82844dea62cd63a11cc23d9"
+    },
+    {
+      "harness": "prime",
+      "receiptPath": "/Users/rig128gb/.rig-installer/receipts/ai-user-testing/1.0.0/prime/receipt.json",
+      "sha256": "941eade96acded52ca3909940160bf2ce9dc4bc03ad347ff7aa8af4f7710ef49"
+    }
+  ],
+  "transformfitSmoke": {
+    "compiled": true,
+    "representativeRuns": [
+      {
+        "platform": "persona-evals",
+        "runId": "tf-ai-persona-evals-1",
+        "state": "blocked"
+      },
+      {
+        "platform": "coach-contract",
+        "runId": "tf-api-coach-contract-1",
+        "state": "failed"
+      },
+      {
+        "platform": "boundary-inputs",
+        "runId": "tf-data-boundary-inputs-1",
+        "state": "failed"
+      },
+      {
+        "platform": "sim-smoke",
+        "runId": "tf-ios-sim-smoke-1",
+        "state": "queued"
+      },
+      {
+        "platform": "week-sim",
+        "runId": "tf-long-week-sim-1",
+        "state": "failed"
+      },
+      {
+        "platform": "baseline-scan",
+        "runId": "tf-sec-baseline-scan-1",
+        "state": "queued"
+      },
+      {
+        "platform": "001-workout-receipt",
+        "runId": "tf-tc001-workout-receipt-1",
+        "state": "blocked"
+      },
+      {
+        "platform": "004-wellness-checkin",
+        "runId": "tf-tc004-wellness-checkin-1",
+        "state": "blocked"
+      },
+      {
+        "platform": "007-pain-safety",
+        "runId": "tf-tc007-pain-safety-1",
+        "state": "blocked"
+      },
+      {
+        "platform": "onboarding",
+        "runId": "tf-web-onboarding-1",
+        "state": "failed"
+      },
+      {
+        "platform": "today-a11y",
+        "runId": "tf-web-today-a11y-1",
+        "state": "failed"
+      },
+      {
+        "platform": "today-vision",
+        "runId": "tf-web-today-vision-1",
+        "state": "failed"
+      },
+      {
+        "platform": "workout-day",
+        "runId": "tf-web-workout-day-1",
+        "state": "failed"
+      }
+    ]
+  },
+  "remoteVerification": {
+    "remoteUrl": "https://github.com/mrodgersjs-web/ai-user-testing-mcp.git",
+    "remoteMain": "d209bef3a86c898312beada16529d1c336ed901e",
+    "localHead": "d209bef3a86c898312beada16529d1c336ed901e",
+    "equal": true,
+    "privateVerified": true
+  },
+  "sealedAt": "2026-08-30T21:04:02.964Z",
+  "sealedBy": "ai-user-testing-verifier",
+  "proofHash": "405b6d7faf74751a5dcb7888737b7e7187b2fd4cf4ce26a9a43bd32e680c2964"
+}
