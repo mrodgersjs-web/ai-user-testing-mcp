@@ -53,7 +53,7 @@ export const catalogSubHelp: Record<string, string> = {
 
 export function catalogLockPath(ctx: Ctx): string {
   const path = str(ctx.values, "lock") ?? str(ctx.values, "fixture") ?? ctx.paths.lockPath;
-  if (path === undefined) {
+  if (path === undefined || path === null) {
     throw new UsageError("ROOT_NOT_FOUND", `${ctx.command}: no repo root (pnpm-workspace.yaml) found; pass --lock <file> or --root <dir>`, ctx.help);
   }
   return path;
@@ -73,7 +73,7 @@ async function resolveGitHubToken(ctx: Ctx): Promise<string | undefined> {
 export async function catalogSync(ctx: Ctx): Promise<number> {
   const fixture = str(ctx.values, "fixture");
   const outPath = str(ctx.values, "out") ?? ctx.paths.lockPath;
-  if (outPath === undefined) {
+  if (outPath === undefined || outPath === null) {
     throw new UsageError("ROOT_NOT_FOUND", "catalog sync: no repo root; pass --out <lock> or --root <dir>", ctx.help);
   }
   const token = await resolveGitHubToken(ctx);

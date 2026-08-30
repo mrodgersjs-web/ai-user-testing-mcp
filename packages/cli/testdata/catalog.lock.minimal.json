@@ -1,547 +1,555 @@
 {
   "entries": [
     {
-      "adoptionTier": "watchlist",
-      "canonicalUrl": "https://training.example.com/appium",
-      "capabilities": [
-        "reference"
-      ],
-      "categories": [
-        "resources"
-      ],
-      "credentialRequirement": "free_account",
-      "description": "Appium Training — fixture entry (non-repository resource).",
-      "executionPolicy": "reference_only",
-      "id": "appium-training",
-      "lastValidation": {
-        "at": "2026-08-28T21:20:23Z",
-        "method": "http_get"
-      },
-      "license": {
-        "kind": "unknown",
-        "spdx": null
-      },
-      "name": "Appium Training",
-      "provenance": [
-        {
-          "catalogCommit": "ff695aac1126d548eb3bc0ceb3d8a0d4e0b9cf93",
-          "depth": 1,
-          "discoveredAt": "2026-08-28T21:20:23Z",
-          "sourceCatalogId": "awesome-testing",
-          "urlAsLinked": "https://training.example.com/appium"
-        }
-      ],
-      "redirectHistory": [],
-      "resolutionStatus": "rate_limited",
-      "targetKind": "training"
-    },
-    {
       "adoptionTier": "reference",
-      "canonicalUrl": "https://example.com/aost",
-      "capabilities": [
-        "reference"
-      ],
+      "canonicalUrl": "https://github.com/abhivaikar/howtheytest",
+      "capabilities": [],
       "categories": [
-        "resources"
+        "Useful References"
       ],
       "credentialRequirement": "none",
-      "description": "The Art of Software Testing — fixture entry (non-repository resource).",
-      "executionPolicy": "reference_only",
-      "id": "art-of-software-testing",
+      "description": "A curated collection of public resources from tech companies on how they test their software and build a quality culture",
+      "executionPolicy": "sandbox_required",
+      "id": "abhivaikar--howtheytest",
       "lastValidation": {
-        "at": "2026-08-28T21:20:23Z",
-        "method": "manual"
-      },
-      "license": {
-        "kind": "restrictive",
-        "spdx": null
-      },
-      "name": "The Art of Software Testing",
-      "provenance": [
-        {
-          "catalogCommit": "ff695aac1126d548eb3bc0ceb3d8a0d4e0b9cf93",
-          "depth": 1,
-          "discoveredAt": "2026-08-28T21:20:23Z",
-          "sourceCatalogId": "awesome-testing",
-          "urlAsLinked": "https://example.com/aost"
-        }
-      ],
-      "redirectHistory": [],
-      "resolutionStatus": "active",
-      "targetKind": "book"
-    },
-    {
-      "adoptionTier": "reference",
-      "canonicalUrl": "https://github.com/community/awesome-a11y",
-      "capabilities": [
-        "reference"
-      ],
-      "categories": [
-        "resources"
-      ],
-      "credentialRequirement": "free_account",
-      "description": "Awesome Accessibility (license missing) — fixture entry (non-repository resource).",
-      "executionPolicy": "reference_only",
-      "id": "community--awesome-a11y",
-      "lastValidation": {
-        "at": "2026-08-28T21:20:23Z",
-        "method": "http_get"
-      },
-      "license": {
-        "kind": "missing",
-        "spdx": null
-      },
-      "name": "Awesome Accessibility (license missing)",
-      "provenance": [
-        {
-          "catalogCommit": "ff695aac1126d548eb3bc0ceb3d8a0d4e0b9cf93",
-          "depth": 1,
-          "discoveredAt": "2026-08-28T21:20:23Z",
-          "sourceCatalogId": "awesome-testing",
-          "urlAsLinked": "https://github.com/community/awesome-a11y"
-        }
-      ],
-      "redirectHistory": [],
-      "resolutionStatus": "active",
-      "targetKind": "awesome_list"
-    },
-    {
-      "adoptionTier": "core_runner",
-      "canonicalUrl": "https://github.com/cypress-io/cypress",
-      "capabilities": [
-        "automation"
-      ],
-      "categories": [
-        "test-automation"
-      ],
-      "credentialRequirement": "none",
-      "description": "Cypress — fixture entry.",
-      "executionPolicy": "allowlisted",
-      "id": "cypress-io--cypress",
-      "lastValidation": {
-        "at": "2026-08-28T21:20:23Z",
+        "at": "2026-08-30T18:30:25.161Z",
         "httpStatus": 200,
         "method": "github_api"
       },
       "license": {
         "kind": "permissive",
-        "spdx": "MIT"
+        "spdx": "CC0-1.0"
       },
-      "name": "Cypress",
+      "name": "How They Test",
       "provenance": [
         {
           "catalogCommit": "ff695aac1126d548eb3bc0ceb3d8a0d4e0b9cf93",
           "depth": 1,
           "discoveredAt": "2026-08-28T21:20:23Z",
           "sourceCatalogId": "awesome-testing",
-          "urlAsLinked": "https://github.com/cypress-io/cypress"
+          "urlAsLinked": "https://github.com/abhivaikar/howtheytest"
         }
       ],
       "redirectHistory": [],
       "repository": {
-        "commitSha": "f48c18e43038b17bf6a90afc145c76ffda2dd419",
+        "commitSha": "743e44913377af238bfdafeab4a1a1ba3b66aab5",
+        "defaultBranch": "master",
+        "name": "howtheytest",
+        "owner": "abhivaikar",
+        "reportedSizeKb": 1212,
+        "submodulePath": "sources/direct/abhivaikar/abhivaikar--howtheytest"
+      },
+      "resolutionStatus": "active",
+      "targetKind": "awesome_list"
+    },
+    {
+      "adoptionTier": "reference",
+      "canonicalUrl": "https://github.com/ai-dashboad/flutter-skill",
+      "capabilities": [
+        "ai",
+        "e2e",
+        "mobile"
+      ],
+      "categories": [
+        "UI & End-to-End Testing"
+      ],
+      "credentialRequirement": "none",
+      "description": "AI-powered E2E testing via MCP for Flutter, React Native, iOS, Android, Electron, Tauri, KMP, and .NET MAUI. Zero test code.",
+      "executionPolicy": "reference_only",
+      "id": "ai-dashboad--flutter-skill",
+      "lastValidation": {
+        "at": "2026-08-30T18:30:25.161Z",
+        "httpStatus": 200,
+        "method": "github_api"
+      },
+      "license": {
+        "spdx": null,
+        "kind": "missing"
+      },
+      "name": "flutter-skill",
+      "provenance": [
+        {
+          "catalogCommit": "ff695aac1126d548eb3bc0ceb3d8a0d4e0b9cf93",
+          "depth": 1,
+          "discoveredAt": "2026-08-28T21:20:23Z",
+          "sourceCatalogId": "awesome-testing",
+          "urlAsLinked": "https://github.com/ai-dashboad/flutter-skill"
+        }
+      ],
+      "redirectHistory": [],
+      "repository": {
+        "commitSha": "de1a0081c2981d37e088b07d081e0471d040ddee",
         "defaultBranch": "main",
-        "name": "cypress",
-        "owner": "cypress-io",
-        "reportedSizeKb": 120000,
-        "submodulePath": "sources/direct/cypress-io/cypress-io--cypress"
+        "name": "flutter-skill",
+        "owner": "ai-dashboad",
+        "reportedSizeKb": 68402,
+        "submodulePath": "sources/direct/ai-dashboad/ai-dashboad--flutter-skill"
       },
       "resolutionStatus": "active",
       "targetKind": "git_repo"
     },
     {
-      "adoptionTier": "optional_adapter",
-      "canonicalUrl": "https://github.com/getgauge/gauge",
+      "adoptionTier": "reference",
+      "canonicalUrl": "https://github.com/aiqualitylab/ai-natural-language-tests",
       "capabilities": [
-        "automation"
+        "ai",
+        "e2e",
+        "framework",
+        "browser-automation"
       ],
       "categories": [
-        "test-automation"
+        "Test Automation Frameworks"
       ],
       "credentialRequirement": "none",
-      "description": "Gauge — fixture entry.",
+      "description": "Generates Cypress and Playwright E2E tests from natural language requirements using LangGraph, ChromaDB, and multi-provider LLM support.",
       "executionPolicy": "sandbox_required",
-      "id": "gauge-test--gauge",
+      "id": "aiqualitylab--ai-natural-language-tests",
       "lastValidation": {
-        "at": "2026-08-28T21:20:23Z",
+        "at": "2026-08-30T18:30:25.161Z",
         "httpStatus": 200,
         "method": "github_api"
       },
       "license": {
         "kind": "copyleft",
-        "spdx": "GPL-3.0-only"
+        "spdx": "AGPL-3.0"
       },
-      "name": "Gauge",
+      "name": "ai-natural-language-tests",
       "provenance": [
         {
           "catalogCommit": "ff695aac1126d548eb3bc0ceb3d8a0d4e0b9cf93",
           "depth": 1,
           "discoveredAt": "2026-08-28T21:20:23Z",
           "sourceCatalogId": "awesome-testing",
-          "urlAsLinked": "https://github.com/getgauge/gauge"
-        }
-      ],
-      "redirectHistory": [],
-      "repository": {
-        "commitSha": "82a657b27ebf2ad19ba01d0b8b88715aab52e65a",
-        "defaultBranch": "main",
-        "name": "gauge",
-        "owner": "getgauge",
-        "reportedSizeKb": 25000,
-        "submodulePath": "sources/direct/getgauge/gauge-test--gauge"
-      },
-      "resolutionStatus": "active",
-      "targetKind": "git_repo"
-    },
-    {
-      "adoptionTier": "approved_adapter",
-      "canonicalUrl": "https://github.com/microsoft/playwright",
-      "capabilities": [
-        "automation"
-      ],
-      "categories": [
-        "test-automation"
-      ],
-      "credentialRequirement": "none",
-      "description": "Playwright — fixture entry.",
-      "executionPolicy": "sandbox_required",
-      "id": "microsoft--playwright",
-      "lastValidation": {
-        "at": "2026-08-28T21:20:23Z",
-        "httpStatus": 200,
-        "method": "github_api"
-      },
-      "license": {
-        "kind": "permissive",
-        "spdx": "Apache-2.0"
-      },
-      "name": "Playwright",
-      "provenance": [
-        {
-          "catalogCommit": "ff695aac1126d548eb3bc0ceb3d8a0d4e0b9cf93",
-          "depth": 1,
-          "discoveredAt": "2026-08-28T21:20:23Z",
-          "sourceCatalogId": "awesome-testing",
-          "urlAsLinked": "https://github.com/microsoft/playwright"
-        },
-        {
-          "catalogCommit": "233562de1a0288b139c4fa40b7d189f806e906ee",
-          "depth": 2,
-          "discoveredAt": "2026-08-28T21:20:23Z",
-          "sourceCatalogId": "ssharper--awesome-playwright",
-          "urlAsLinked": "https://github.com/microsoft/playwright"
-        }
-      ],
-      "redirectHistory": [],
-      "repository": {
-        "commitSha": "3c26f290f5f506759164f4cf236ca5b0cd0875c5",
-        "defaultBranch": "main",
-        "name": "playwright",
-        "owner": "microsoft",
-        "reportedSizeKb": 90000,
-        "submodulePath": "sources/direct/microsoft/microsoft--playwright"
-      },
-      "resolutionStatus": "active",
-      "targetKind": "git_repo"
-    },
-    {
-      "adoptionTier": "watchlist",
-      "canonicalUrl": "https://qaforums.example.com",
-      "capabilities": [
-        "reference"
-      ],
-      "categories": [
-        "resources"
-      ],
-      "credentialRequirement": "none",
-      "description": "QA Forums (dead) — fixture entry (non-repository resource).",
-      "executionPolicy": "reference_only",
-      "id": "qaforums--dead",
-      "lastValidation": {
-        "at": "2026-08-28T21:20:23Z",
-        "method": "manual"
-      },
-      "license": {
-        "kind": "unknown",
-        "spdx": null
-      },
-      "name": "QA Forums (dead)",
-      "provenance": [
-        {
-          "catalogCommit": "ff695aac1126d548eb3bc0ceb3d8a0d4e0b9cf93",
-          "depth": 1,
-          "discoveredAt": "2026-08-28T21:20:23Z",
-          "sourceCatalogId": "awesome-testing",
-          "urlAsLinked": "https://qaforums.example.com"
+          "urlAsLinked": "https://github.com/aiqualitylab/ai-natural-language-tests"
         }
       ],
       "redirectHistory": [],
       "resolutionStatus": "dead",
-      "targetKind": "website"
+      "targetKind": "other"
     },
     {
-      "adoptionTier": "core_runner",
-      "canonicalUrl": "https://github.com/SeleniumHQ/selenium",
-      "capabilities": [
-        "automation"
-      ],
+      "adoptionTier": "reference",
+      "canonicalUrl": "https://github.com/aliesbelik/awesome-jmeter",
+      "capabilities": [],
       "categories": [
-        "test-automation"
+        "Useful References"
       ],
       "credentialRequirement": "none",
-      "description": "Selenium — fixture entry.",
-      "executionPolicy": "allowlisted",
-      "id": "seleniumhq--selenium",
+      "description": "A curated collection of resources around Apache JMeter.",
+      "executionPolicy": "reference_only",
+      "id": "aliesbelik--awesome-jmeter",
       "lastValidation": {
-        "at": "2026-08-28T21:20:23Z",
+        "at": "2026-08-30T18:30:25.161Z",
         "httpStatus": 200,
         "method": "github_api"
       },
       "license": {
-        "kind": "permissive",
-        "spdx": "Apache-2.0"
+        "kind": "unknown",
+        "spdx": "CC-BY-4.0"
       },
-      "name": "Selenium",
+      "name": "Awesome JMeter",
       "provenance": [
         {
           "catalogCommit": "ff695aac1126d548eb3bc0ceb3d8a0d4e0b9cf93",
           "depth": 1,
           "discoveredAt": "2026-08-28T21:20:23Z",
           "sourceCatalogId": "awesome-testing",
-          "urlAsLinked": "https://github.com/SeleniumHQ/selenium"
+          "urlAsLinked": "https://github.com/aliesbelik/awesome-jmeter"
         }
       ],
       "redirectHistory": [],
       "repository": {
-        "commitSha": "1eebbe421afe07b0e8bed081e1874714ab8beb78",
+        "commitSha": "ea110f64a3b78443dd61734ab1b5f1b1a371378a",
         "defaultBranch": "main",
-        "name": "selenium",
-        "owner": "seleniumhq",
-        "reportedSizeKb": 400000,
-        "submodulePath": "sources/direct/seleniumhq/seleniumhq--selenium"
+        "name": "awesome-jmeter",
+        "owner": "aliesbelik",
+        "reportedSizeKb": 310,
+        "submodulePath": "sources/direct/aliesbelik/aliesbelik--awesome-jmeter"
+      },
+      "resolutionStatus": "active",
+      "targetKind": "awesome_list"
+    },
+    {
+      "adoptionTier": "reference",
+      "canonicalUrl": "https://github.com/altansayan/mock-jutsu-api",
+      "capabilities": [
+        "api",
+        "mocking",
+        "test-data"
+      ],
+      "categories": [
+        "Test Data Management"
+      ],
+      "credentialRequirement": "none",
+      "description": "Algorithmic open-source mock data engine generating 390+ format-valid types (IBAN, TCKN, Luhn, VIN, NHS, SWIFT, MRZ and more). CLI + REST API + Python package + JMeter",
+      "executionPolicy": "reference_only",
+      "id": "altansayan--mock-jutsu-api",
+      "lastValidation": {
+        "at": "2026-08-30T18:30:25.161Z",
+        "httpStatus": 200,
+        "method": "github_api"
+      },
+      "license": {
+        "kind": "unknown",
+        "spdx": "NOASSERTION"
+      },
+      "name": "MockJutsu",
+      "provenance": [
+        {
+          "catalogCommit": "ff695aac1126d548eb3bc0ceb3d8a0d4e0b9cf93",
+          "depth": 1,
+          "discoveredAt": "2026-08-28T21:20:23Z",
+          "sourceCatalogId": "awesome-testing",
+          "urlAsLinked": "https://github.com/altansayan/mock-jutsu-api"
+        }
+      ],
+      "redirectHistory": [],
+      "repository": {
+        "commitSha": "55c1e77e2371fd7d4db79164d6aabbe7a6fd3862",
+        "defaultBranch": "main",
+        "name": "mock-jutsu-api",
+        "owner": "altansayan",
+        "reportedSizeKb": 80358,
+        "submodulePath": "sources/direct/altansayan/altansayan--mock-jutsu-api"
       },
       "resolutionStatus": "active",
       "targetKind": "git_repo"
     },
     {
-      "adoptionTier": "watchlist",
-      "canonicalUrl": "https://newsletter.example.com",
-      "capabilities": [
-        "reference"
-      ],
+      "adoptionTier": "reference",
+      "canonicalUrl": "https://sendgrid.com/blog/1000-foot-overview-of-writing-cypress-tests-frontendtwiliosendgrid",
+      "capabilities": [],
       "categories": [
-        "resources"
+        "Companies & how they test their software"
       ],
-      "credentialRequirement": "free_account",
-      "description": "The Testing Trajectory — fixture entry (non-repository resource).",
+      "credentialRequirement": "none",
+      "description": "",
       "executionPolicy": "reference_only",
-      "id": "testing-trajectory",
+      "id": "1-000-foot-overview-of-writing-cypress-tests-sendgrid-com",
       "lastValidation": {
-        "at": "2026-08-28T21:20:23Z",
-        "method": "http_get"
+        "at": "2026-08-30T18:30:25.161Z",
+        "method": "manual",
+        "notes": "discovered via nested catalog; provider check pending"
       },
       "license": {
         "kind": "unknown",
         "spdx": null
       },
-      "name": "The Testing Trajectory",
+      "name": "1,000 Foot Overview of Writing Cypress Tests",
       "provenance": [
         {
-          "catalogCommit": "ff695aac1126d548eb3bc0ceb3d8a0d4e0b9cf93",
-          "depth": 1,
-          "discoveredAt": "2026-08-28T21:20:23Z",
-          "sourceCatalogId": "awesome-testing",
-          "urlAsLinked": "https://newsletter.example.com"
+          "catalogCommit": "743e44913377af238bfdafeab4a1a1ba3b66aab5",
+          "depth": 2,
+          "discoveredAt": "2026-08-30T18:30:25.161Z",
+          "sourceCatalogId": "abhivaikar--howtheytest",
+          "urlAsLinked": "https://sendgrid.com/blog/1000-foot-overview-of-writing-cypress-tests-frontendtwiliosendgrid/"
         }
       ],
       "redirectHistory": [],
       "resolutionStatus": "unresolved",
-      "targetKind": "newsletter"
+      "targetKind": "website"
     },
     {
-      "adoptionTier": "watchlist",
-      "canonicalUrl": "https://testrig.example.com",
-      "capabilities": [
-        "reference"
-      ],
+      "adoptionTier": "reference",
+      "canonicalUrl": "https://www.bbc.co.uk/blogs/internet/entries/e9356c0f-cf17-4ccc-bb05-2fa5d13fa289",
+      "capabilities": [],
       "categories": [
-        "resources"
-      ],
-      "credentialRequirement": "paid",
-      "description": "TestRig Cloud — fixture entry (non-repository resource).",
-      "executionPolicy": "reference_only",
-      "id": "testrig--cloud",
-      "lastValidation": {
-        "at": "2026-08-28T21:20:23Z",
-        "method": "http_get"
-      },
-      "license": {
-        "kind": "restrictive",
-        "spdx": null
-      },
-      "name": "TestRig Cloud",
-      "provenance": [
-        {
-          "catalogCommit": "ff695aac1126d548eb3bc0ceb3d8a0d4e0b9cf93",
-          "depth": 1,
-          "discoveredAt": "2026-08-28T21:20:23Z",
-          "sourceCatalogId": "awesome-testing",
-          "urlAsLinked": "https://testrig.example.com"
-        }
-      ],
-      "redirectHistory": [],
-      "resolutionStatus": "active",
-      "targetKind": "saas"
-    },
-    {
-      "adoptionTier": "approved_adapter",
-      "canonicalUrl": "https://github.com/usebruno/bruno",
-      "capabilities": [
-        "automation"
-      ],
-      "categories": [
-        "test-automation"
+        "Companies & how they test their software"
       ],
       "credentialRequirement": "none",
-      "description": "Bruno — fixture entry.",
-      "executionPolicy": "allowlisted",
-      "id": "usebruno--bruno",
+      "description": "",
+      "executionPolicy": "reference_only",
+      "id": "10-guidelines-on-readability-and-consistency-when-writing-integration-tests-www-bbc-co-uk",
       "lastValidation": {
-        "at": "2026-08-28T21:20:23Z",
-        "httpStatus": 200,
-        "method": "github_api"
+        "at": "2026-08-30T18:30:25.161Z",
+        "method": "manual",
+        "notes": "discovered via nested catalog; provider check pending"
       },
       "license": {
-        "kind": "permissive",
-        "spdx": "MIT"
+        "kind": "unknown",
+        "spdx": null
       },
-      "name": "Bruno",
+      "name": "10 guidelines on readability and consistency when writing Integration Tests",
       "provenance": [
         {
-          "catalogCommit": "ff695aac1126d548eb3bc0ceb3d8a0d4e0b9cf93",
-          "depth": 1,
-          "discoveredAt": "2026-08-28T21:20:23Z",
-          "sourceCatalogId": "awesome-testing",
-          "urlAsLinked": "https://github.com/usebruno/bruno"
+          "catalogCommit": "743e44913377af238bfdafeab4a1a1ba3b66aab5",
+          "depth": 2,
+          "discoveredAt": "2026-08-30T18:30:25.161Z",
+          "sourceCatalogId": "abhivaikar--howtheytest",
+          "urlAsLinked": "https://www.bbc.co.uk/blogs/internet/entries/e9356c0f-cf17-4ccc-bb05-2fa5d13fa289"
         }
       ],
       "redirectHistory": [],
-      "repository": {
-        "commitSha": "d338fc52616248426241eee97c1a1e3f21d71936",
-        "defaultBranch": "main",
-        "name": "bruno",
-        "owner": "usebruno",
-        "reportedSizeKb": 30000,
-        "submodulePath": "sources/direct/usebruno/usebruno--bruno"
+      "resolutionStatus": "unresolved",
+      "targetKind": "website"
+    },
+    {
+      "adoptionTier": "reference",
+      "canonicalUrl": "https://ebaytech.berlin/100-percent-test-coverage-is-not-enough-3d733551bc3f",
+      "capabilities": [],
+      "categories": [
+        "Companies & how they test their software"
+      ],
+      "credentialRequirement": "none",
+      "description": "",
+      "executionPolicy": "reference_only",
+      "id": "100-test-coverage-is-not-enough-ebaytech-berlin",
+      "lastValidation": {
+        "at": "2026-08-30T18:30:25.161Z",
+        "method": "manual",
+        "notes": "discovered via nested catalog; provider check pending"
       },
-      "resolutionStatus": "redirected",
-      "targetKind": "git_repo"
+      "license": {
+        "kind": "unknown",
+        "spdx": null
+      },
+      "name": "100% test coverage is not enough",
+      "provenance": [
+        {
+          "catalogCommit": "743e44913377af238bfdafeab4a1a1ba3b66aab5",
+          "depth": 2,
+          "discoveredAt": "2026-08-30T18:30:25.161Z",
+          "sourceCatalogId": "abhivaikar--howtheytest",
+          "urlAsLinked": "https://ebaytech.berlin/100-percent-test-coverage-is-not-enough-3d733551bc3f"
+        }
+      ],
+      "redirectHistory": [],
+      "resolutionStatus": "unresolved",
+      "targetKind": "website"
+    },
+    {
+      "adoptionTier": "reference",
+      "canonicalUrl": "https://www.bbc.co.uk/blogs/internet/entries/ecedc9af-4bc8-4fb3-9cd3-754a85a1ce19",
+      "capabilities": [],
+      "categories": [
+        "Companies & how they test their software"
+      ],
+      "credentialRequirement": "none",
+      "description": "",
+      "executionPolicy": "reference_only",
+      "id": "10x-your-collaboration-on-writing-tests---part-1-understanding-www-bbc-co-uk",
+      "lastValidation": {
+        "at": "2026-08-30T18:30:25.161Z",
+        "method": "manual",
+        "notes": "discovered via nested catalog; provider check pending"
+      },
+      "license": {
+        "kind": "unknown",
+        "spdx": null
+      },
+      "name": "10x your collaboration on writing tests - Part 1: Understanding",
+      "provenance": [
+        {
+          "catalogCommit": "743e44913377af238bfdafeab4a1a1ba3b66aab5",
+          "depth": 2,
+          "discoveredAt": "2026-08-30T18:30:25.161Z",
+          "sourceCatalogId": "abhivaikar--howtheytest",
+          "urlAsLinked": "https://www.bbc.co.uk/blogs/internet/entries/ecedc9af-4bc8-4fb3-9cd3-754a85a1ce19"
+        }
+      ],
+      "redirectHistory": [],
+      "resolutionStatus": "unresolved",
+      "targetKind": "website"
+    },
+    {
+      "adoptionTier": "reference",
+      "canonicalUrl": "https://bug0.com/blog/20-underdog-open-source-projects-pushing-limits-ai-playwright",
+      "capabilities": [
+        "ai",
+        "browser-automation"
+      ],
+      "categories": [
+        "Articles and Talks"
+      ],
+      "credentialRequirement": "none",
+      "description": "Roundup of emerging AI Playwright projects.",
+      "executionPolicy": "reference_only",
+      "id": "20-open-source-projects-redefining-ai-playwright-testing-bug0-com",
+      "lastValidation": {
+        "at": "2026-08-30T18:30:25.161Z",
+        "method": "manual",
+        "notes": "discovered via nested catalog; provider check pending"
+      },
+      "license": {
+        "kind": "unknown",
+        "spdx": null
+      },
+      "name": "20 Open-Source Projects Redefining AI + Playwright Testing",
+      "provenance": [
+        {
+          "catalogCommit": "aace396216c512355dc8266211fecdae81089b03",
+          "depth": 2,
+          "discoveredAt": "2026-08-30T18:30:25.161Z",
+          "sourceCatalogId": "tugkanboz--awesome-ai-testing",
+          "urlAsLinked": "https://bug0.com/blog/20-underdog-open-source-projects-pushing-limits-ai-playwright"
+        }
+      ],
+      "redirectHistory": [],
+      "resolutionStatus": "unresolved",
+      "targetKind": "website"
+    },
+    {
+      "adoptionTier": "reference",
+      "canonicalUrl": "https://medium.com/slalom-build/23-books-for-quality-assurance-professionals-9a7db9945e8",
+      "capabilities": [],
+      "categories": [
+        "Companies & how they test their software"
+      ],
+      "credentialRequirement": "none",
+      "description": "",
+      "executionPolicy": "reference_only",
+      "id": "23-books-for-quality-assurance-professionals-medium-com",
+      "lastValidation": {
+        "at": "2026-08-30T18:30:25.161Z",
+        "method": "manual",
+        "notes": "discovered via nested catalog; provider check pending"
+      },
+      "license": {
+        "kind": "unknown",
+        "spdx": null
+      },
+      "name": "23 Books for Quality Assurance Professionals",
+      "provenance": [
+        {
+          "catalogCommit": "743e44913377af238bfdafeab4a1a1ba3b66aab5",
+          "depth": 2,
+          "discoveredAt": "2026-08-30T18:30:25.161Z",
+          "sourceCatalogId": "abhivaikar--howtheytest",
+          "urlAsLinked": "https://medium.com/slalom-build/23-books-for-quality-assurance-professionals-9a7db9945e8"
+        }
+      ],
+      "redirectHistory": [],
+      "resolutionStatus": "unresolved",
+      "targetKind": "website"
+    },
+    {
+      "adoptionTier": "reference",
+      "canonicalUrl": "https://www.youtube.com/watch?v=9kwslvopqfw",
+      "capabilities": [],
+      "categories": [
+        "Companies & how they test their software"
+      ],
+      "credentialRequirement": "none",
+      "description": "",
+      "executionPolicy": "reference_only",
+      "id": "3-years-of-backend-testing-at-shazam---the-stuff-we-got-wrong-www-youtube-com",
+      "lastValidation": {
+        "at": "2026-08-30T18:30:25.161Z",
+        "method": "manual",
+        "notes": "discovered via nested catalog; provider check pending"
+      },
+      "license": {
+        "kind": "unknown",
+        "spdx": null
+      },
+      "name": "3 years of backend testing at Shazam - the stuff we got wrong",
+      "provenance": [
+        {
+          "catalogCommit": "743e44913377af238bfdafeab4a1a1ba3b66aab5",
+          "depth": 2,
+          "discoveredAt": "2026-08-30T18:30:25.161Z",
+          "sourceCatalogId": "abhivaikar--howtheytest",
+          "urlAsLinked": "https://www.youtube.com/watch?v=9kWslvOpQfw"
+        }
+      ],
+      "redirectHistory": [],
+      "resolutionStatus": "unresolved",
+      "targetKind": "website"
     }
   ],
   "generatedFrom": {
     "commit": "ff695aac1126d548eb3bc0ceb3d8a0d4e0b9cf93",
-    "readmeSha256": "9942a8f5f705fc9ad2366611e123638e5698bc07c191df013fc2636d2c10469f",
+    "readmeSha256": "547c6570453318c7772c87cd88586b91cd4369e5cc3e4acc7b147205ca7b6e4a",
     "repo": "TheJambo/awesome-testing"
   },
   "nestedCatalogs": [
     {
-      "commit": "a2d06f41fadc3b7ce411043a8bffd79f95ce0699",
-      "discoveredCatalogCount": 1,
-      "expandedLinkCount": 14,
-      "id": "ssharper--awesome-playwright",
+      "commit": "743e44913377af238bfdafeab4a1a1ba3b66aab5",
+      "discoveredCatalogCount": 0,
+      "expandedLinkCount": 730,
+      "id": "abhivaikar--howtheytest",
       "status": "active",
-      "url": "https://github.com/ssharper/awesome-playwright"
+      "url": "https://github.com/abhivaikar/howtheytest"
+    },
+    {
+      "commit": "ea110f64a3b78443dd61734ab1b5f1b1a371378a",
+      "discoveredCatalogCount": 5,
+      "expandedLinkCount": 222,
+      "id": "aliesbelik--awesome-jmeter",
+      "status": "active",
+      "url": "https://github.com/aliesbelik/awesome-jmeter"
     }
   ],
   "pins": [
     {
-      "commitSha": "f48c18e43038b17bf6a90afc145c76ffda2dd419",
-      "defaultBranch": "main",
-      "entryId": "cypress-io--cypress",
-      "gitmodulesName": "cypress-io--cypress",
-      "lastHydratedAt": "2026-08-29T06:00:00Z",
-      "name": "cypress",
-      "owner": "cypress-io",
+      "commitSha": "743e44913377af238bfdafeab4a1a1ba3b66aab5",
+      "defaultBranch": "master",
+      "entryId": "abhivaikar--howtheytest",
+      "gitmodulesName": "abhivaikar--howtheytest",
+      "lastHydratedAt": null,
+      "name": "howtheytest",
+      "owner": "abhivaikar",
       "pinState": "pinned",
-      "repoUrl": "https://github.com/cypress-io/cypress",
-      "reportedSizeKb": 120000,
+      "repoUrl": "https://github.com/abhivaikar/howtheytest",
+      "reportedSizeKb": 1212,
       "shallowCapable": true,
-      "submodulePath": "sources/direct/cypress-io/cypress-io--cypress"
+      "submodulePath": "sources/direct/abhivaikar/abhivaikar--howtheytest"
     },
     {
-      "commitSha": "82a657b27ebf2ad19ba01d0b8b88715aab52e65a",
+      "commitSha": "de1a0081c2981d37e088b07d081e0471d040ddee",
       "defaultBranch": "main",
-      "entryId": "gauge-test--gauge",
-      "gitmodulesName": "gauge-test--gauge",
+      "entryId": "ai-dashboad--flutter-skill",
+      "gitmodulesName": "ai-dashboad--flutter-skill",
       "lastHydratedAt": null,
-      "name": "gauge",
-      "owner": "getgauge",
-      "pinState": "failed",
-      "repoUrl": "https://github.com/getgauge/gauge",
-      "reportedSizeKb": 25000,
+      "name": "flutter-skill",
+      "owner": "ai-dashboad",
+      "pinState": "pinned",
+      "repoUrl": "https://github.com/ai-dashboad/flutter-skill",
+      "reportedSizeKb": 68402,
       "shallowCapable": true,
-      "submodulePath": "sources/direct/getgauge/gauge-test--gauge"
+      "submodulePath": "sources/direct/ai-dashboad/ai-dashboad--flutter-skill"
     },
     {
-      "commitSha": "3c26f290f5f506759164f4cf236ca5b0cd0875c5",
+      "commitSha": "ea110f64a3b78443dd61734ab1b5f1b1a371378a",
       "defaultBranch": "main",
-      "entryId": "microsoft--playwright",
-      "gitmodulesName": "microsoft--playwright",
+      "entryId": "aliesbelik--awesome-jmeter",
+      "gitmodulesName": "aliesbelik--awesome-jmeter",
       "lastHydratedAt": null,
-      "name": "playwright",
-      "owner": "microsoft",
+      "name": "awesome-jmeter",
+      "owner": "aliesbelik",
       "pinState": "pending",
-      "repoUrl": "https://github.com/microsoft/playwright",
-      "reportedSizeKb": 90000,
+      "repoUrl": "https://github.com/aliesbelik/awesome-jmeter",
+      "reportedSizeKb": 310,
       "shallowCapable": true,
-      "submodulePath": "sources/direct/microsoft/microsoft--playwright"
+      "submodulePath": "sources/direct/aliesbelik/aliesbelik--awesome-jmeter"
     },
     {
-      "commitSha": "1eebbe421afe07b0e8bed081e1874714ab8beb78",
+      "commitSha": "55c1e77e2371fd7d4db79164d6aabbe7a6fd3862",
       "defaultBranch": "main",
-      "entryId": "seleniumhq--selenium",
-      "gitmodulesName": "seleniumhq--selenium",
-      "lastHydratedAt": "2026-08-29T06:00:00Z",
-      "name": "selenium",
-      "owner": "seleniumhq",
-      "pinState": "pinned",
-      "repoUrl": "https://github.com/SeleniumHQ/selenium",
-      "reportedSizeKb": 400000,
-      "shallowCapable": true,
-      "submodulePath": "sources/direct/seleniumhq/seleniumhq--selenium"
-    },
-    {
-      "commitSha": "d338fc52616248426241eee97c1a1e3f21d71936",
-      "defaultBranch": "main",
-      "entryId": "usebruno--bruno",
-      "gitmodulesName": "usebruno--bruno",
+      "entryId": "altansayan--mock-jutsu-api",
+      "gitmodulesName": "altansayan--mock-jutsu-api",
       "lastHydratedAt": null,
-      "name": "bruno",
-      "owner": "usebruno",
+      "name": "mock-jutsu-api",
+      "owner": "altansayan",
       "pinState": "pinned",
-      "repoUrl": "https://github.com/usebruno/bruno",
-      "reportedSizeKb": 30000,
+      "repoUrl": "https://github.com/altansayan/mock-jutsu-api",
+      "reportedSizeKb": 80358,
       "shallowCapable": true,
-      "submodulePath": "sources/direct/usebruno/usebruno--bruno"
+      "submodulePath": "sources/direct/altansayan/altansayan--mock-jutsu-api"
     }
   ],
   "schemaVersion": 1,
   "statistics": {
-    "byAdoptionTier": {
-      "approved_adapter": 2,
-      "core_runner": 2,
-      "optional_adapter": 1,
-      "reference": 2,
-      "watchlist": 4
-    },
+    "firstLevelCount": 5,
+    "uniqueRepos": 4,
     "byResolutionStatus": {
-      "active": 7,
+      "active": 6,
       "dead": 1,
-      "rate_limited": 1,
-      "redirected": 1,
-      "unresolved": 1
+      "unresolved": 5
     },
-    "firstLevelCount": 11,
-    "uniqueRepos": 5
+    "byAdoptionTier": {
+      "reference": 10,
+      "approved_adapter": 2
+    }
   }
 }

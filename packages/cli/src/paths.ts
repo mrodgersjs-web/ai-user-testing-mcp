@@ -3,7 +3,7 @@
  *
  * Repo root = first ancestor containing pnpm-workspace.yaml (walk-up, never
  * hardcoded). Everything generated lives under <root>/.rig-testlab/ (gitignored);
- * the committed lock lives at <root>/sources/catalog.lock.json and every path
+ * the committed lock lives at <root>/catalog.lock.json and every path
  * is overridable per command (--lock / --fixture / --root / --store).
  */
 import { join } from "node:path";
@@ -39,7 +39,7 @@ export function resolvePaths(ov: PathOverrides): Paths {
   }
   return {
     root,
-    lockPath: ov.lock ?? (root === null ? null : join(root, "sources", "catalog.lock.json")),
+    lockPath: ov.lock ?? (root === null ? null : join(root, "catalog.lock.json")),
     adaptersDir: root === null ? null : join(root, "adapters"),
     storeRoot: root === null ? null : join(root, ".rig-testlab", "store"),
     sandboxBase: root === null ? null : join(root, ".rig-testlab", "sandbox"),

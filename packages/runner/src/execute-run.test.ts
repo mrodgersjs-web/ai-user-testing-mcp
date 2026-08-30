@@ -1,4 +1,4 @@
-import { afterAll, describe, expect, it } from "vitest";
+import { afterAll, describe, expect, it, vi } from "vitest";
 import {
   mkdirSync,
   mkdtempSync,
@@ -432,6 +432,28 @@ describe("executeRun sandbox hygiene", () => {
       sealer: fakeReceiptSealer(),
       signal: controller.signal,
     });
+    expect(run.state).toBe("cancelled");
+    expect(run.failureDetail).toBe("cancelled_during_run");
+    expect(spawner.kills).toContain("SIGTERM");
+  });
+
+  it("aborted after spawn completes: live cancel beats signal-death mapping", async () => {
+    const controller = new AbortController();
+    const spawner = fakeSpawner({ holdOpen: true });
+    const pending = executeRun(queuedManifest("run.liveabort"), makeAdapter(), {
+      argv: ["/bin/echo"], // allowlisted in makeAdapter; holdOpen wedges the child regardless
+      baseDir: freshDir("base"),
+      storeRoot: freshDir("store"),
+      spawner,
+      sealer: fakeReceiptSealer(),
+      signal: controller.signal,
+    });
+    // Deterministic: abort only once the child is definitely spawned.
+    await vi.waitFor(() => {
+      expect(spawner.calls).toHaveLength(1);
+    });
+    controller.abort();
+    const run = await pending;
     expect(run.state).toBe("cancelled");
     expect(run.failureDetail).toBe("cancelled_during_run");
     expect(spawner.kills).toContain("SIGTERM");

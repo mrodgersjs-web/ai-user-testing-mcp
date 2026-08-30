@@ -18,6 +18,7 @@ import type { Ctx } from "../context.js";
 import { CommandFailure, UsageError } from "../errors.js";
 
 import { bool, str, strs } from "../opts.js";
+import { listRunIds, readManifest } from "../store.js";
 
 export const EVIDENCE_HELP = `rig-testlab evidence <subcommand>
 
@@ -28,7 +29,7 @@ export const EVIDENCE_HELP = `rig-testlab evidence <subcommand>
 
 function watchedManifests(ctx: Ctx): { storeRoot: string; runs: Array<{ id: string; manifest: RunManifest }> ; unreadable: string[] } {
   const storeRoot = str(ctx.values, "store") ?? ctx.paths.storeRoot;
-  if (storeRoot === undefined) {
+  if (storeRoot === undefined || storeRoot === null) {
     throw new UsageError("ROOT_NOT_FOUND", `${ctx.command}: pass --store <dir> or --root <dir>`, ctx.help);
   }
   const ids = strs(ctx.values, "run");

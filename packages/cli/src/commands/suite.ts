@@ -105,7 +105,7 @@ function suiteInputs(ctx: Ctx): SuiteInputs {
     throw new UsageError("SUITE_INPUT_INVALID", `${ctx.command}: --scenarios must be a JSON array of ScenarioSpec`, ctx.help);
   }
   const adaptersDir = str(ctx.values, "adapters-dir") ?? ctx.paths.adaptersDir;
-  if (adaptersDir === undefined) {
+  if (adaptersDir === undefined || adaptersDir === null) {
     throw new UsageError("ROOT_NOT_FOUND", `${ctx.command}: pass --adapters-dir <dir> or --root <dir>`, ctx.help);
   }
   const registry = loadAdapters(adaptersDir);
@@ -117,7 +117,7 @@ function suiteInputs(ctx: Ctx): SuiteInputs {
   }
   let entries: Parameters<typeof selectableAdapters>[1] = [];
   const lockPath = str(ctx.values, "lock") ?? str(ctx.values, "fixture") ?? ctx.paths.lockPath;
-  if (lockPath !== undefined) {
+  if (lockPath !== undefined && lockPath !== null) {
     try {
       entries = loadLockFailClosed(lockPath).entries;
     } catch (err) {
@@ -263,8 +263,8 @@ export async function suiteRun(ctx: Ctx): Promise<number> {
 
 export async function runWait(ctx: Ctx): Promise<number> {
   const storeRoot = str(ctx.values, "store") ?? ctx.paths.storeRoot;
-  if (storeRoot === undefined || !existsSync(storeRoot)) {
-    throw new CommandFailure("STORE_MISSING", `run wait: no run store${storeRoot === undefined ? "" : ` at ${storeRoot}`}; run \`rig-testlab suite run\` first`);
+  if (storeRoot === undefined || storeRoot === null || !existsSync(storeRoot)) {
+    throw new CommandFailure("STORE_MISSING", `run wait: no run store${storeRoot === undefined || storeRoot === null ? "" : ` at ${storeRoot}`}; run \`rig-testlab suite run\` first`);
   }
   const ids = strs(ctx.values, "run");
   const watchAll = bool(ctx.values, "all");

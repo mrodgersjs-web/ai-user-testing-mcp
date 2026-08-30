@@ -129,17 +129,17 @@ export const compiledSuiteSchema = z.object({
 });
 
 /** JSON-success tool result: text content + structured mirror. */
-export interface ToolTextResult {
+export type ToolTextResult = {
   content: Array<{ type: "text"; text: string }>;
   structuredContent: Record<string, unknown>;
-}
+};
 
 /** Structured failure tool result. */
-export interface ToolFailureResult {
+export type ToolFailureResult = {
   content: Array<{ type: "text"; text: string }>;
   structuredContent: ToolErrorEnvelope;
   isError: true;
-}
+};
 
 export type ToolResult = ToolTextResult | ToolFailureResult;
 

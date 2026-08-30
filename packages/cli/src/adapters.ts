@@ -61,10 +61,11 @@ export function loadAdapters(adaptersDir: string): AdapterRegistry {
 export function selectableAdapters(registry: AdapterRegistry, entries: readonly CatalogEntry[]): SelectableAdapter[] {
   const out: SelectableAdapter[] = [];
   for (const loaded of registry.adapters) {
-    if (loaded.descriptor === undefined) continue;
-    const entry = entries.find((e) => e.id === loaded.descriptor.sourceEntryId);
+    const descriptor = loaded.descriptor;
+    if (descriptor === undefined) continue;
+    const entry = entries.find((e) => e.id === descriptor.sourceEntryId);
     const hints = entry === undefined ? {} : { adoptionTier: entry.adoptionTier };
-    out.push({ ...loaded.descriptor, ...hints });
+    out.push({ ...descriptor, ...hints });
   }
   return out;
 }

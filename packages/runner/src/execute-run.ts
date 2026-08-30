@@ -136,6 +136,7 @@ export async function executeRun(
   const redactedText = (text: string): string => redact(text).text;
 
   let sandboxRoot = "";
+  let removeAbortListener: (() => void) | null = null;
   try {
     run.state = "running";
     run.startedAt = null;
@@ -222,11 +223,16 @@ export async function executeRun(
       cancelRequested = true;
       scheduleKill();
     };
-    opts.signal?.addEventListener("abort", onAbort, { once: true });
+    if (opts.signal !== undefined) {
+      opts.signal.addEventListener("abort", onAbort, { once: true });
+      const signal = opts.signal;
+      removeAbortListener = () => signal.removeEventListener("abort", onAbort);
+    }
 
     try {
       handle = spawner.spawn({ argv: [...opts.argv], cwd: worktree, env: childEnv });
-      opts.signal?.removeEventListener("abort", onAbort);
+      // The listener stays for the WHOLE run: a live cancel must win over the
+      // child's signal-death exit mapping. Removed in the outer finally.
       if (cancelRequested) scheduleKill(); // abort fired during spawn
 
       const limit = adapter.limits.maxOutputBytes;
@@ -313,13 +319,13 @@ export async function executeRun(
       run.finishedAt = finished;
       return run;
     } catch (err) {
-      opts.signal?.removeEventListener("abort", onAbort);
       run.state = "failed";
       run.failureDetail = `spawn_failed:${err instanceof Error ? err.message : String(err)}`;
       run.finishedAt = now();
       return run;
     }
   } finally {
+    removeAbortListener?.();
     if (!opts.keepSandbox && sandboxRoot.length > 0) {
       rmSync(sandboxRoot, { recursive: true, force: true });
     }

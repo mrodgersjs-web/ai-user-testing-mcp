@@ -210,21 +210,26 @@ export class LabContext {
   loadAdapterFiles(): { dirPresent: boolean; loads: AdapterFileLoad[] } {
     if (!existsSync(this.adaptersDir)) return { dirPresent: false, loads: [] };
     const loads: AdapterFileLoad[] = [];
-    for (const file of readdirSync(this.adaptersDir).filter((f) => f.endsWith(".json")).sort()) {
-      const full = join(this.adaptersDir, file);
+    // Repo-canonical layout: adapters/<id>/adapter.json (same as the CLI loader).
+    for (const dir of readdirSync(this.adaptersDir, { withFileTypes: true }).filter((d) => d.isDirectory()).map((d) => d.name).sort()) {
+      const full = join(this.adaptersDir, dir, "adapter.json");
+      if (!existsSync(full)) {
+        loads.push({ file: `${dir}/adapter.json`, reason: "missing adapter.json" });
+        continue;
+      }
       let raw: unknown;
       try {
         raw = readJsonFile(full);
       } catch (err) {
-        loads.push({ file, reason: `unparseable JSON: ${err instanceof Error ? err.message : String(err)}` });
+        loads.push({ file: `${dir}/adapter.json`, reason: `unparseable JSON: ${err instanceof Error ? err.message : String(err)}` });
         continue;
       }
       const errors = adapterShapeErrors(raw);
       if (errors.length > 0) {
-        loads.push({ file, reason: errors.join("; ") });
+        loads.push({ file: `${dir}/adapter.json`, reason: errors.join("; ") });
         continue;
       }
-      loads.push({ file, descriptor: raw as AdapterDescriptor });
+      loads.push({ file: `${dir}/adapter.json`, descriptor: raw as AdapterDescriptor });
     }
     return { dirPresent: true, loads };
   }

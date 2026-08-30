@@ -32,7 +32,7 @@ anonymous promotion (PROMOTE_OPERATOR_REQUIRED).`;
 
 function adaptersDirOf(ctx: Ctx): string {
   const dir = str(ctx.values, "adapters-dir") ?? ctx.paths.adaptersDir;
-  if (dir === undefined) {
+  if (dir === undefined || dir === null) {
     throw new UsageError(
       "ROOT_NOT_FOUND",
       `${ctx.command}: no repo root (pnpm-workspace.yaml) found; pass --adapters-dir <dir> or --root <dir>`,

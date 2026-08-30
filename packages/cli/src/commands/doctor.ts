@@ -71,7 +71,7 @@ export async function doctor(ctx: Ctx): Promise<number> {
       checks.push({ name: "catalog-lock", blocking: true, status: "pass", detail: `schema + integrity OK (${ctx.paths.lockPath})` });
     } catch (err) {
       const e = err as { details?: readonly string[]; message?: string };
-      lockErrors = e.details ?? [];
+      lockErrors = [...(e.details ?? [])];
       checks.push({ name: "catalog-lock", blocking: true, status: "fail", detail: e.message ?? String(err), evidence: lockErrors });
     }
   }
