@@ -1,8 +1,8 @@
 {
   "id": "transformfit",
   "repo": {
-    "url": "git@github.com:Rodgers-Intelligence-Group/transformfit-flutter.git",
-    "revision": "f412c01a7431b813acb39d90cfc04f10c99fb64f",
+    "url": "https://github.com/mrodgersjs-web/transformfit-flutter.git",
+    "revision": "ad888bc99009bf1cc1e7e695955565cb199f7aa7",
     "localPath": "/Users/rig128gb/Developer/transformfit-flutter"
   },
   "platforms": ["web", "ios", "api", "data", "ai", "vision", "accessibility", "security", "longitudinal"],
