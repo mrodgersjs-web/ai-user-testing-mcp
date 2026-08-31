@@ -5,11 +5,46 @@
     "revision": "ad888bc99009bf1cc1e7e695955565cb199f7aa7",
     "localPath": "/Users/rig128gb/Developer/transformfit-flutter"
   },
-  "platforms": ["web", "ios", "api", "data", "ai", "vision", "accessibility", "security", "longitudinal"],
+  "platforms": [
+    "web",
+    "ios",
+    "api",
+    "data",
+    "ai",
+    "vision",
+    "accessibility",
+    "security",
+    "longitudinal"
+  ],
   "suites": [
-    { "path": "e2e/cypress", "scenarioIds": ["tf-web-onboarding", "tf-web-workout-day", "tf-web-today-a11y", "tf-web-today-vision"] },
-    { "path": "testsprite_tests", "scenarioIds": ["tf-tc001-workout-receipt", "tf-tc004-wellness-checkin", "tf-tc007-pain-safety"] },
-    { "path": "gates", "scenarioIds": ["tf-ios-sim-smoke", "tf-api-coach-contract", "tf-data-boundary-inputs", "tf-ai-persona-evals", "tf-sec-baseline-scan", "tf-long-week-sim"] }
+    {
+      "path": "e2e/cypress",
+      "scenarioIds": [
+        "tf-web-onboarding",
+        "tf-web-workout-day",
+        "tf-web-today-a11y",
+        "tf-web-today-vision"
+      ]
+    },
+    {
+      "path": "testsprite_tests",
+      "scenarioIds": [
+        "tf-tc001-workout-receipt",
+        "tf-tc004-wellness-checkin",
+        "tf-tc007-pain-safety"
+      ]
+    },
+    {
+      "path": "gates",
+      "scenarioIds": [
+        "tf-ios-sim-smoke",
+        "tf-api-coach-contract",
+        "tf-data-boundary-inputs",
+        "tf-ai-persona-evals",
+        "tf-sec-baseline-scan",
+        "tf-long-week-sim"
+      ]
+    }
   ],
   "requiredAdapters": [
     "cypress",
@@ -25,15 +60,83 @@
   ],
   "provision": {
     "postCheckout": [
-      { "argv": ["npm", "ci", "--prefix", "e2e"] },
-      { "argv": ["python3", "scripts/certification/ai_usability_harness.py", "cypress-catalog", "--output", "e2e/cypress/fixtures/transformfit-screen-catalog.json"] },
-      { "argv": ["mkdir", "-p", "build"] },
-      { "argv": ["cp", "-R", "/Users/rig128gb/Developer/transformfit-flutter/build/web", "build/web"] },
-      { "argv": ["ln", "-sfn", "e2e/node_modules", "node_modules"] },
-      { "argv": ["cp", "/Users/rig128gb/Developer/ai-user-testing-mcp/projects/transformfit/cypress.suite.config.mjs", "cypress.config.mjs"] },
-      { "argv": ["ln", "-sfn", "../artifacts", "e2e/artifacts"] },
-      { "argv": ["mkdir", "-p", "artifacts/cypress/demo"] },
-      { "argv": ["python3", "scripts/certification/ai_usability_harness.py", "cypress-bind", "--lane", "demo", "--run-id", "suite-demo", "--build-dir", "build/web", "--output", "artifacts/cypress/demo/source-binding.json"] }
+      {
+        "argv": [
+          "npm",
+          "ci",
+          "--prefix",
+          "e2e"
+        ]
+      },
+      {
+        "argv": [
+          "python3",
+          "scripts/certification/ai_usability_harness.py",
+          "cypress-catalog",
+          "--output",
+          "e2e/cypress/fixtures/transformfit-screen-catalog.json"
+        ]
+      },
+      {
+        "argv": [
+          "mkdir",
+          "-p",
+          "build"
+        ]
+      },
+      {
+        "argv": [
+          "cp",
+          "-R",
+          "/Users/rig128gb/Developer/transformfit-flutter/build/web",
+          "build/web"
+        ]
+      },
+      {
+        "argv": [
+          "ln",
+          "-sfn",
+          "e2e/node_modules",
+          "node_modules"
+        ]
+      },
+      {
+        "argv": [
+          "cp",
+          "/Users/rig128gb/Developer/ai-user-testing-mcp/projects/transformfit/cypress.suite.config.mjs",
+          "cypress.config.mjs"
+        ]
+      },
+      {
+        "argv": [
+          "ln",
+          "-sfn",
+          "../artifacts",
+          "e2e/artifacts"
+        ]
+      },
+      {
+        "argv": [
+          "mkdir",
+          "-p",
+          "artifacts/cypress/demo"
+        ]
+      },
+      {
+        "argv": [
+          "python3",
+          "scripts/certification/ai_usability_harness.py",
+          "cypress-bind",
+          "--lane",
+          "demo",
+          "--run-id",
+          "suite-demo",
+          "--build-dir",
+          "build/web",
+          "--output",
+          "artifacts/cypress/demo/source-binding.json"
+        ]
+      }
     ]
   }
 }
