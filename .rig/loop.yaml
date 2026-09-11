@@ -1,0 +1,7 @@
+schema: rig.repo-loop.v1
+default_loop: iqrsqpi-v20
+always_on: [gate-d-loop, proof-loop]
+floor: 0.80
+supabase:
+  schema: rig_shared
+  events: agent_events

@@ -1,0 +1,16 @@
+{
+  "schema": "rig.repo-adapters.v1",
+  "repo": "mrodgersjs-web/ai-user-testing-mcp",
+  "tier": "B_PRODUCT_APP",
+  "supabase": {
+    "schema": "rig_shared",
+    "role": "ai-user-testing-mcp-agent"
+  },
+  "loops": {
+    "default": "iqrsqpi-v20",
+    "always_on": [
+      "gate-d-loop",
+      "proof-loop"
+    ]
+  }
+}

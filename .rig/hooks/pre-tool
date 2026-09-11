@@ -1,0 +1,5 @@
+#!/bin/sh
+# RIG pre-tool guard: route through platform rig-loop when available.
+PLATFORM_RIG_LOOP="${RIG_LOOP_CLI:-$HOME/Developer/rig-capabilities/bin/rig-loop}"
+[ -x "$PLATFORM_RIG_LOOP" ] || exit 0
+exec "$PLATFORM_RIG_LOOP" hook pre-tool --repo "$PWD" --format claude

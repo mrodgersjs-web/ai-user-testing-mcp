@@ -1,0 +1,30 @@
+name: rig-lattice
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  lattice:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Score repository against RIG lattice floor
+        env:
+          RIG_LATTICE_FLOOR: ${{ vars.RIG_LATTICE_FLOOR || '0.80' }}
+        run: |
+          pipx install rig-lattice || pip install rig-lattice
+          rig-lattice score . --floor "$RIG_LATTICE_FLOOR" --format github
+      - name: Verify sealed proofs for load-bearing claims
+        if: hashFiles('.rig/proofs/**/*.json') != ''
+        run: |
+          pipx install rig-proof-gate || pip install rig-proof-gate
+          rig-proof-gate verify .rig/proofs --strict

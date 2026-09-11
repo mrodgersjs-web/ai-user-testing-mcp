@@ -1,0 +1,31 @@
+# RIG execution-owner standard (org-wide, mandatory). Source: operator table 2026-09-11.
+# Every automation in this repo MUST declare its owner from this table before it runs.
+schema: rig.work-routing.v1
+routing:
+  - work_type: pure_collection_counting_hashing_validation_routing
+    owner: plain_python
+  - work_type: ordinary_scheduled_run_to_completion
+    owner: kestra
+    model_dependency: pydantic_ai_inside_model_dependent_steps
+  - work_type: durable_clock_critical_with_catchup_recovery
+    owner: temporal
+    model_dependency: pydantic_ai_activities_where_needed
+  - work_type: resident_service_socket_watcher_hardware
+    owner: launchd
+  - work_type: human_oriented_judgment_coordination
+    owner: orca
+    model_dependency: pydantic_ai
+  - work_type: dynamic_multi_agent_graph_real_cycles
+    owner: langgraph
+    model_dependency: pydantic_ai_agents_optional
+  - work_type: approval_permissions_budgets_retries_idempotency
+    owner: deterministic_code
+    note: never_the_model
+  - work_type: public_posting_email_payments_destructive_effects
+    owner: deterministic_executor_behind_gate_d
+enforcement:
+  ci: rig-lattice gate rejects new automation lacking a routing declaration
+  done_claims: tac close-gate (v2) sealed evidence required
+  wide_edits: scout-worker-synthesizer required (files > 5)
+  fuzzy_fixes: tac stochastic coverage (n >= 2 frames)
+  results_standard: 1000x round via capabilities_round per lane; MCP tools return verified results only
