@@ -9,12 +9,17 @@ permissions:
 
 jobs:
   lattice:
+    # The rig-lattice scorer is not on PyPI yet (pip install returns 404), so this
+    # job failed on every push since 2026-09-12. It now skips instead of failing.
+    # To turn it back on once the scorer is installable, set the repository
+    # variable RIG_LATTICE_ENABLED to true (Settings > Secrets and variables > Actions).
+    if: ${{ vars.RIG_LATTICE_ENABLED == 'true' }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
       - name: Score repository against RIG lattice floor
