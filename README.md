@@ -1,4 +1,4 @@
-# ai-user-testing-mcp (private)
+# ai-user-testing-mcp
 
 Governed AI user-testing monorepo. Catalogs every resource in
 [Awesome Testing](https://github.com/TheJambo/awesome-testing) at pinned commit
