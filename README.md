@@ -2,8 +2,6 @@
 
 ![CI status](https://github.com/actions/workflow/mrodgersjs-web/ai-user-testing-mcp/ci.yml/status)
 
-![CI status](https://github.com/actions/workflow/mrodgersjs-web/ai-user-testing-mcp/ci.yml/status)
-
 Governed AI user-testing monorepo. Catalogs every resource in
 [Awesome Testing](https://github.com/TheJambo/awesome-testing) at pinned commit
 `ff695aac1126d548eb3bc0ceb3d8a0d4e0b9cf93`, plus exactly one level of its referenced
