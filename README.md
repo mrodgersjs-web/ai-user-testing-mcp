@@ -1,5 +1,7 @@
 # ai-user-testing-mcp
 
+![CI status](https://github.com/actions/workflow/mrodgersjs-web/ai-user-testing-mcp/ci.yml/status)
+
 Governed AI user-testing monorepo. Catalogs every resource in
 [Awesome Testing](https://github.com/TheJambo/awesome-testing) at pinned commit
 `ff695aac1126d548eb3bc0ceb3d8a0d4e0b9cf93`, plus exactly one level of its referenced
@@ -42,3 +44,7 @@ pnpm build
 pnpm test
 pnpm --filter @rig-testlab/cli dev -- doctor
 ```
+
+---
+
+Part of the [mrodgersjs-web](https://github.com/mrodgersjs-web) FDE studio fleet. [rodgersintelligence.com](https://rodgersintelligence.com)
