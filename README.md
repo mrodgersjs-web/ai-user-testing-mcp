@@ -1,6 +1,7 @@
 # ai-user-testing-mcp
 
-![CI status](https://github.com/actions/workflow/mrodgersjs-web/ai-user-testing-mcp/ci.yml/status)
+![CI status](https://github.com/mrodgersjs-web/ai-user-testing-mcp/actions/workflows/ci.yml/badge.svg?branch=main)
+![CI status](https://img.shields.io/github/actions/workflow/status/mrodgersjs-web/ai-user-testing-mcp/ci.yml?label=CI&logo=github-actions)
 
 Governed AI user-testing monorepo. Catalogs every resource in
 [Awesome Testing](https://github.com/TheJambo/awesome-testing) at pinned commit
